@@ -73,7 +73,7 @@ export default function PolaroidCaseScroll() {
         <h2 className="font-heading text-2xl font-semibold text-plum">
           Selected work
         </h2>
-        <div className="flex gap-8 overflow-x-auto pb-6">
+        <div className="flex gap-12 overflow-x-auto px-6 pb-6 sm:px-10">
           {caseStudies.map((study, i) => (
             <PolaroidCard key={study.slug} study={study} index={i} />
           ))}
@@ -96,7 +96,7 @@ export default function PolaroidCaseScroll() {
           <div className="absolute left-0 right-0 top-[86px] h-px bg-plum/15" />
           <div
             ref={trackRef}
-            className="flex items-start gap-12 px-[10vw] will-change-transform"
+            className="flex items-start gap-[7vw] px-[10vw] will-change-transform"
             style={{ transform: `translateX(-${progress * maxTranslate}px)` }}
           >
             {caseStudies.map((study, i) => (
@@ -131,7 +131,7 @@ function PolaroidCard({
       <span
         className={`absolute -top-3 left-1/2 h-6 w-10 -translate-x-1/2 rotate-2 rounded-sm opacity-80 ${tape}`}
       />
-      <div className="w-56 rounded-sm bg-white p-3 pb-5 shadow-[0_18px_30px_-12px_rgba(69,59,74,0.4)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-0">
+      <div className="w-[clamp(220px,24vw,320px)] rounded-sm bg-white p-3 pb-5 shadow-[0_18px_30px_-12px_rgba(69,59,74,0.4)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-0">
         <div className="flex aspect-[4/5] items-center justify-center rounded-sm bg-gradient-to-br from-lavender-soft to-lavender p-4 text-center">
           <span className="font-heading text-lg font-semibold text-plum">
             {study.title}
