@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { caseStudies } from "@/data/caseStudies";
 
 // Hand-tuned per-card look so the row feels a little imperfect, like real
@@ -132,10 +133,19 @@ function PolaroidCard({
         className={`absolute -top-3 left-1/2 h-6 w-10 -translate-x-1/2 rotate-2 rounded-sm opacity-80 ${tape}`}
       />
       <div className="w-[clamp(220px,24vw,320px)] rounded-sm bg-white p-3 pb-5 shadow-[0_18px_30px_-12px_rgba(69,59,74,0.4)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-0">
-        <div className="flex aspect-[4/5] items-center justify-center rounded-sm bg-gradient-to-br from-lavender-soft to-lavender p-4 text-center">
-          <span className="font-heading text-lg font-semibold text-plum">
-            {study.title}
-          </span>
+        <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+          <Image
+            src={`/work/${study.slug}.jpg`}
+            alt={`${study.title} preview`}
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 24vw, 60vw"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-lavender-soft to-lavender p-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="font-heading text-lg font-semibold text-plum">
+              {study.title}
+            </span>
+          </div>
         </div>
         <p className="mt-3 text-center font-heading text-sm font-semibold text-plum">
           {study.subtitle}
