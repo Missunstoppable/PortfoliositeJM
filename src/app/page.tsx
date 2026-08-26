@@ -4,10 +4,10 @@ import PolaroidCaseScroll from "@/components/PolaroidCaseScroll";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-28 pb-28">
+    <div className="flex flex-col gap-10 pb-28">
       {/* Hero */}
-      <section className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-10 px-6 pt-12 sm:px-10 sm:pt-20 md:flex-row md:justify-between">
-        <div className="flex max-w-xl flex-col gap-5 text-center md:text-left">
+      <section className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-6 px-6 pt-6 sm:px-10 sm:pt-10 md:flex-row md:justify-between">
+        <div className="flex max-w-xl flex-col gap-4 text-center md:text-left">
           <p className="font-heading text-sm font-semibold uppercase tracking-wide text-plum/60">
             Product Designer · UX Designer
           </p>
@@ -20,7 +20,7 @@ export default function Home() {
             experiences.
           </p>
         </div>
-        <div className="relative flex h-56 w-56 shrink-0 items-center justify-center rounded-3xl bg-lavender-soft p-4 sm:h-64 sm:w-64">
+        <div className="relative flex h-40 w-40 shrink-0 items-center justify-center rounded-3xl bg-lavender-soft p-3 sm:h-48 sm:w-48">
           <div className="relative h-full w-full">
             <Image
               src="/hero-avatar.png"
@@ -28,7 +28,7 @@ export default function Home() {
               fill
               className="object-contain"
               priority
-              sizes="256px"
+              sizes="192px"
             />
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
       {/* Case studies — hanging polaroid horizontal scroll */}
       <PolaroidCaseScroll />
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-28 px-6 sm:px-10">
+      <div className="mx-auto mt-20 flex w-full max-w-5xl flex-col gap-28 px-6 sm:px-10">
         {/* Tools & skills */}
         <section className="flex flex-col gap-6">
           <h2 className="font-heading text-2xl font-semibold text-plum">

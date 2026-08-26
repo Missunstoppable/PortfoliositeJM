@@ -88,7 +88,7 @@ export default function PolaroidCaseScroll() {
       style={{ height: "calc(100vh + 220vh)" }}
       className="relative"
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-center gap-10 overflow-hidden">
+      <div className="sticky top-0 flex h-screen flex-col justify-start gap-10 overflow-hidden pt-24 sm:pt-28">
         <h2 className="px-6 font-heading text-2xl font-semibold text-plum sm:px-10">
           Selected work
         </h2>
