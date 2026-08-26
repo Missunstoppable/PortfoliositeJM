@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type KeyboardEvent, type TransitionEvent } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function BookCover() {
   const router = useRouter();
@@ -52,9 +53,15 @@ export default function BookCover() {
             : "opacity-100 [transform:rotateY(0deg)]"
         }`}
       >
-        <div className="mx-auto mb-6 flex h-32 w-32 items-center justify-center rounded-full bg-lavender-soft text-3xl font-heading font-semibold text-plum">
-          {/* TODO: swap for Jianan's illustrated avatar (public/hero-avatar.png) */}
-          JM
+        <div className="relative mx-auto mb-6 h-40 w-40">
+          <Image
+            src="/hero-avatar.png"
+            alt="Illustrated portrait of Jianan Meng"
+            fill
+            className="object-contain"
+            priority
+            sizes="160px"
+          />
         </div>
         <h1 className="font-heading text-2xl font-bold text-plum">
           Jianan Meng
