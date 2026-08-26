@@ -27,6 +27,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-lato), Arial, Helvetica, sans-serif;
   position: relative;
+  cursor: url("/cursor-face.png") 45 48, auto;
 }
 
 /* Subtle paper-grain texture overlay, tinted toward the lavender theme */
