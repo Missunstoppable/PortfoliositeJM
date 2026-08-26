@@ -6,13 +6,17 @@ Jianan wants a new UX/Product Designer portfolio site to replace/rebuild their c
 
 ## Site Structure (multi-page, top nav)
 
-- **Home** — Hero, case study previews, Tools/Skills, Experience, Why Hire Me, Contact (footer)
-- **Work** — index of all case studies (or this can just be the homepage case study section; case studies link out to full pages)
-- **Case study pages** (5, one per project) — full narrative: role/timeframe, problem/context, process/approach, outcome/metrics
-- **About** — bio blurb only (philosophy, focus areas, personal interests)
-- **Contact** — footer section only (email + LinkedIn), no standalone page
+**Update:** the homepage is now a book-cover interaction, not a scrolling content page. Structure revised as follows:
 
-Nav: Home / Work / About
+- **Home (`/`)** — Book cover only: avatar, name, tagline, "Product Designer" label, on a lavender jacket background matching Jianan's theme swatch. Clicking/tapping triggers a hinge-flip animation, then navigates to `/contents`.
+- **Contents (`/contents`)** — The "opened book" landing page: a table-of-contents list linking to Selected Work, About Me, and Experience & Skills, plus the Why Hire Me pitch and footer/contact.
+- **Work (`/work`)** — index of all case studies; links out to full pages.
+- **Case study pages (`/work/[slug]`)** (5, one per project) — full narrative: role/timeframe, problem/context, process/approach, outcome/metrics.
+- **About (`/about`)** — bio blurb only (philosophy, focus areas, personal interests).
+- **Experience (`/experience`)** — Experience timeline + Tools/Skills, combined on one page (moved off the homepage per Jianan's request).
+- **Contact** — footer section only (email + LinkedIn), no standalone page.
+
+Nav (persistent across all pages): Logo (→ Home) / About / Works / Experience
 
 ## Visual & Tech Direction
 

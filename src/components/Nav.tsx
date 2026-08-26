@@ -1,18 +1,26 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
+  { href: "/work", label: "Works" },
+  { href: "/experience", label: "Experience" },
 ];
 
 export default function Nav() {
+  const pathname = usePathname();
+  const onCover = pathname === "/";
+
   return (
     <header className="w-full">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6 sm:px-10">
         <Link
           href="/"
-          className="font-heading text-lg font-semibold text-plum"
+          className={`font-heading text-lg font-semibold ${
+            onCover ? "text-white" : "text-plum"
+          }`}
         >
           Jianan Meng
         </Link>
@@ -21,7 +29,11 @@ export default function Nav() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-plum/80 transition-colors hover:text-plum"
+                className={
+                  onCover
+                    ? "text-white/80 transition-colors hover:text-white"
+                    : "text-plum/80 transition-colors hover:text-plum"
+                }
               >
                 {link.label}
               </Link>
