@@ -135,7 +135,7 @@ function PolaroidCard({
       <div className="w-[clamp(220px,24vw,320px)] rounded-sm bg-white p-3 pb-5 shadow-[0_18px_30px_-12px_rgba(69,59,74,0.4)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-0">
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
           <Image
-            src={`/work/${study.slug}.jpg`}
+            src={`/work/${study.slug}.png`}
             alt={`${study.title} preview`}
             fill
             className="object-cover"
