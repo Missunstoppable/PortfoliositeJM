@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-10 pb-28">
       {/* Hero */}
-      <section className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-6 px-6 pt-6 sm:px-10 sm:pt-10 md:flex-row md:justify-between">
+      <section className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-6 px-6 pt-6 sm:px-10 sm:pt-10 md:flex-row md:items-start md:justify-between">
         <div className="flex max-w-xl flex-col gap-4 text-center md:text-left">
           <p className="font-heading text-sm font-semibold uppercase tracking-wide text-plum/60">
             Product Designer · UX Designer
