@@ -6,17 +6,22 @@ Jianan wants a new UX/Product Designer portfolio site to replace/rebuild their c
 
 ## Site Structure (multi-page, top nav)
 
-**Update:** the homepage is now a book-cover interaction, not a scrolling content page. Structure revised as follows:
+**Update:** the book-cover idea was tried and then dropped. The homepage is back to a single scrolling page, with the case study previews reworked into a horizontal-scroll "hanging polaroids" section. Current structure:
 
-- **Home (`/`)** — Book cover only: avatar, name, tagline, "Product Designer" label, on a lavender jacket background matching Jianan's theme swatch. Clicking/tapping triggers a hinge-flip animation, then navigates to `/contents`.
-- **Contents (`/contents`)** — The "opened book" landing page: a table-of-contents list linking to Selected Work, About Me, and Experience & Skills, plus the Why Hire Me pitch and footer/contact.
-- **Work (`/work`)** — index of all case studies; links out to full pages.
+- **Home (`/`)** — single scrolling page:
+  - Hero: avatar illustration, name, title, one-line tagline
+  - Selected work: 5 case studies shown as polaroid photos that appear to hang from a line, each at a slightly different height (lower toward the middle, like a sagging string) and a slight rotation. While this section is in view, vertical scroll input drives a horizontal scroll through all 5 cards (pinned/sticky section); once the last card is reached, normal vertical scrolling resumes. Each card is clickable, linking to its full case study page. Falls back to a plain horizontally-scrollable strip when `prefers-reduced-motion` is set.
+  - Tools & skills
+  - Experience (timeline)
+  - Why Hire Me
+- **Work (`/work`)** — index of all case studies (grid of cards); links out to full pages.
 - **Case study pages (`/work/[slug]`)** (5, one per project) — full narrative: role/timeframe, problem/context, process/approach, outcome/metrics.
 - **About (`/about`)** — bio blurb only (philosophy, focus areas, personal interests).
-- **Experience (`/experience`)** — Experience timeline + Tools/Skills, combined on one page (moved off the homepage per Jianan's request).
 - **Contact** — footer section only (email + LinkedIn), no standalone page.
 
-Nav (persistent across all pages): Logo (→ Home) / About / Works / Experience
+Nav (persistent across all pages): Logo (→ Home) / Home / Work / About
+
+(Note: an earlier iteration tried a book-cover hero with a separate `/contents` and `/experience` page — this was reverted per Jianan's follow-up request and those routes were removed.)
 
 ## Visual & Tech Direction
 

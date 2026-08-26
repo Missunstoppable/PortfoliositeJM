@@ -46,13 +46,3 @@ body > * {
   position: relative;
   z-index: 1;
 }
-
-/* Book-cover route: swap the paper background for the lavender jacket color */
-body.cover-mode {
-  background: var(--lavender);
-}
-
-body.cover-mode::before {
-  opacity: 0.6;
-  mix-blend-mode: soft-light;
-}
