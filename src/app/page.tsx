@@ -20,17 +20,15 @@ export default function Home() {
             experiences.
           </p>
         </div>
-        <div className="relative flex h-40 w-40 shrink-0 items-center justify-center rounded-3xl bg-lavender-soft p-3 sm:h-48 sm:w-48">
-          <div className="relative h-full w-full">
-            <Image
-              src="/hero-avatar.png"
-              alt="Illustrated portrait of Jianan Meng"
-              fill
-              className="object-contain"
-              priority
-              sizes="192px"
-            />
-          </div>
+        <div className="relative h-64 w-64 shrink-0 sm:h-80 sm:w-80">
+          <Image
+            src="/hero-avatar.png"
+            alt="Illustrated portrait of Jianan Meng"
+            fill
+            className="object-contain"
+            priority
+            sizes="320px"
+          />
         </div>
       </section>
 
