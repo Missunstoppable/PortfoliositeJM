@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Quicksand, Lato } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -16,10 +17,31 @@ const lato = Lato({
   weight: ["300", "400", "700"],
 });
 
+const title = "Jianan Meng — Product Designer";
+const description =
+  "Product Designer turning complex journeys into clear, simple, measurable and ultimately HUMAN product experiences.";
+
 export const metadata: Metadata = {
-  title: "Jianan Meng — Product Designer",
-  description:
-    "Product Designer turning complex journeys into clear, simple, measurable and ultimately HUMAN product experiences.",
+  metadataBase: new URL("https://jiananmeng.design"),
+  title: {
+    default: title,
+    template: "%s — Jianan Meng",
+  },
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+};
+
+export const viewport = {
+  themeColor: "#faf6f1",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -32,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

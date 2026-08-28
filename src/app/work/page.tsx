@@ -3,7 +3,7 @@ import { caseStudies } from "@/data/caseStudies";
 import CaseStudyCard from "@/components/CaseStudyCard";
 
 export const metadata: Metadata = {
-  title: "Work — Jianan Meng",
+  title: "Work",
 };
 
 export default function WorkPage() {
