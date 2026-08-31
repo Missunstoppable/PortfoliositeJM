@@ -22,6 +22,8 @@ const OSDIRE_CONTENT = `
 
 **Osdire · Freelance Marketplace**
 
+[HERO IMAGE]
+
 Osdire had built a supply of freelancers before actively growing the buyer side of its marketplace. By the time buyer acquisition started, however, many of those freelancers had become inactive.
 
 That created a classic marketplace problem:
@@ -493,6 +495,8 @@ const QUABBLE_CONTENT = `
 
 **Quabble · Mental Wellness Mobile App**
 
+[HERO IMAGE]
+
 Quabble helps people build mental wellness into everyday life through short, playful mental workouts.
 
 The product already had a distinctive visual identity and a growing library of content. The bigger challenge was helping users understand **why they should come back — and experience that value early enough to form a routine.**
@@ -911,6 +915,8 @@ const MUDE_CONTENT = `
 # Designing a bedtime app that wants you to put your phone down
 
 ## Mude — a behavioural design exploration into bedtime procrastination
+
+[HERO IMAGE]
 
 We've probably all done it.
 
@@ -1370,6 +1376,8 @@ const FAMCOOK_CONTENT = `
 ## Designing a shared cooking experience around different diets, skills and very busy hands
 
 **FamCook · Self-initiated product concept**
+
+[HERO IMAGE]
 
 Cooking together sounds simple.
 
@@ -1897,6 +1905,8 @@ const SPIRA9_CONTENT = `
 ## Reimagining Spira9's digital presence as both a conversion website and a showcase for its AI website builder
 
 **Spira9 · Digital Marketing & AI Website Builder**
+
+[HERO IMAGE]
 
 Spira9 needed a new website for two reasons.
 

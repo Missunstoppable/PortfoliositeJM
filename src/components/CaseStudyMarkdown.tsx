@@ -27,6 +27,28 @@ const components: Components = {
   ),
   p: ({ children }) => {
     const text = textOf(children).trim();
+
+    if (text === "[HERO IMAGE]") {
+      return (
+        <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-plum/25 bg-white/40 text-plum/40">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="M21 15l-5-5L5 21" />
+          </svg>
+          <span className="text-sm italic">Add hero image</span>
+        </div>
+      );
+    }
+
     const isPlaceholder = /^\[.*\]$/.test(text);
     if (isPlaceholder) {
       return (
