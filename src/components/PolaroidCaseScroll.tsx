@@ -150,9 +150,11 @@ function PolaroidCard({
         <p className="mt-3 text-center font-heading text-sm font-semibold text-plum">
           {study.subtitle}
         </p>
-        <p className="mt-1 text-center text-xs text-plum/60">
-          {study.metricsPreview}
-        </p>
+        {study.metricsPreview && (
+          <p className="mt-1 text-center text-xs text-plum/60">
+            {study.metricsPreview}
+          </p>
+        )}
       </div>
     </Link>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy } from "@/data/caseStudies";
+import CaseStudyMarkdown from "@/components/CaseStudyMarkdown";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -26,6 +27,20 @@ export default async function CaseStudyPage({
   const study = getCaseStudy(slug);
   if (!study) notFound();
 
+  if (study.content) {
+    return (
+      <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
+        <Link
+          href="/work"
+          className="w-fit text-sm font-medium text-plum/60 transition-colors hover:text-plum"
+        >
+          ← Back to work
+        </Link>
+        <CaseStudyMarkdown content={study.content} />
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
       <Link
@@ -42,9 +57,11 @@ export default async function CaseStudyPage({
         <p className="text-lg text-plum/80">{study.subtitle}</p>
         <p className="text-sm text-plum/60">{study.role}</p>
         {study.meta && <p className="text-sm text-plum/50">{study.meta}</p>}
-        <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-4 py-1.5 text-sm font-medium text-plum">
-          {study.metricsPreview}
-        </span>
+        {study.metricsPreview && (
+          <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-4 py-1.5 text-sm font-medium text-plum">
+            {study.metricsPreview}
+          </span>
+        )}
       </header>
 
       <section className="flex flex-col gap-3">
@@ -59,7 +76,7 @@ export default async function CaseStudyPage({
           Process &amp; approach
         </h2>
         <ul className="flex flex-col gap-3">
-          {study.process.map((step, i) => (
+          {study.process?.map((step, i) => (
             <li
               key={i}
               className="flex gap-3 leading-relaxed text-plum/80"

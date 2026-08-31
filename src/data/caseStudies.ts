@@ -5,11 +5,486 @@ export type CaseStudy = {
   role: string;
   meta?: string;
   summary: string;
-  metricsPreview: string;
-  problem: string;
-  process: string[];
-  outcome: string;
+  metricsPreview?: string;
+  // Rich case studies (full markdown, replaces problem/process/outcome
+  // entirely on the detail page) set `content`. Older, simpler case
+  // studies still use the structured fields below.
+  content?: string;
+  problem?: string;
+  process?: string[];
+  outcome?: string;
 };
+
+const OSDIRE_CONTENT = `
+# Reactivating a two-sided marketplace
+
+## Designing the journey from "I need something done" to a successful freelancer hire
+
+**Osdire · Freelance Marketplace**
+
+Osdire had built a supply of freelancers before actively growing the buyer side of its marketplace. By the time buyer acquisition started, however, many of those freelancers had become inactive.
+
+That created a classic marketplace problem:
+
+**How might we make new buyer demand easy to act on — so buyers receive meaningful responses and freelancers have a reason to return?**
+
+I designed the end-to-end experience connecting **project creation → freelancer response → negotiation → payment**, rather than treating project posting as an isolated form.
+
+**Role**
+Product Designer
+
+**I owned**
+Journey mapping · User flows · Interaction design · UI design · Prototyping · Product specifications · Design handoff
+
+**Worked with**
+Project Manager · Backend Lead · Engineering · QA
+
+**Timeline**
+[Add actual project timeline here]
+
+---
+
+# The problem wasn't really the form
+
+At first glance, the task was straightforward:
+
+> Help buyers post projects.
+
+But an easier posting form wouldn't solve the underlying marketplace problem.
+
+Many buyers knew **what outcome they wanted**, but didn't necessarily know how to turn that into a freelancer-ready brief.
+
+At the same time, freelancers needed enough information to quickly answer:
+
+- Is this project relevant to me?
+- Is the budget worth my time?
+- Can I deliver what this buyer needs?
+- Is it worth spending credits to submit an offer?
+
+A vague project might technically count as a successful post, but if no relevant freelancer responded, **neither side experienced value**.
+
+So I reframed the challenge:
+
+### Instead of optimising for projects posted, optimise for meaningful buyer–freelancer interactions.
+
+---
+
+# Two users. One marketplace loop.
+
+The experience needed to create value for both sides at the same time.
+
+### For buyers
+
+**Goal:** Find someone capable of delivering the outcome they need.
+
+They needed to:
+
+Describe an idea → turn it into a useful brief → receive relevant offers → compare options → agree terms → hire.
+
+### For freelancers
+
+**Goal:** Find opportunities worth pursuing.
+
+They needed to:
+
+Discover a project → judge fit quickly → understand requirements → make a tailored offer → negotiate → win work.
+
+### The product opportunity
+
+The clearer and more actionable buyer demand became, the easier it became for the right freelancer to respond.
+
+That created the loop I wanted the experience to support:
+
+**Clear demand → relevant response → confident negotiation → purchase → marketplace value**
+
+> **Design principle:** A project isn't valuable because it was published. It's valuable when somebody relevant can act on it.
+
+---
+
+# What success would look like
+
+Instead of using registrations, logins or page views as the primary measure of success, I wanted measurement to reflect **value exchanged between both sides of the marketplace**.
+
+### North Star
+
+**Weekly purchased custom offers**
+
+The number of freelancer offers accepted and successfully paid for each week.
+
+### Two signals I'd watch closely
+
+**Project response rate**
+How many published projects receive at least one relevant offer within 48 hours?
+
+**Project-to-purchase conversion**
+How many published projects eventually become paid work?
+
+Together, these tell us whether we're simply creating more activity — or actually improving marketplace liquidity.
+
+---
+
+# Designing the journey
+
+Working with the Project Manager and Backend Lead, I mapped how actions on one side of the marketplace affected the other.
+
+### Buyer
+
+Draft → Register → Publish → Receive offers → Negotiate → Accept → Pay
+
+### Freelancer
+
+Discover → Assess fit → Create offer → Top up credits if needed → Submit → Negotiate → Receive order
+
+This uncovered something important:
+
+**Project posting was only the beginning of a much larger transaction system.**
+
+The information collected from buyers also needed to support search, filtering, freelancer decision-making, offers, negotiation, payment and eventually order creation.
+
+That changed how I approached the design.
+
+[SHOW JOURNEY / SYSTEM MAP HERE]
+
+---
+
+# Decision 01
+
+## Start with intent, not an intimidating form
+
+A buyer arriving on the platform might have a perfectly clear goal:
+
+> "I need someone to redesign my website."
+
+What they may *not* have is a perfectly written scope, list of deliverables, required skills and project specification.
+
+Starting with a large form would make the buyer do all of that translation themselves.
+
+So I started with one simple question:
+
+### "What do you need to get done?"
+
+From there, buyers could either write the project themselves or use AI to generate a starting brief.
+
+The generated content remained completely editable.
+
+### Why?
+
+I wanted AI to reduce the **blank-page problem**, not take control away from the user.
+
+The buyer still decides what is accurate, what matters and what eventually gets published.
+
+**Trade-off**
+
+AI could accelerate project creation, but generated requirements could also be inaccurate or overly generic.
+
+So instead of automatically publishing AI output, I treated it as **draft assistance**.
+
+[SHOW FIRST-STEP → GENERATED-DRAFT SCREENS HERE]
+
+---
+
+# Decision 02
+
+## Give buyers value before asking them to register
+
+One of the biggest decisions was **when to introduce the sign-up wall**.
+
+The easiest implementation would have been:
+
+**Register → create project → publish**
+
+But that asks someone to make a commitment before they've experienced any value.
+
+Instead, I designed:
+
+**Describe need → build project → register → publish**
+
+Visitors could see their rough idea turn into something that looked like a credible freelancer brief before being asked to create an account.
+
+Registration then had a clear purpose:
+
+### "Your project is ready. Create an account to publish it."
+
+rather than:
+
+### "Create an account before we'll show you anything."
+
+**Hypothesis**
+
+Showing value first should increase the proportion of visitors who progress from starting a project to publishing one.
+
+**What I'd measure**
+
+Draft → registration conversion
+Registration abandonment
+Registration → publication conversion
+Overall visitor → publication conversion
+
+[SHOW THE SIGN-UP POINT IN THE FLOW HERE]
+
+---
+
+# Decision 03
+
+## Structure the brief for the person on the other side
+
+A completely free-form project description gives buyers flexibility.
+
+But it creates a problem for freelancers.
+
+Important information can be missing, buried or inconsistent — making opportunities difficult to compare and eventually making matching and filtering harder for the platform.
+
+So I structured the brief around three questions:
+
+### What needs to be done?
+
+The project's goal and context.
+
+### What does delivery look like?
+
+Budget · timeframe · deliverables.
+
+### Who is right for the job?
+
+Skills · expertise · experience.
+
+Where consistency mattered, I used structured inputs such as predefined skills, deliverables and budget ranges.
+
+Where context mattered, I kept room for natural language.
+
+### The trade-off
+
+**Too little structure:** easy for buyers, harder for freelancers and matching.
+
+**Too much structure:** better data, exhausting project creation.
+
+The design therefore progressively introduced structure only where it helped the marketplace make a better match.
+
+[SHOW ANNOTATED PROJECT-BRIEF SCREEN HERE]
+
+---
+
+# Decision 04
+
+## An offer isn't an order
+
+Freelance work rarely works like adding a fixed product to a shopping basket.
+
+Scope changes.
+
+Timelines change.
+
+Prices change.
+
+Questions need answering.
+
+So rather than forcing buyers directly from an offer into checkout, I designed **custom offers as negotiable objects**.
+
+A freelancer could propose:
+
+- Scope
+- Price
+- Delivery timeframe
+- Deliverables
+- A message explaining their approach
+
+The buyer could then discuss the proposal before committing.
+
+This sounds like a UI decision, but it quickly became a **system-design problem**.
+
+Working with the Backend Lead and Engineering, we needed clear definitions for:
+
+**Project → Offer → Revised offer → Accepted offer → Payment → Order**
+
+Each state changed what the buyer could do, what the freelancer could do and what the system needed to store.
+
+That collaboration helped turn an ambiguous interaction into a transaction model Engineering could reliably build.
+
+[SHOW OFFER + NEGOTIATION + ORDER STATES]
+
+---
+
+# Decision 05
+
+## Keep credit purchasing in the context of the freelancer's goal
+
+Freelancers needed credits to submit custom offers.
+
+That could easily become a disconnected ecommerce journey:
+
+> You don't have enough credits → go buy credits → somehow find your way back.
+
+Instead, I kept credit top-up within the offer journey.
+
+The context remained clear:
+
+**You're buying credits because you're trying to submit this offer.**
+
+After topping up, the freelancer could continue towards the original goal instead of restarting the journey.
+
+More importantly, I wouldn't consider **credit purchases** success on their own.
+
+If people buy credits but don't submit relevant offers or win work, we've monetised friction rather than created marketplace value.
+
+So I treated top-up completion as an intermediate signal, with **offer submission and eventual transactions** as the outcomes that mattered.
+
+[SHOW CREDIT TOP-UP SCREEN HERE]
+
+---
+
+# A product decision I made testable
+
+## Should buyers negotiate with everyone?
+
+Giving buyers unlimited choice sounds positive.
+
+But more choice isn't always better.
+
+If a buyer received many offers, simultaneously negotiating with everyone could create cognitive load, slower decisions and abandoned projects.
+
+So I explored limiting the number of active negotiations.
+
+### Hypothesis
+
+A reasonable limit could help buyers focus on their strongest candidates and reduce time to purchase.
+
+### But there was a risk
+
+Restricting comparison too aggressively might reduce buyer confidence and make the marketplace feel controlling.
+
+Rather than treating either opinion as correct, I framed it as an experiment.
+
+I would compare capped and uncapped experiences using:
+
+**Negotiation → purchase conversion**
+**Time to purchase**
+**Abandonment after reaching the limit**
+**Average negotiations before purchase**
+
+And I would segment the result by factors such as project value, number of offers received and new vs returning buyers.
+
+The goal wasn't to prove the limit worked.
+
+It was to find the point where **decision support stopped becoming decision restriction**.
+
+---
+
+# The final experience
+
+The final design connected:
+
+**Project idea**
+
+↓
+**Structured brief**
+
+↓
+**Registration & publication**
+
+↓
+**Freelancer discovery**
+
+↓
+**Custom offer**
+
+↓
+**Credit top-up**
+
+↓
+**Negotiation**
+
+↓
+**Acceptance & payment**
+
+↓
+**Order**
+
+Instead of optimising one screen at a time, I designed the flow as a connected marketplace system.
+
+[USE YOUR STRONGEST FINAL MOCKUPS HERE]
+
+---
+
+# What I delivered
+
+I delivered a developer-ready experience spanning both buyer and freelancer journeys, including:
+
+Project creation and publishing · delayed registration · structured project requirements · custom offers · freelancer credit top-ups · negotiation · payment · transaction states · specifications and handoff.
+
+I also worked with Product and Engineering to make the underlying states and dependencies explicit, so the experience could operate consistently beyond the visible UI.
+
+### The bigger outcome
+
+The project shifted the design focus from:
+
+**"How do we get buyers to post?"**
+
+to:
+
+**"How do we increase the likelihood that buyer demand turns into a meaningful transaction?"**
+
+That distinction shaped everything from the information architecture to the metrics I would use to evaluate the product.
+
+---
+
+# What I'd measure after launch
+
+The most useful funnel would be:
+
+**Project started**
+
+→ Project completed
+→ Account created
+→ Project published
+→ First relevant offer
+→ Negotiation started
+→ Offer accepted
+→ Payment completed
+
+I would pay particular attention to:
+
+### Time to first relevant offer
+
+Because a buyer who waits too long may lose confidence before the marketplace demonstrates value.
+
+### Projects receiving no relevant offers
+
+Because publication without supply-side response is a marketplace failure, even if the buyer flow converted successfully.
+
+### Project-to-purchase conversion
+
+Because this shows whether activity eventually becomes value for both the user and the business.
+
+---
+
+# What I learned
+
+## In a marketplace, one user's activation depends on another user's behaviour.
+
+This project changed how I think about engagement.
+
+A buyer publishing a project looks like activation.
+
+A freelancer logging in looks like activation.
+
+Neither means very much if the two never successfully interact.
+
+The more meaningful unit of value was the **connection between them**.
+
+It also reinforced something I now carry into other product work:
+
+### Define the behaviour you're trying to change before designing the screen.
+
+Once I knew the experience needed to increase relevant buyer–freelancer interactions, individual decisions became easier to evaluate.
+
+Delaying registration wasn't just "better UX."
+
+Structured briefs weren't just "cleaner forms."
+
+Negotiation limits weren't just "simplification."
+
+Each became a hypothesis about how design could move users closer to mutual value.
+`;
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -20,18 +495,7 @@ export const caseStudies: CaseStudy[] = [
     meta: "Collaborators: PM, Backend Lead, Engineering, QA · Scope: Journey mapping, user flows, interaction design, UI design, prototyping, product specs & handoff",
     summary:
       "End-to-end experience for project drafting, registration, offers, and purchases.",
-    metricsPreview: "Weekly Signup ↑23% · Engagement ↑37%",
-    problem:
-      "Osdire faced a marketplace-liquidity problem — supply-side (freelancer) growth outpaced buyer acquisition, leaving freelancers inactive, buyers facing slow responses, and trust eroding. The core friction: buyers struggled converting goals into clear briefs from a blank form, and vague requirements hurt freelancer assessment and offer quality.",
-    process: [
-      "Reduced startup effort — the flow opens with \"What do you need to get done?\"; buyers draft briefs manually or from editable AI-generated starting points.",
-      "Structured briefs around three questions: scope, budget/timeframe/deliverables, and required skills/experience.",
-      "Delayed registration until after drafting, to demonstrate value before requiring commitment.",
-      "Connected credits to offers — freelancers top up credits before submitting tailored offers (scope, price, timeframe, messaging).",
-      "Added negotiation states allowing clarification before offers became orders, with testable limits on simultaneous negotiations.",
-    ],
-    outcome:
-      "North star metric: weekly purchased custom offers, tracked alongside project-to-purchase conversion and 48-hour response rate. The final design unified drafting, registration, publishing, discovery, offers, credit purchasing, negotiation, and payment into one developer-ready journey — treating project posting as the start of a marketplace interaction, not an isolated form. Result: Weekly Signup ↑23%, User Engagement ↑37%.",
+    content: OSDIRE_CONTENT,
   },
   {
     slug: "quabble",

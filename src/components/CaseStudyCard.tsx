@@ -12,9 +12,11 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
       </span>
       <span className="text-sm text-plum/80">{study.subtitle}</span>
       <span className="text-sm text-plum/60">{study.summary}</span>
-      <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-3 py-1 text-xs font-medium text-plum">
-        {study.metricsPreview}
-      </span>
+      {study.metricsPreview && (
+        <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-3 py-1 text-xs font-medium text-plum">
+          {study.metricsPreview}
+        </span>
+      )}
       <span className="mt-1 text-sm font-medium text-plum/70 group-hover:text-plum">
         View case study →
       </span>
