@@ -215,10 +215,10 @@ Showing value first should increase the proportion of visitors who progress from
 
 **What I'd measure**
 
-Draft → registration conversion
-Registration abandonment
-Registration → publication conversion
-Overall visitor → publication conversion
+- Draft → registration conversion
+- Registration abandonment
+- Registration → publication conversion
+- Overall visitor → publication conversion
 
 [SHOW THE SIGN-UP POINT IN THE FLOW HERE]
 
@@ -356,10 +356,10 @@ Rather than treating either opinion as correct, I framed it as an experiment.
 
 I would compare capped and uncapped experiences using:
 
-**Negotiation → purchase conversion**
-**Time to purchase**
-**Abandonment after reaching the limit**
-**Average negotiations before purchase**
+- **Negotiation → purchase conversion**
+- **Time to purchase**
+- **Abandonment after reaching the limit**
+- **Average negotiations before purchase**
 
 And I would segment the result by factors such as project value, number of offers received and new vs returning buyers.
 
@@ -486,6 +486,427 @@ Negotiation limits weren't just "simplification."
 Each became a hypothesis about how design could move users closer to mutual value.
 `;
 
+const QUABBLE_CONTENT = `
+# Helping users reach the value of mental wellness sooner
+
+## Improving activation and retention for Quabble's daily mental wellness experience
+
+**Quabble · Mental Wellness Mobile App**
+
+Quabble helps people build mental wellness into everyday life through short, playful mental workouts.
+
+The product already had a distinctive visual identity and a growing library of content. The bigger challenge was helping users understand **why they should come back — and experience that value early enough to form a routine.**
+
+I initially joined the project through a UX audit. That work developed into a broader collaboration across **activation, onboarding, paywall experience, engagement and retention**.
+
+The question became:
+
+### How might we help users experience a meaningful mental workout sooner — and make coming back feel worth it?
+
+---
+
+## My role
+
+**Product / UX Designer**
+
+I worked across:
+
+UX audit · User research · Product discovery · Journey analysis · Onboarding · Paywall UX · Interaction design · Growth experiments · UX QA
+
+**Collaborated with**
+
+Head of Product · CEO · Engineering · Marketing
+
+**Timeline**
+
+Initial UX audit: 2 weeks
+
+Ongoing product collaboration: approximately 1 year
+
+---
+
+# The real problem wasn't visual design
+
+Quabble already looked good.
+
+The issue was that visual quality alone didn't guarantee that users understood:
+
+- what a "mental workout" was,
+- where to start,
+- how Quabble fitted into their daily life,
+- or why they should return tomorrow.
+
+At the time, **activation was a major product focus**.
+
+The team was looking closely at:
+
+### Time to first workout completed
+
+because completing a workout represented the first point where a new user could experience the product's core value.
+
+That changed how I approached the work.
+
+Instead of asking:
+
+**"Where are the usability issues?"**
+
+I started asking:
+
+**"What is preventing someone from reaching the meaningful part of the product?"**
+
+---
+
+# From UX friction to product behaviour
+
+I started with a screen-by-screen heuristic audit, reviewing usability, hierarchy, navigation, interaction patterns and clarity.
+
+But rather than treating every usability issue equally, I grouped findings according to the behaviour they might affect.
+
+### Discover
+
+Can a new user understand what Quabble offers?
+
+### Start
+
+Can they confidently choose and begin a mental workout?
+
+### Experience value
+
+Do they understand what they're getting from completing it?
+
+### Return
+
+Does the product give them a reason to make mental wellness part of their routine?
+
+This helped turn a long list of interface issues into **product priorities**.
+
+[SHOW YOUR AUDIT / PRIORITISATION VISUAL HERE]
+
+---
+
+# Decision 01
+
+## Prioritise the path to the first meaningful workout
+
+One of the most important things I learned from the project was that **registration isn't necessarily activation**.
+
+A user can download the app.
+
+Create an account.
+
+Browse several screens.
+
+And still never understand why the product matters.
+
+For Quabble, the more meaningful moment happened when someone actually completed a mental workout.
+
+So I started evaluating the experience around a simple question:
+
+### How much work does a new user have to do before experiencing Quabble?
+
+Anything standing between entry and that first meaningful experience needed to justify its existence.
+
+This influenced how I assessed:
+
+- onboarding,
+- content discovery,
+- calls to action,
+- navigation,
+- explanations,
+- and the sequence in which product information appeared.
+
+The goal wasn't simply to make onboarding shorter.
+
+It was to make the path to value **clearer**.
+
+[SHOW OLD JOURNEY → IMPROVED JOURNEY]
+
+---
+
+# Decision 02
+
+## Explain the value before asking users to commit
+
+Mental wellness is a difficult category because the benefit isn't always immediately tangible.
+
+"Do a mental workout every day" is a behaviour.
+
+But it doesn't yet explain **why I should care today**.
+
+So I explored how onboarding and the paywall could communicate Quabble's value earlier.
+
+Instead of focusing primarily on features, the experience needed to answer:
+
+### What will this help me with?
+
+### What does using Quabble actually feel like?
+
+### Why would I come back tomorrow?
+
+This meant surfacing the experience itself earlier and making the relationship between **small daily actions and longer-term wellbeing** easier to understand.
+
+I also explored the paywall as part of the user journey rather than an isolated conversion screen.
+
+A paywall should not be the first place where the product clearly explains why it is valuable.
+
+[SHOW ONBOARDING / PAYWALL ITERATIONS HERE]
+
+---
+
+# Decision 03
+
+## Make wellness feel like a journey, not a content library
+
+Another opportunity was helping users understand where individual workouts fitted into their broader wellness experience.
+
+A collection of exercises gives users choice.
+
+But choice alone doesn't create progress.
+
+So I explored ways to make the experience feel more like a **mental wellness journey** — helping users understand:
+
+- what they could do today,
+- how activities related to their goals,
+- what they had already completed,
+- and what they might do next.
+
+This shifted the experience away from:
+
+**"Here are some wellness activities."**
+
+towards:
+
+**"Here is something useful you can do for yourself today."**
+
+That distinction was important because habit-building depends on reducing the effort required to decide what to do next.
+
+[SHOW JOURNEY / ROUTINE / WORKOUT SCREENS]
+
+---
+
+# Decision 04
+
+## Bring the product into the user's daily routine
+
+Opening an app requires someone to remember that the app exists.
+
+That sounds obvious, but it becomes important when you're designing for habit formation.
+
+I explored a mobile widget that placed Quabble's daily experience directly on the phone's home screen.
+
+Rather than asking users to remember:
+
+> "I should open my wellness app today."
+
+the product could become an ambient reminder:
+
+### "Here's something small you can do for yourself right now."
+
+The widget therefore wasn't primarily a UI feature.
+
+It was a hypothesis about **retention and routine formation**.
+
+[SHOW WIDGET MOCKUP]
+
+---
+
+# Designing the experiment
+
+A potentially misleading way to evaluate the widget would have been:
+
+**Compare people who install the widget with people who don't.**
+
+But there was an obvious problem.
+
+Users were prompted inside Quabble to install the widget.
+
+That meant the people who chose to install it were likely already:
+
+- more engaged,
+- more curious about the product,
+- or more motivated to build a routine.
+
+If widget users subsequently completed more workouts, we couldn't confidently say the widget caused that behaviour.
+
+### Selection bias
+
+The more engaged users may simply have been more likely to install it in the first place.
+
+So I approached the feature as an experiment instead.
+
+For the initial test, traffic could be split among **paid users**, the segment the team was focused on delivering value for.
+
+### Control
+
+Existing experience.
+
+### Variant
+
+Widget experience / widget promotion.
+
+I would compare behaviours such as:
+
+**Workout completion frequency**
+
+**Return rate**
+
+**Time between workouts**
+
+**Daily routine participation**
+
+rather than simply measuring widget installs.
+
+Because:
+
+### Installing a feature isn't value. Using the product more meaningfully might be.
+
+[SHOW SIMPLE EXPERIMENT DIAGRAM]
+
+---
+
+# Understanding motivation beyond the interface
+
+As my involvement with Quabble expanded, I also worked on growth and user research beyond individual screens.
+
+I helped explore questions such as:
+
+### Who receives the most value from Quabble?
+
+### Why do some people continue while others disengage?
+
+### Which needs should the product prioritise?
+
+I worked on survey design to better understand different user groups and their motivations, and explored user stories as a way to make the community and benefits of mental wellness feel more relatable.
+
+This helped connect interface decisions with a broader product question:
+
+### What makes Quabble worth returning to?
+
+[SHOW SURVEY / INSIGHT VISUAL, NOT THE WHOLE RESEARCH DOCUMENT]
+
+---
+
+# What changed
+
+The initial audit was reviewed with Quabble's Head of Product and shared with the wider team for prioritisation.
+
+### 80%
+
+of my initial recommendations were taken onboard for consideration.
+
+### ~30%
+
+were implemented during subsequent product updates.
+
+More importantly, the project expanded beyond a one-off UX review.
+
+I went on to contribute to areas including:
+
+Onboarding · Paywall experience · Mental wellness journey · Engagement concepts · Retention widget · Growth research · UX QA
+
+The work changed how I thought about product design:
+
+### Fixing friction is useful.
+
+### Understanding the behaviour behind the friction is more powerful.
+
+---
+
+# Measuring success
+
+I wouldn't evaluate this work using one engagement number alone.
+
+I'd look at the user journey as a funnel:
+
+**App opened**
+
+→ Onboarding completed
+→ Workout discovered
+→ First workout started
+→ First workout completed
+→ Second workout completed
+→ Routine established
+
+And then ask where users are losing momentum.
+
+The metrics I'd pay particular attention to are:
+
+### Time to first workout completed
+
+How quickly does a new user experience the core product?
+
+### First → second workout conversion
+
+Did the first experience create enough value to bring them back?
+
+### Workout completion frequency
+
+Are users integrating Quabble into their routine?
+
+### Retention by behaviour
+
+Do users who complete workouts, use certain content or interact with routine features retain differently?
+
+These tell us much more than simply asking how many people opened the app.
+
+---
+
+# What I learned
+
+## Activation is the moment a user experiences value — not the moment the company acquires a user.
+
+This project changed the way I think about onboarding.
+
+A successful sign-up does not automatically mean someone understands a product.
+
+A completed onboarding flow doesn't either.
+
+For Quabble, I became much more interested in the moment when someone could genuinely think:
+
+### "Ah — this is what this product can do for me."
+
+That became a useful lens for evaluating everything from navigation to onboarding and retention.
+
+---
+
+## Product experiments need to separate correlation from causation
+
+The widget work also reinforced an important lesson about product data.
+
+If highly engaged users voluntarily adopt a feature, their higher engagement afterwards does not necessarily mean the feature caused it.
+
+Recognising that bias changed the question from:
+
+**"Do widget users engage more?"**
+
+to:
+
+**"Does introducing the widget cause users to engage differently?"**
+
+That is a small wording change, but a very different product question.
+
+---
+
+# If I continued this work
+
+I would focus next on understanding **what makes the first mental workout meaningful enough to create a second one**.
+
+I would segment retention by:
+
+- first workout type,
+- user motivation,
+- onboarding path,
+- frequency of early workouts,
+- subscription status,
+- and use of routine features.
+
+From there, I would test personalised next-workout recommendations and different ways of reinforcing progress.
+
+Not to maximise screen time.
+
+But to help users build a wellness routine that remains useful **without needing the app to demand their attention.**
+`;
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
@@ -501,22 +922,10 @@ export const caseStudies: CaseStudy[] = [
     slug: "quabble",
     title: "Quabble",
     subtitle: "Designing for engagement and sustainable growth",
-    role: "Product Marketer · UX Designer",
+    role: "Product / UX Designer",
     summary:
       "Guided activities and reflection tools for emotional habits, at a mental-wellness startup.",
-    metricsPreview: "Organic reach 3M+",
-    problem:
-      "Quabble needed to demonstrate value early to convert users to paid membership, while reducing reliance on costly acquisition channels — touching everything from onboarding friction to audience understanding to community-driven growth.",
-    process: [
-      "Ran a UX QA audit across the mobile app to identify usability issues.",
-      "Researched onboarding and monetization patterns across mental-wellness, journaling, healthcare, and AI companion products.",
-      "Designed an in-app survey examining user motivations, desired outcomes, valued features, and engagement preferences.",
-      "Redesigned onboarding to demonstrate value before the paywall.",
-      "Explored partnership-led growth via scholarship memberships and healthcare provider relationships.",
-      "Led \"Quabbler Stories,\" a YouTube series featuring real user experiences, and investigated LTV vs. CAC across channels.",
-    ],
-    outcome:
-      "The work produced a value-led onboarding approach, a refreshed audience understanding, clarified acquisition priorities, explored partnership channels, and community-driven storytelling for engagement and word-of-mouth growth — contributing to 3M+ organic reach.",
+    content: QUABBLE_CONTENT,
   },
   {
     slug: "mude",
