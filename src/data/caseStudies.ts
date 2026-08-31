@@ -1895,38 +1895,38 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
     title: "Osdire",
-    subtitle: "Reactivating a two-sided freelance marketplace",
+    subtitle: "Freelancers went quiet the moment buyers showed up",
     role: "Product Designer",
     meta: "Collaborators: PM, Backend Lead, Engineering, QA · Scope: Journey mapping, user flows, interaction design, UI design, prototyping, product specs & handoff",
     summary:
-      "End-to-end experience for project drafting, registration, offers, and purchases.",
+      "Rebuilding a stalled two-sided marketplace — from a blank project form to a real freelancer hire.",
     content: OSDIRE_CONTENT,
   },
   {
     slug: "quabble",
     title: "Quabble",
-    subtitle: "Designing for engagement and sustainable growth",
+    subtitle: "Registration isn't the same thing as activation",
     role: "Product / UX Designer",
     summary:
-      "Guided activities and reflection tools for emotional habits, at a mental-wellness startup.",
+      "A UX audit that grew into a year of work on onboarding, paywall and retention for a mental-wellness app.",
     content: QUABBLE_CONTENT,
   },
   {
     slug: "mude",
     title: "Mude",
-    subtitle: "A healthy bedtime routine, without the procrastination",
+    subtitle: "A bedtime app that wants you to put it down",
     role: "Product Designer / UX Researcher",
     summary:
-      "A behavioural design exploration into bedtime procrastination — helping people wind down and leave their phone.",
+      "Exploring how a phone product could help people wind down and actually leave their phone before bed.",
     content: MUDE_CONTENT,
   },
   {
     slug: "famcook",
     title: "FamCook",
-    subtitle: "Smoothing group cooking, from planning to plate",
+    subtitle: "When the group chat can't agree on dinner",
     role: "Product Designer / UX Researcher",
     summary:
-      "A self-initiated concept exploring how to make planning and cooking a shared meal easier — without losing the social part.",
+      "Designing a shared meal plan for friends with different diets, skills and very busy hands.",
     content: FAMCOOK_CONTENT,
   },
   {
