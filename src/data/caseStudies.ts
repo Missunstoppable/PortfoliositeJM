@@ -2350,7 +2350,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "mude",
     title: "Mude",
-    subtitle: "Designing a wind-down ritual to reduce bedtime procrastination",
+    subtitle: "A wind-down ritual to reduce bedtime procrastination",
     role: "Product Designer / UX Researcher",
     summary:
       "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
@@ -2359,7 +2359,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "famcook",
     title: "FamCook",
-    subtitle: "Designing a shared meal-planning product for group cooking",
+    subtitle: "A shared meal-planning product for group cooking",
     role: "Product Designer / UX Researcher",
     summary:
       "A self-initiated concept turning dietary chaos and an unanswered group chat into one shared plan, from decision to dinner.",
