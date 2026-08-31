@@ -1,8 +1,8 @@
 export const experience = [
   {
     role: "UX/Product Designer",
-    org: "Stealth Startup (Marketplace)",
-    dates: "Jun 2025–Present",
+    org: "Osdire",
+    dates: "Jun 2025–Jul 2026",
   },
   {
     role: "UX Designer / Product Marketing Manager",
