@@ -53,15 +53,23 @@ Nav (persistent across all pages): Logo (→ Home) / Home / Work / About
 
 ## About / Bio
 
-Jianan transitioned from education and QA roles into UX design and research, driven by interests in psychology, color theory, and language.
+**Final content (`src/data/content.ts` → `about`):**
 
-**Core philosophy:** "Tech should bring people together" — guides their approach to creating meaningful digital experiences that align business objectives with user needs.
+Hi, I'm Jianan — a Product Designer who enjoys turning messy problems into products that feel surprisingly simple.
 
-**Focus areas:** HealthTech, EdTech, Environment Tech, and technology serving social good.
+My route into design hasn't been completely linear. Before becoming a Product Designer, I worked across customer success, UX QA, product marketing and growth. It means I learned to understand products not only from the perspective of the person designing them, but also the people using them, selling them, supporting them and building them.
 
-**Personal interests:** Cafe exploration, fitness, writing, classic blues music, and time with loved ones.
+Today, I work across the full product design process — from discovery and research through to interaction design, testing, delivery and post-launch optimisation.
 
-**Skills foundation:** Combines data-driven insights with understanding of user behavior and product strategy.
+I'm particularly interested in the space where user needs, product strategy and data meet. I like asking what users are trying to accomplish, understanding what matters to the business, and finding the product experience that makes both sides work.
+
+I've worked on products including freelance marketplaces, mental-wellness experiences and early-stage digital platforms, often in environments where there isn't a perfectly defined brief waiting for me.
+
+And that's probably my favourite kind of problem.
+
+**Pull-quote (highlighted on the page):** "Give me an ambiguous challenge, some users to talk to, a few behavioural clues and a Figma file — and I'm very happy."
+
+Outside of designing interfaces, I'm increasingly interested in AI products, responsible technology and how emerging technology can solve meaningful human problems without creating ten new ones along the way.
 
 ## Experience (to live on Homepage)
 
@@ -74,17 +82,36 @@ Jianan transitioned from education and QA roles into UX design and research, dri
 
 ## Tools & Skills
 
-UX Design, UX Research, UI Design, Product Design, Design Systems, Workshops, Design Sprint, Inclusive Design, Accessibility, User-Centered Design, User Testing, Usability Testing, User Analytics, Leadership, Communication, Collaboration, Growth Mindset, Stakeholder Management
+Grouped into three categories on the homepage (`src/data/content.ts` → `skillGroups`):
+
+- **Product Design:** User Research, Product Discovery, UX Strategy, Journey Mapping, Information Architecture, Wireframing, Prototyping, Interaction Design, Usability Testing, Design Systems, Accessibility, UX QA
+- **Product Thinking:** Problem Framing, Hypothesis Building, MVP Definition, Feature Prioritisation, RICE, User Stories, Acceptance Criteria, Roadmapping, Experimentation, Agile Delivery
+- **Data & Optimisation:** Google Analytics, Microsoft Clarity, Funnel Analysis, Behavioural Insights, A/B Testing, North Star Metrics, Activation & Retention
 
 ## Why Hire Me
 
-I turn ambiguous, messy problems into shipped products that move real numbers. Across five projects — a two-sided marketplace, a mental wellness app, a lifestyle app, a co-cooking app, and a marketing website — the work consistently drove measurable outcomes: conversion up as much as 23%, task success up as much as 50%, and retention gains across the board.
+**Final content** (homepage, structured as intro → a short list of questions → outro → closing line):
 
-I work end-to-end: research, IA, wireframes, hi-fi UI, usability testing, and engineering handoff — so I can own a feature from an open question to a developer-ready spec. I've also worked product marketing angles (growth, LTV/CAC, onboarding-to-paid conversion), which means I design with business impact in mind, not just usability.
+I don't just make things look nice.
 
-My throughline is "tech should bring people together" — I care about accessibility and human-centered design as much as the metrics, which shows up in details like voice control for hands-free cooking or a distraction-free wind-down mode for sleep.
+Although I do, in fact, enjoy making things look nice.
 
-(Draft — Jianan to review/adjust tone before publishing.)
+I like figuring out why something should exist, who it should help, and whether it actually worked after we shipped it.
+
+I'm the designer who will happily jump between a Figma file, a user interview, an analytics dashboard and a Jira ticket without having an identity crisis.
+
+I ask a lot of questions — usually useful ones:
+
+- What problem are we actually solving?
+- What evidence do we have?
+- What's the simplest version worth building?
+- And what are users going to do when they inevitably ignore the button we thought was obvious?
+
+My background spans product design, UX research, growth experimentation, UX QA and customer-facing roles, so I tend to see products from more than one angle.
+
+I care about the tiny interaction that frustrates one user and the bigger product decision affecting thousands.
+
+**In short:** I design with users, think with product, collaborate with engineers, and keep one eye on the metrics.
 
 ## Contact
 

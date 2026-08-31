@@ -12,13 +12,15 @@ export default function AboutPage() {
         About me
       </h1>
       <div className="flex flex-col gap-6 text-lg leading-relaxed text-plum/80">
-        <p>{about.intro}</p>
+        {about.paragraphs.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
         <p className="rounded-2xl border border-plum/10 bg-white/50 p-6 text-plum">
-          {about.philosophy}
+          {about.pullQuote}
         </p>
-        <p>{about.focus}</p>
-        <p>{about.foundation}</p>
-        <p>{about.personal}</p>
+        {about.closingParagraphs.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
       </div>
     </div>
   );

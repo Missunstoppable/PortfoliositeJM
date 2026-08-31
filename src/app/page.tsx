@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { experience, skills, whyHireMe } from "@/data/content";
+import { experience, skillGroups, whyHireMe } from "@/data/content";
 import PolaroidCaseScroll from "@/components/PolaroidCaseScroll";
 
 export default function Home() {
@@ -39,18 +39,27 @@ export default function Home() {
 
       <div className="mx-auto mt-20 flex w-full max-w-5xl flex-col gap-28 px-6 sm:px-10">
         {/* Tools & skills */}
-        <section className="flex flex-col gap-6">
+        <section className="flex flex-col gap-10">
           <h2 className="font-heading text-2xl font-semibold text-plum">
             Tools &amp; skills
           </h2>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-plum/15 bg-white/60 px-4 py-1.5 text-sm text-plum/80"
-              >
-                {skill}
-              </span>
+          <div className="flex flex-col gap-8">
+            {skillGroups.map((group) => (
+              <div key={group.category} className="flex flex-col gap-3">
+                <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-plum/60">
+                  {group.category}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {group.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-plum/15 bg-white/60 px-4 py-1.5 text-sm text-plum/80"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
@@ -81,12 +90,40 @@ export default function Home() {
             {whyHireMe.heading}
           </h2>
           <div className="flex flex-col gap-4">
-            {whyHireMe.paragraphs.map((p, i) => (
+            {whyHireMe.intro.map((p, i) => (
               <p key={i} className="leading-relaxed text-plum/80">
                 {p}
               </p>
             ))}
           </div>
+
+          <div className="flex flex-col gap-3">
+            <p className="leading-relaxed text-plum/80">
+              {whyHireMe.questionsIntro}
+            </p>
+            <ul className="flex flex-col gap-2 border-l border-plum/15 pl-5">
+              {whyHireMe.questions.map((q, i) => (
+                <li key={i} className="leading-relaxed text-plum/80 italic">
+                  {q}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {whyHireMe.outro.map((p, i) => (
+              <p key={i} className="leading-relaxed text-plum/80">
+                {p}
+              </p>
+            ))}
+          </div>
+
+          <p className="leading-relaxed text-plum">
+            <span className="font-heading font-semibold">
+              {whyHireMe.closingLabel}
+            </span>{" "}
+            {whyHireMe.closing}
+          </p>
         </section>
       </div>
     </div>
