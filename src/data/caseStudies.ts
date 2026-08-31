@@ -2331,47 +2331,47 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
     title: "Osdire",
-    subtitle: "Freelancers went quiet the moment buyers showed up",
+    subtitle: "Redesigning the marketplace journey from project draft to freelancer hire",
     role: "Product Designer",
     meta: "Collaborators: PM, Backend Lead, Engineering, QA · Scope: Journey mapping, user flows, interaction design, UI design, prototyping, product specs & handoff",
     summary:
-      "Rebuilding a stalled two-sided marketplace — from a blank project form to a real freelancer hire.",
+      "Reactivating a stalled two-sided marketplace by rethinking how buyer demand and freelancer supply connect, end to end.",
     content: OSDIRE_CONTENT,
   },
   {
     slug: "quabble",
     title: "Quabble",
-    subtitle: "Registration isn't the same thing as activation",
+    subtitle: "Improving activation and retention for a mental-wellness app",
     role: "Product / UX Designer",
     summary:
-      "A UX audit that grew into a year of work on onboarding, paywall and retention for a mental-wellness app.",
+      "A UX audit that expanded into a year of onboarding, paywall and engagement work to help new users reach value sooner.",
     content: QUABBLE_CONTENT,
   },
   {
     slug: "mude",
     title: "Mude",
-    subtitle: "A bedtime app that wants you to put it down",
+    subtitle: "A behavioural product concept for bedtime procrastination",
     role: "Product Designer / UX Researcher",
     summary:
-      "Exploring how a phone product could help people wind down and actually leave their phone before bed.",
+      "Exploring how a wind-down ritual could help users disengage from their phone and follow through on their own bedtime intention.",
     content: MUDE_CONTENT,
   },
   {
     slug: "famcook",
     title: "FamCook",
-    subtitle: "When the group chat can't agree on dinner",
+    subtitle: "A shared meal-planning product for coordinating group cooking",
     role: "Product Designer / UX Researcher",
     summary:
-      "Designing a shared meal plan for friends with different diets, skills and very busy hands.",
+      "Turning scattered group-chat planning into a shared system — dietary needs, decisions and who's cooking what, in one place.",
     content: FAMCOOK_CONTENT,
   },
   {
     slug: "spira9",
     title: "Spira9",
-    subtitle: "Make it look custom. Don't make it too custom.",
+    subtitle: "A conversion website built inside its own AI website builder",
     role: "UX / UI Designer",
     summary:
-      "Designing a site that had to sell Spira9's AI website builder — while being built entirely inside it.",
+      "Redesigning Spira9's marketing site to sell its product while demonstrating what the product itself could build.",
     content: SPIRA9_CONTENT,
   },
 ];
