@@ -2350,28 +2350,28 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "mude",
     title: "Mude",
-    subtitle: "A behavioural product concept for bedtime procrastination",
+    subtitle: "Designing a wind-down ritual to reduce bedtime procrastination",
     role: "Product Designer / UX Researcher",
     summary:
-      "Exploring how a wind-down ritual could help users disengage from their phone and follow through on their own bedtime intention.",
+      "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
     content: MUDE_CONTENT,
   },
   {
     slug: "famcook",
     title: "FamCook",
-    subtitle: "A shared meal-planning product for coordinating group cooking",
+    subtitle: "Designing a shared meal-planning product for group cooking",
     role: "Product Designer / UX Researcher",
     summary:
-      "Turning scattered group-chat planning into a shared system — dietary needs, decisions and who's cooking what, in one place.",
+      "A self-initiated concept turning dietary chaos and an unanswered group chat into one shared plan, from decision to dinner.",
     content: FAMCOOK_CONTENT,
   },
   {
     slug: "spira9",
     title: "Spira9",
-    subtitle: "A conversion website built inside its own AI website builder",
+    subtitle: "Redesigning a conversion website built inside its own AI website builder",
     role: "UX / UI Designer",
     summary:
-      "Redesigning Spira9's marketing site to sell its product while demonstrating what the product itself could build.",
+      "A four-week client project selling Spira9's website-building platform by building the site entirely inside it.",
     content: SPIRA9_CONTENT,
   },
 ];
