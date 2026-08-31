@@ -1364,6 +1364,533 @@ Sometimes the best thing your product can help someone do is:
 ### leave.
 `;
 
+const FAMCOOK_CONTENT = `
+# From group-chat chaos to cooking together
+
+## Designing a shared cooking experience around different diets, skills and very busy hands
+
+**FamCook · Self-initiated product concept**
+
+Cooking together sounds simple.
+
+Pick a recipe. Buy some ingredients. Cook. Eat.
+
+Add eight friends, three dietary requirements, different cooking abilities and a group chat where nobody answers the actual question, and suddenly dinner starts looking suspiciously like project management.
+
+FamCook is a self-initiated concept exploring how digital products could make **planning and cooking a shared meal easier — without taking the social part out of it.**
+
+The challenge became:
+
+### How might we reduce the coordination around cooking together, so people can spend more time actually enjoying it?
+
+**Role**
+Product Designer / UX Researcher
+
+**Timeline**
+3 months
+
+**Research & methods**
+User interviews · Competitive analysis · Journey mapping · Prioritisation · Wireframing · Prototyping · Usability testing · Interaction design · Visual design
+
+---
+
+# The 30-second version
+
+### Problem
+
+Cooking together creates coordination work before anyone even reaches the kitchen: agreeing on dishes, accommodating dietary needs, planning ingredients and understanding who can do what.
+
+### Research insight
+
+Most of the friction participants described happened **before cooking**, while the problems during cooking were more about attention, coordination and differing levels of confidence.
+
+### Product decision
+
+Rather than building a giant cooking super-app, I focused FamCook around a shared meal plan that connects **decision-making, preparation and cooking**.
+
+### What testing changed
+
+Testing pushed me to reduce navigation, simplify the meal plan and rethink how information should be presented when users are actively cooking.
+
+### Biggest lesson
+
+The hardest part of this project wasn't generating ideas.
+
+It was deciding what **not** to build.
+
+---
+
+# Cooking was only half the problem
+
+I started by interviewing five people about how they cooked with partners, housemates, family members and groups of friends.
+
+The conversations uncovered problems throughout the journey.
+
+### Before cooking
+
+People had to:
+
+remember everyone's dietary requirements, agree on dishes, share ideas, buy the right ingredients, and coordinate the plan.
+
+### During cooking
+
+Different skill levels became more noticeable.
+
+Tasks were forgotten.
+
+People worked at different speeds.
+
+And when several dishes were happening simultaneously, the kitchen could become stressful surprisingly quickly.
+
+### Afterwards
+
+Even dinner wasn't quite the end.
+
+There might still be payment and cleanup to organise.
+
+The initial research gave me plenty of potential problems.
+
+Possibly too many.
+
+[SHOW RESEARCH THEMES / JOURNEY HERE]
+
+---
+
+# The first real design challenge
+
+## I had enough ideas to build five different apps
+
+My early exploration generated several possible directions.
+
+### A dietary profile
+
+A reusable profile containing allergies, preferences and dietary requirements.
+
+### A recipe generator
+
+Recommend meals based on the group, occasion, ingredients and restrictions.
+
+### A meal-planning space
+
+Help people propose dishes, discuss options and organise preparation.
+
+### A live co-cooking experience
+
+Coordinate people while multiple dishes are being prepared.
+
+All of them could solve genuine problems.
+
+Trying to build all of them would solve another problem:
+
+### how to create a very bloated product.
+
+So I evaluated the directions based on the research, usefulness across different cooking situations and feasibility within the project.
+
+I chose to concentrate on:
+
+## Shared planning + communication + coordinated cooking
+
+because it addressed several of the highest-frequency problems without requiring FamCook to become a recipe platform, social network and kitchen operating system simultaneously.
+
+[SHOW PRIORITISATION VISUAL]
+
+---
+
+# Decision 01
+
+## Don't build another group chat
+
+At first, communication looked like an obvious feature.
+
+People already organise meals through WhatsApp, Messenger and other group chats.
+
+So simply putting chat inside FamCook wouldn't create much value.
+
+The real problem was that **important decisions disappear inside conversation**.
+
+Someone suggests lasagne.
+
+Someone else says they're dairy-free.
+
+Three messages later somebody sends a meme.
+
+By tomorrow nobody remembers whether lasagne was actually agreed.
+
+So I designed the shared meal plan as the persistent layer above conversation.
+
+Instead of forcing users to search through messages, key information could stay visible:
+
+**What are we making?**
+
+**What still needs deciding?**
+
+**What do we need to buy?**
+
+**Who's doing what?**
+
+Conversation could support decisions without becoming the place where those decisions were stored.
+
+[SHOW CHAT + PINNED MEAL PLAN]
+
+---
+
+# Decision 02
+
+## Treat dietary information as group context, not someone's problem to remember
+
+Dietary requirements were one of the clearest planning frustrations from the interviews.
+
+In real life, responsibility often falls on one organiser:
+
+> "Was Sam vegetarian or vegan?"
+
+> "Who couldn't have nuts?"
+
+> "Can everyone eat this?"
+
+I didn't want the product to rely on one person's memory.
+
+FamCook therefore explored ways for dietary preferences and restrictions to become **shared context for the meal**.
+
+That information could influence the dishes being considered and help the group spot conflicts earlier — before ingredients had been purchased or cooking had started.
+
+The goal wasn't to replace proper allergen checking.
+
+It was to reduce avoidable coordination mistakes.
+
+[SHOW DIETARY PROFILE / MEAL PLAN CONNECTION]
+
+---
+
+# Decision 03
+
+## Help the group decide without forcing them to start with a recipe
+
+Another problem surfaced around the question:
+
+### "What should we cook?"
+
+Sometimes people know exactly what they want.
+
+Sometimes the conversation is:
+
+> "Something comforting?"
+
+> "Maybe Asian?"
+
+> "Not spicy."
+
+> "I've got mushrooms."
+
+A traditional recipe search assumes the user already knows what they're looking for.
+
+I explored several lower-effort inspiration entry points:
+
+### Mood
+
+What kind of food do we feel like eating?
+
+### Occasion
+
+What are we cooking for?
+
+### Snap
+
+What ingredients do we already have?
+
+The idea wasn't to create another giant recipe catalogue.
+
+It was to help a group move from **vague intention → viable meal idea** with less negotiation.
+
+[SHOW INSPIRATION SCREENS]
+
+---
+
+# Decision 04
+
+## Designing for someone holding a spatula is different
+
+The context changed dramatically once cooking started.
+
+Users aren't calmly sitting at a desk.
+
+They're reading instructions, handling ingredients, watching pans, talking to other people, moving around the kitchen, and possibly wondering why the rice is burning.
+
+That made **attention** one of the most important design constraints.
+
+Anything requiring precise taps, repeated scrolling or dense reading became more expensive during cooking.
+
+So I started treating the cooking interface as a different mode of use.
+
+### Bigger priorities.
+
+### Less information at once.
+
+### Clearer hierarchy.
+
+### Fewer interactions.
+
+I also considered hands-free interaction and voice controls because the problem isn't merely accessibility in the traditional sense.
+
+Sometimes the user literally has chicken on their hands.
+
+[SHOW COOKING MODE]
+
+---
+
+# Decision 05
+
+## One screen beat two
+
+My initial co-cooking interface divided information across a split-screen experience.
+
+On paper, it allowed more information to remain visible.
+
+During testing, however, the extra information increased complexity.
+
+So I changed the experience to a **single-screen cooking view**.
+
+Instead of maximising how much information was available, I prioritised what users needed **right now**.
+
+This became an important lesson in contextual interface design:
+
+### Information can be useful and still not deserve to be visible.
+
+When someone's attention is already divided, simplicity isn't just aesthetic.
+
+It's functional.
+
+[SHOW SPLIT SCREEN → SINGLE SCREEN]
+
+---
+
+# Testing the first model
+
+I tested the low-fidelity prototype with four participants.
+
+The sessions highlighted several areas where my first assumptions weren't working.
+
+Among the changes:
+
+### Navigation became more visible
+
+I replaced the hamburger-style navigation with more immediately accessible entry points.
+
+### The meal plan became simpler
+
+I removed the calendar because it added visual complexity without enough value.
+
+### Cooking became more focused
+
+The split-screen approach became a single-screen interface.
+
+### Inspiration became more flexible
+
+I expanded the ways users could discover dishes around mood and flavour rather than relying on conventional search alone.
+
+These weren't isolated UI tweaks.
+
+Together, they pushed the product towards **lower cognitive effort**.
+
+[SHOW FIRST ITERATION → SECOND ITERATION]
+
+---
+
+# Then I got uncomfortable feedback
+
+I presented the next iteration to eight design mentors through ADPList.
+
+A recurring piece of feedback was difficult but useful:
+
+### The concept worked better than the interface.
+
+The product was functional, but the mobile experience lacked consistency and didn't always follow familiar interaction patterns.
+
+My first instinct as a new designer had been to invent.
+
+That feedback reminded me that originality isn't automatically usability.
+
+So I revisited the design system, component behaviour, hierarchy and established mobile patterns.
+
+The goal became:
+
+### Innovate where the problem requires innovation.
+
+### Use familiar patterns everywhere else.
+
+[SHOW EARLY UI → FINAL UI]
+
+---
+
+# Decision 06
+
+## Don't make onboarding interrogate the user
+
+My early onboarding asked for information including budget.
+
+But after reconsidering what FamCook actually needed to create a useful group-cooking experience, budget wasn't one of the strongest inputs.
+
+Cooking confidence was.
+
+Knowing whether someone was comfortable cooking independently or needed more guidance could influence how tasks and instructions were presented later.
+
+So I replaced lower-value questions with information that could actually shape the experience.
+
+I also allowed people to finish profile details later rather than requiring everything upfront.
+
+The principle was:
+
+### If I'm asking the user for data, I should know what I'm going to do with it.
+
+[SHOW ONBOARDING ITERATION]
+
+---
+
+# The final concept
+
+FamCook became a connected experience across three stages.
+
+## 01 — Plan together
+
+Create a meal, invite people, understand dietary needs and turn suggestions into agreed dishes.
+
+## 02 — Prepare together
+
+Organise ingredients and responsibilities so everyone understands what needs to happen.
+
+## 03 — Cook together
+
+Present the information people need in a simpler, lower-attention interface while the meal is actually being prepared.
+
+The product doesn't try to replace conversation.
+
+It provides **structure around the parts of conversation that need to turn into action**.
+
+[SHOW STRONGEST FINAL SCREENS]
+
+---
+
+# What did I actually validate?
+
+FamCook was a concept project rather than a launched product.
+
+So I don't have production data showing increased retention, engagement or successful group meals.
+
+What I did validate was the **usability and direction of the interaction model**.
+
+Research helped identify where people experienced coordination friction.
+
+Prototype testing revealed where my first solution introduced new friction.
+
+And feedback led to meaningful changes in navigation, information density, interaction patterns and the cooking interface.
+
+That distinction matters.
+
+### Prototype testing can tell me whether people understand and can use the experience.
+
+### It cannot tell me whether FamCook would become a successful product.
+
+---
+
+# If FamCook were shipped, what would success mean?
+
+I wouldn't use general app engagement as the primary measure.
+
+The product exists to help groups successfully organise and cook meals.
+
+So I would start with a behavioural outcome such as:
+
+## Shared meals successfully completed
+
+A meal that progresses from planning into an agreed plan and completed cooking session.
+
+I would then examine:
+
+### Plan completion
+
+How often does a newly created meal reach an agreed set of dishes?
+
+### Decision time
+
+How long does it take a group to move from invitation to an agreed meal?
+
+### Dietary-conflict resolution
+
+How often are incompatible dish choices identified before the group reaches preparation?
+
+### Cooking-task completion
+
+Can groups successfully understand and complete assigned tasks during cooking?
+
+### Repeat group cooking
+
+Do groups choose to use FamCook again for another shared meal?
+
+The important thing isn't whether users spend more time inside FamCook.
+
+It's whether FamCook helps them spend **better time together outside it**.
+
+---
+
+# What I wouldn't build yet
+
+My original project generated ideas around:
+
+AI recipe generation, voice control, social discovery, profiles, wearables, ingredient recognition, personalised recommendations, payments, and deeper accessibility features.
+
+Some may eventually be valuable.
+
+But before adding them, I'd validate one much more fundamental behaviour:
+
+### Will groups actually use a shared meal plan instead of continuing to organise everything through their existing chat?
+
+If the answer is no, more features won't rescue the concept.
+
+I would test that assumption before significantly expanding the product.
+
+---
+
+# What I learned
+
+## Prioritisation is design.
+
+This was one of my earliest product-design projects, and my biggest mistake initially was believing that discovering more user problems meant I needed to design more solutions.
+
+Research gave me dozens of directions.
+
+The better product wasn't the one containing all of them.
+
+It was the one where the features reinforced the **same core behaviour**.
+
+---
+
+## Design for the context, not just the screen.
+
+FamCook also taught me to think differently about mobile interaction.
+
+A screen used while planning dinner on the sofa and a screen used while stirring a pan might run on the same phone.
+
+They don't have the same UX requirements.
+
+The user's physical environment, attention and ability to interact are part of the interface.
+
+---
+
+## Collaboration products need shared truth
+
+The communication problem wasn't a lack of messages.
+
+People already had plenty of ways to message each other.
+
+The problem was turning those conversations into something everyone could understand and act on.
+
+That insight became the most transferable lesson from the project:
+
+### When many people are coordinating one outcome, good UX isn't just communication.
+
+### It's creating a shared understanding of what happens next.
+`;
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
@@ -1397,22 +1924,10 @@ export const caseStudies: CaseStudy[] = [
     slug: "famcook",
     title: "FamCook",
     subtitle: "Smoothing group cooking, from planning to plate",
-    role: "UX Researcher · UX Designer · UI Designer",
-    meta: "Timeframe: 3 months · Self-initiated / course project",
+    role: "Product Designer / UX Researcher",
     summary:
-      "A co-cooking app that reduces friction in planning and preparation for group meals.",
-    metricsPreview: "Task Success ↑50% · Satisfaction ↑30%",
-    problem:
-      "How do you organize a group cooking session for friends with varying dietary needs and cooking skill levels? The research question: how might we design a collaborative cooking experience that reduces friction in planning and preparation, while fostering enjoyment and connection?",
-    process: [
-      "Conducted 5 user interviews on group meal organization, followed by affinity diagramming and competitive analysis.",
-      "Identified pain points across three stages: pre-cooking, during cooking, and post-cooking — including tracking dietary restrictions, selecting compatible dishes, and coordinating communication.",
-      "Generated wireframes using Crazy Eights, then built a lo-fi prototype and tested with 4 participants.",
-      "Presented to 8 ADP List mentors for feedback before developing hi-fi designs with a style guide.",
-      "Replaced the hamburger menu with widgets, removed calendar clutter, built a single-screen cooking interface, added personalized recommendations and \"inspiration by mood/flavour,\" and designed skills-based onboarding.",
-    ],
-    outcome:
-      "Task success ↑50%, user satisfaction and engagement ↑30%. Accessibility was a throughline — clear visual hierarchy and a voice-control option so users don't have to touch a device with oily hands while cooking.",
+      "A self-initiated concept exploring how to make planning and cooking a shared meal easier — without losing the social part.",
+    content: FAMCOOK_CONTENT,
   },
   {
     slug: "spira9",
