@@ -907,6 +907,463 @@ Not to maximise screen time.
 But to help users build a wellness routine that remains useful **without needing the app to demand their attention.**
 `;
 
+const MUDE_CONTENT = `
+# Designing a bedtime app that wants you to put your phone down
+
+## Mude — a behavioural design exploration into bedtime procrastination
+
+We've probably all done it.
+
+You're tired. You know you should sleep. Tomorrow-you would very much appreciate it.
+
+And yet somehow you're still scrolling at 12:47am.
+
+Mude is a self-initiated product concept exploring **bedtime procrastination** — the gap between intending to go to bed and actually doing it.
+
+The challenge wasn't simply:
+
+**How do I help people sleep?**
+
+It was:
+
+### How might a digital product help people emotionally wind down and leave their phone — without becoming another reason to stay on it?
+
+**Project**
+Self-initiated product concept
+
+**Role**
+Product Designer / UX Researcher
+
+**Timeline**
+1 month
+
+**Methods**
+Secondary research · Survey · Journey mapping · Prototyping · 5 guerrilla usability tests · 3 moderated usability tests · Iteration
+
+---
+
+# The 30-second version
+
+### Problem
+
+People sometimes delay bedtime even when they intend to sleep, often filling that time with digital activities.
+
+### Insight
+
+Going to bed isn't only a scheduling problem. For some people, staying awake provides a final period of personal time or emotional decompression after the day.
+
+### Design response
+
+I explored a short ritual built around capturing meaningful moments, reflecting on the day and then deliberately **ending the digital interaction**.
+
+### What testing changed
+
+My original assumption that journaling was inherently calming was wrong.
+
+Users pointed out that revisiting a frustrating or upsetting journal entry before bed could do exactly the opposite.
+
+That changed the product.
+
+---
+
+# I started with the behaviour, not an app idea
+
+I wanted to understand why someone who *wanted* to sleep would repeatedly choose not to.
+
+My exploratory research combined secondary research with a survey examining bedtime habits, stress, digital behaviour and activities people already found helpful before bed.
+
+The research pointed towards a more interesting problem than poor time management.
+
+Bedtime procrastination could represent an **intention–behaviour gap**.
+
+Someone might understand perfectly well that sleep is important while still choosing the immediate reward of another episode, another video or a little more personal time.
+
+So instead of designing another app that said:
+
+> "It's bedtime. Go to sleep."
+
+I became interested in the **transition between being active and being ready to stop**.
+
+That became the product opportunity.
+
+---
+
+# The core tension
+
+## How do you use a phone to help someone stop using their phone?
+
+This became the most important constraint in the project.
+
+Most digital products are designed around engagement:
+
+**Open → interact → discover more → come back**
+
+That felt wrong here.
+
+If Mude succeeded by increasing minutes spent in the app, it could actually be making the original problem worse.
+
+So I defined a different design principle:
+
+### Mude should earn a few intentional minutes of attention, then give the user's attention back.
+
+That meant avoiding infinite content, unnecessary browsing and interactions designed purely to prolong engagement.
+
+The experience needed an ending.
+
+[SHOW SIMPLE DIAGRAM: OPEN MUDE → WIND DOWN → LEAVE PHONE]
+
+---
+
+# Research helped me narrow the behaviour
+
+My initial exploration generated plenty of possible features:
+
+journaling, mood tracking, sleep tracking, galleries, personalised prompts, achievements, environmental recommendations, reminders, integrations and more.
+
+But a one-month concept did not need to become an entire wellness ecosystem.
+
+I narrowed the core experience to three behaviours:
+
+### Notice
+
+Capture small moments during the day before they're forgotten.
+
+### Reflect
+
+Return to selected moments as part of a short bedtime ritual.
+
+### Switch off
+
+Create a clear ending that encourages the user to leave the digital environment.
+
+This gave me a much simpler product loop:
+
+**Notice during the day → Reflect at night → Say goodbye to today → Switch off**
+
+[SHOW CORE EXPERIENCE / JOURNEY]
+
+---
+
+# Decision 01
+
+## Don't make users become poets before bed
+
+Journaling sounded useful in theory.
+
+In practice, it creates a very obvious problem:
+
+### "What am I supposed to write?"
+
+My early journey mapping identified the blank page as a likely drop-off point. If reflection started to feel like homework, it wouldn't make a convincing bedtime ritual.
+
+So I explored multiple low-effort ways to capture something:
+
+- A short note.
+- A photo.
+- A voice entry.
+- A lightweight prompt.
+
+The goal wasn't to produce a perfect journal entry.
+
+It was to help someone notice:
+
+**"That was a nice part of my day."**
+
+Prompts could help when people were stuck, but users always retained control over what they recorded.
+
+[SHOW JOURNAL ENTRY / PROMPTS]
+
+---
+
+# Decision 02
+
+## Capture moments when they happen — not only when you're already tired
+
+Originally, I thought about Mude mainly as something people would use at bedtime.
+
+Mapping the journey changed that.
+
+Meaningful moments happen throughout the day.
+
+If users were expected to reconstruct everything at 11pm, they would have to remember what happened, decide what mattered and then write about it when they were already tired.
+
+So I introduced multiple entry points.
+
+Someone could quickly capture a moment during the day and return to it later during their wind-down.
+
+That divided the cognitive work:
+
+**Daytime:** notice.
+
+**Bedtime:** reflect.
+
+The bedtime experience could therefore remain lighter and calmer.
+
+[SHOW DAYTIME CAPTURE → NIGHT-TIME REFLECTION]
+
+---
+
+# Decision 03
+
+## Make wind-down a ritual, not another content feed
+
+I wanted the evening interaction to feel deliberately different from the products users might have been scrolling moments earlier.
+
+Instead of an endless feed, Mude had a finite sequence.
+
+The user could prepare their environment, revisit selected moments and move towards a deliberate ending.
+
+One interaction I explored was a **"goodbye to today"** ritual inspired by tearing a page from a calendar.
+
+It gave an abstract action — finishing the day — a visible moment of closure.
+
+The interaction wasn't there just to create delight.
+
+It communicated:
+
+### Today is finished. You don't need to keep doing things.
+
+[SHOW WIND-DOWN + PAGE-TEAR INTERACTION]
+
+---
+
+# Then users challenged my biggest assumption
+
+After creating the first high-fidelity prototype, I ran three moderated usability-testing sessions with follow-up interviews.
+
+And one participant asked a question that changed the direction of the project:
+
+### "What if I write about something that annoyed me?"
+
+I had assumed that journaling followed by reflection would create a reassuring wind-down.
+
+But journaling isn't automatically positive.
+
+Someone might use it to process:
+
+an argument,
+a stressful meeting,
+anxiety about tomorrow,
+or something they were angry about.
+
+Automatically resurfacing that entry just before sleep could be the opposite of calming.
+
+It exposed an important flaw in my original concept:
+
+### Capturing an emotion and reliving an emotion are not the same user need.
+
+That was more useful than a participant simply telling me they liked the prototype.
+
+[SHOW OLD FLOW → INSIGHT → NEW FLOW]
+
+---
+
+# Decision 04
+
+## Separate "things I want to remember" from "things I need to let out"
+
+Instead of abandoning journaling, I reconsidered the role different entries should play.
+
+Some moments are worth revisiting:
+
+- A good meal.
+- Something funny a friend said.
+- Finishing something difficult.
+- A small thing you're grateful for.
+
+Other thoughts may simply need somewhere to go.
+
+So I explored separating **positive reflection** from **emotional release**.
+
+Content intended as an outlet didn't need to automatically return during the bedtime recap.
+
+This gave the user more control over their emotional experience and challenged my earlier assumption that more personalisation or more resurfaced content was necessarily better.
+
+The lesson was simple:
+
+### Don't optimise an experience around the happy path of someone's emotions.
+
+---
+
+# Testing also made the experience quieter
+
+The first round of guerrilla testing with five participants exposed several more practical problems.
+
+My opening screen felt redundant.
+
+Some button choices needed better accessibility.
+
+The wind-down flow contained too much text.
+
+And parts of the sequence felt more like using an app than winding down from one.
+
+The second testing round challenged the visual experience further.
+
+Participants questioned whether the interface felt sufficiently calming, and some found the slideshow-style playback potentially more stimulating than relaxing.
+
+So I reduced unnecessary content and reconsidered motion, visual density and the sequence of the experience.
+
+The objective wasn't:
+
+**"How can I make this more impressive?"**
+
+It became:
+
+### "What can I remove?"
+
+[SHOW BEFORE → AFTER ITERATION]
+
+---
+
+# Decision 05
+
+## Design a finish line
+
+A bedtime product needs something most apps actively avoid:
+
+### a reason to leave.
+
+So the final part of Mude deliberately closes the interaction.
+
+After reflection and the goodbye ritual, the interface transitions towards **Switch Off**.
+
+Rather than suggesting another activity or presenting more content, the experience encourages the user to put the device down and can connect with the phone's Sleep / Do Not Disturb mode.
+
+There is no infinite feed waiting underneath.
+
+No "you might also like…"
+
+No streak demanding one more action.
+
+Because, in this context:
+
+### Closing the app can be a successful conversion.
+
+[SHOW FINAL SWITCH-OFF SCREEN]
+
+---
+
+# The final concept
+
+Mude became a three-part experience.
+
+### 01 — Notice
+
+Capture meaningful moments throughout the day with minimal effort.
+
+### 02 — Wind down
+
+Revisit selected positive moments through a short, finite bedtime ritual.
+
+### 03 — Switch off
+
+Mark the end of the day and deliberately leave the digital environment.
+
+[SHOW YOUR STRONGEST FINAL SCREENS HERE]
+
+The product isn't intended to diagnose or treat sleep disorders.
+
+It's a behavioural design exploration around a narrower question:
+
+### Can we make the transition from "one more thing" to "I'm done for today" a little easier?
+
+---
+
+# What did I actually validate?
+
+Because this was a **self-initiated prototype**, I did not have a live product, production analytics or a large enough sample to claim improvements in retention or sleep.
+
+What I could evaluate was the design itself.
+
+Across two rounds of testing, I identified issues with:
+
+navigation, accessibility, information density, interaction sequencing, emotional assumptions and the overall wind-down concept.
+
+Most importantly, testing invalidated part of my original hypothesis about journaling and led me to change the product model.
+
+For this project, that is the outcome I would stand behind:
+
+### I finished with a better problem definition than the one I started with.
+
+---
+
+# If Mude were shipped, what would success mean?
+
+Traditional engagement metrics could be misleading here.
+
+More sessions and more screen time might actually indicate a worse outcome.
+
+Instead, I would evaluate whether Mude helps users follow through on their own bedtime intention.
+
+A primary behavioural signal could be:
+
+### Intended-bedtime adherence
+
+How often does a user finish their wind-down close to the bedtime they set for themselves?
+
+I would support that with:
+
+**Wind-down completion** — Do users reach the intentional Switch Off moment?
+
+**Time to switch off** — Does the ritual remain short rather than becoming another prolonged activity?
+
+**Repeat voluntary use** — Do people find the routine useful enough to return to over time?
+
+**Self-reported calmness** — Do users feel more ready to disengage after the ritual?
+
+**Post-routine screen behaviour** — With appropriate permission, do users actually leave their device after finishing?
+
+Sleep quality could be explored as a longer-term self-reported outcome, but I would not claim that Mude caused improved sleep without substantially stronger research.
+
+---
+
+# What I wouldn't build yet
+
+This project originally generated ideas around AI-generated content, sleep tracking, wearables, achievements, social features and deeper personalisation.
+
+I wouldn't prioritise those next.
+
+Not until the core behaviour works.
+
+Before increasing scope, I would want to answer:
+
+### Do people actually find the Notice → Reflect → Switch Off ritual useful enough to repeat?
+
+Only then would I decide which additional capabilities genuinely strengthen that behaviour.
+
+---
+
+# What I learned
+
+## The best usability test doesn't always validate your design.
+
+The most valuable feedback I received wasn't:
+
+> "I couldn't find this button."
+
+It was a question that challenged the premise of the experience.
+
+That reminded me that testing isn't just about checking whether users can operate a solution.
+
+It's also an opportunity to ask whether the solution **should work that way at all**.
+
+---
+
+## User engagement isn't universally good.
+
+Mude also changed how I think about product metrics.
+
+For many digital products, longer sessions can look positive.
+
+For a bedtime product, they could represent failure.
+
+Good product design means defining success around the **user's goal**, not automatically around more product usage.
+
+Sometimes the best thing your product can help someone do is:
+
+### leave.
+`;
+
 export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
@@ -931,22 +1388,10 @@ export const caseStudies: CaseStudy[] = [
     slug: "mude",
     title: "Mude",
     subtitle: "A healthy bedtime routine, without the procrastination",
-    role: "UX Researcher · UX Designer",
-    meta: "Timeframe: 1 month · Self-initiated",
+    role: "Product Designer / UX Researcher",
     summary:
-      "A wind-down app addressing bedtime procrastination through journaling and mindful ritual.",
-    metricsPreview: "Task Success ↑40% · Satisfaction ↑30%",
-    problem:
-      "Bedtime procrastination — especially among students and women — is driven by stress-based \"reclaiming me-time\" and excessive device use, leading to sleep deprivation, emotional dysregulation, and physical health issues. The goal: help users recognize their daily achievements and feel present and fulfilled leading up to bedtime, in a mindful, distraction-free way.",
-    process: [
-      "Secondary research and a survey-based exploratory analysis identified journaling as a lever for the root causes of bedtime procrastination.",
-      "Mapped user flows to find entry points, friction areas, and happy paths.",
-      "Built wireframes and a lo-fi prototype, then ran guerrilla testing with 5 users.",
-      "Iterated to hi-fi, then ran moderated testing with 3 participants and follow-up interviews.",
-      "Designed AI-generated journaling prompts, a \"page-tear ritual\" farewell mechanism, mood tracking visualization, an \"emotional dumpster,\" a wind-down interface, and a distraction-blocking \"Sleep Mode.\"",
-    ],
-    outcome:
-      "New user adoption ↑35%, retention ↑25%, user satisfaction ↑30%, task success ↑40% — with a clean, clutter-free interface and a distraction-minimized wind-down experience.",
+      "A behavioural design exploration into bedtime procrastination — helping people wind down and leave their phone.",
+    content: MUDE_CONTENT,
   },
   {
     slug: "famcook",
