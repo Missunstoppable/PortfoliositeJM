@@ -15,7 +15,10 @@ export type CaseStudy = {
   outcome?: string;
 };
 
-const OSDIRE_CONTENT = `
+// Archived — hidden per Jianan's request in favor of OSDIRE_CONTENT below.
+// Not referenced anywhere; kept in case we switch back.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const OSDIRE_CONTENT_ARCHIVED_V1 = `
 # Reactivating a two-sided marketplace
 
 ## Designing the journey from "I need something done" to a successful freelancer hire
@@ -486,6 +489,270 @@ Structured briefs weren't just "cleaner forms."
 Negotiation limits weren't just "simplification."
 
 Each became a hypothesis about how design could move users closer to mutual value.
+`;
+
+const OSDIRE_CONTENT = `
+# Helping freelancers publish their first service
+
+## How behavioural data and user research informed an onboarding redesign that contributed to a fourfold increase in service publishing
+
+**Osdire · Freelance Marketplace**
+
+[HERO IMAGE]
+
+Osdire is a two-sided freelance marketplace connecting businesses with freelancers. After the platform's MVP launched, we discovered a significant activation problem: freelancers were registering, but many were not completing the process of publishing their first service.
+
+I led the investigation and redesign of the freelancer onboarding and service-publishing journey—from diagnosing the problem to defining requirements, designing the experience and validating the released product.
+
+### At a glance
+
+- **My role:** Product/UX Designer
+- **Company:** Osdire
+- **Period:** June 2025–July 2026
+- **Product stage:** Post-MVP optimisation
+- **Platforms:** Responsive web application
+- **Collaborators:** Founders, Product, Performance Marketing, Frontend, Backend and QA
+- **Methods:** Funnel analysis, session recordings, think-aloud interviews, journey mapping, prototyping, usability testing and UX QA
+- **Outcome:** The redesign contributed to a **fourfold increase in successful service publishing**
+
+---
+
+# The challenge
+
+## Registration was not translating into marketplace supply
+
+A marketplace cannot serve buyers without a healthy supply of services. Although Osdire was attracting new freelancer registrations, only around **20% of newly registered freelancers published at least one service**.
+
+This represented an 80% drop between registration and the freelancer's first meaningful contribution to the marketplace.
+
+The initial assumption was that freelancers might lack motivation or abandon the process because creating a service required too much effort. Before proposing a solution, I wanted to understand:
+
+- Where were freelancers leaving?
+- What made those points difficult?
+- Were they unwilling to publish, or unable to complete the process?
+- Which obstacles could we remove without reducing the quality of service listings?
+
+Our product goal became clearer:
+
+> Help more newly registered freelancers turn their expertise into a complete, searchable service listing without compromising the information buyers needed to make a decision.
+
+---
+
+# Establishing reliable evidence
+
+## Before analysing the funnel, I checked whether we could trust it
+
+I worked with the performance marketer to review and correct the Google Analytics funnel. This was important because an incomplete or incorrectly configured funnel could have led us to optimise the wrong part of the journey.
+
+Once the tracking was reliable, the funnel confirmed a substantial drop between registration and first-service publication.
+
+I then combined several forms of evidence:
+
+### Funnel data
+
+Google Analytics showed the scale of the activation problem and identified the earliest stages with significant abandonment.
+
+### Session recordings
+
+I reviewed **13 recordings of high-intent freelancers** who had actively attempted to create a service. More than **40% abandoned at the first publishing step**.
+
+Some users spent more than 30 minutes on the platform without successfully publishing. Their behaviour suggested that motivation was not the only issue: people were investing time but still struggling to progress.
+
+### Think-aloud interviews
+
+We recruited freelancers through influencer-marketing contacts and asked them to talk through their thoughts while attempting the journey. This helped uncover confusion that behavioural data alone could not explain.
+
+### Internal walkthroughs
+
+I gathered feedback from team members who regularly encountered questions or problems relating to freelancer listings. This helped connect the interface problems with wider marketplace and operational requirements.
+
+The combination was important: analytics showed **where** people left, while observation and conversation helped explain **why**.
+
+---
+
+# What I learned
+
+## 1. The platform's taxonomy did not match how freelancers described their work
+
+At the beginning of the publishing process, freelancers had to navigate a four-level category hierarchy.
+
+This structure reflected the platform's backend taxonomy, but not necessarily the language or mental models freelancers used to describe their skills. Users repeatedly moved backwards and forwards through the hierarchy, uncertain which path contained the correct category.
+
+The most important barrier appeared at the very first step—before freelancers had built enough momentum to continue.
+
+## 2. Users were asked to make too many decisions upfront
+
+The journey presented several fields and decisions together. Before seeing meaningful progress, freelancers had to understand the platform's categorisation system and decide how to position their service.
+
+The amount of information made the task feel more complex than it needed to be.
+
+## 3. Users left the journey to prepare their content
+
+Freelancers were asked to provide titles and descriptions without enough contextual support. Some left the page to work out what to write or look for examples elsewhere.
+
+The interface explained what information was required, but did not adequately help users create it.
+
+## 4. Completion did not feel close or predictable
+
+The journey lacked a strong sense of progress. Users could not always tell how much work remained or whether their listing was ready to publish.
+
+Together, these findings changed how I framed the problem:
+
+> Freelancers were not simply abandoning the journey because they lacked intent. The product was making it unnecessarily difficult for motivated users to translate their expertise into the platform's required structure.
+
+---
+
+# Choosing where to intervene
+
+The evidence pointed to several possible improvements, but we could not rebuild the complete publishing system at once.
+
+I prioritised changes according to:
+
+- The severity and frequency of the observed problem
+- Its position in the activation journey
+- The likely effect on successful publication
+- Technical feasibility within the existing platform
+- The need to retain sufficient listing quality for buyers
+
+The category-selection step became the highest priority because it was both an early barrier and a prerequisite for the rest of the journey.
+
+Instead of changing the entire backend taxonomy, I focused on improving how users interacted with it. This allowed us to address the user problem while respecting the platform's existing technical structure.
+
+---
+
+# The redesigned experience
+
+## 1. Replacing hierarchy navigation with type-and-select
+
+I replaced the four-level category picker with a type-and-select interaction.
+
+Instead of navigating the platform's taxonomy manually, freelancers could begin by describing their service in familiar language. The interface then suggested relevant predefined subcategories for them to select.
+
+This preserved the structured data required for search and matching while reducing the need for users to understand Osdire's internal classification system.
+
+**Before:**
+
+Users had to understand the hierarchy before they could categorise their service.
+
+**After:**
+
+Users could begin with the service they already understood, while the interface helped translate it into the platform's structure.
+
+## 2. Breaking the journey into manageable stages
+
+I applied progressive disclosure so users could concentrate on one group of decisions at a time.
+
+The revised journey introduced information as it became relevant, reducing the perceived complexity of the form and creating a clearer sense of forward movement.
+
+The sequence was designed to build momentum: users started with simpler classification decisions before moving into the more demanding work of presenting and pricing their service.
+
+## 3. Providing contextual writing support
+
+We considered AI-generated service content, but this would have introduced additional technical cost and complexity at that stage of the product.
+
+Instead, I used:
+
+- Field-specific examples
+- Prompts explaining what buyers needed to know
+- Short guidance placed at the moment it was required
+- Clearer distinctions between required and optional information
+
+This provided practical support without introducing an expensive dependency or removing the freelancer's control over how their service was represented.
+
+## 4. Making readiness visible
+
+I simplified the final review into a clearer checklist, helping freelancers understand:
+
+- What they had completed
+- What still needed attention
+- Why particular information was required
+- When the service was ready to publish
+
+This reduced uncertainty at the end of the journey while retaining the quality requirements necessary for a useful marketplace listing.
+
+---
+
+# Designing within product and technical constraints
+
+The redesign was not only an interface exercise. Each interaction had implications for the marketplace's taxonomy, search behaviour and underlying data.
+
+I worked with Product, Frontend, Backend and QA to define:
+
+- How typed phrases would map to existing subcategories
+- What happened when no suitable suggestion appeared
+- Required and optional fields
+- Validation and error states
+- Dependencies between publishing steps
+- Saved and incomplete service states
+- Expected behaviour across responsive screen sizes
+- Acceptance criteria for release
+
+I documented the intended behaviours and edge cases, created interactive Figma prototypes and remained involved during implementation to resolve questions as they arose.
+
+Once the changes were built, I conducted UX QA and release validation to check that the implemented journey matched the intended experience.
+
+---
+
+# The outcome
+
+Following the release, successful service publishing increased fourfold.
+
+I describe the redesign as having **contributed to** this result because the improvement depended on multidisciplinary delivery and was not produced by design work in isolation. However, the post-release movement addressed the activation behaviour we had specifically investigated: more freelancers progressed from registration to contributing usable supply to the marketplace.
+
+The project created value on both sides:
+
+### For freelancers
+
+- A faster and clearer path to becoming active
+- Less need to understand Osdire's internal taxonomy
+- More support when presenting their expertise
+- Greater visibility of progress and readiness
+
+### For the marketplace
+
+- More successfully published services
+- Increased supply for buyers to discover
+- More structured service data for matching and search
+- A stronger foundation for freelancer activation
+
+---
+
+# What I learned
+
+## Validate the measurement before responding to it
+
+Correcting the funnel before making design decisions prevented us from building around potentially unreliable evidence. Instrumentation is part of product discovery, not simply something used after launch.
+
+## Behavioural data and user research answer different questions
+
+The funnel identified the scale and location of abandonment. Session recordings and interviews revealed the hesitation, misunderstandings and unmet needs behind it. Neither source would have been sufficient alone.
+
+## High intent does not guarantee successful activation
+
+Some freelancers spent significant time trying to publish. Their persistence initially looked like engagement, but it was also evidence of friction. Time spent is only positive when it helps users achieve their goal.
+
+## Technical constraints can sharpen the solution
+
+We could not replace the complete taxonomy or introduce costly AI generation. Designing a simpler layer over the existing structure produced a more feasible solution while still addressing the central user problem.
+
+## Activation should represent delivered value
+
+Registration alone did not create value for freelancers, buyers or the marketplace. Publishing a first service was a much more meaningful activation point because it represented a freelancer becoming discoverable and able to receive work.
+
+---
+
+# My wider contribution to Osdire
+
+This optimisation formed part of a broader product role across the marketplace. I also contributed to:
+
+- Buyer project creation and matching
+- Search and service discovery
+- Custom offers and negotiation
+- Orders and project delivery
+- Payments, wallet and billing
+- Internal moderation and operational tools
+
+Across these areas, I combined user research, interaction design and product delivery—turning customer and business needs into prioritised workflows, specifications, user stories and testable product behaviour.
 `;
 
 const QUABBLE_CONTENT = `
@@ -2341,11 +2608,10 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "osdire",
     title: "Osdire",
-    subtitle: "Redesigning the marketplace journey from project draft to freelancer hire",
-    role: "Product Designer",
-    meta: "Collaborators: PM, Backend Lead, Engineering, QA · Scope: Journey mapping, user flows, interaction design, UI design, prototyping, product specs & handoff",
+    subtitle: "Redesigning freelancer onboarding to unlock marketplace supply",
+    role: "Product / UX Designer",
     summary:
-      "Reactivating a stalled two-sided marketplace by rethinking how buyer demand and freelancer supply connect, end to end.",
+      "Freelancers were registering and quietly disappearing — tracing an 80% drop to a category picker nobody could parse, and fixing it.",
     content: OSDIRE_CONTENT,
   },
   {
