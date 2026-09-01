@@ -39,7 +39,7 @@ const components: Components = {
               src={`/work/${file}`}
               alt="Case study hero image"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(min-width: 640px) 768px, 100vw"
               priority
             />
@@ -66,33 +66,19 @@ const components: Components = {
       );
     }
 
-    const beforeAfterMatch = text.match(
-      /^\[BEFORE-AFTER:\s*([^,]+),\s*(.+)\]$/,
-    );
-    if (beforeAfterMatch) {
-      const [, beforeFile, afterFile] = beforeAfterMatch;
+    const imageMatch = text.match(/^\[IMAGE:\s*(.+)\]$/);
+    if (imageMatch) {
+      const file = imageMatch[1].trim();
       return (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {[
-            { label: "Before", file: beforeFile.trim() },
-            { label: "After", file: afterFile.trim() },
-          ].map(({ label, file }) => (
-            <figure key={label} className="flex flex-col gap-2">
-              <div className="overflow-hidden rounded-xl border border-plum/10">
-                <Image
-                  src={`/work/${file}`}
-                  alt={`${label} screenshot`}
-                  width={800}
-                  height={600}
-                  className="h-auto w-full"
-                  sizes="(min-width: 640px) 384px, 100vw"
-                />
-              </div>
-              <figcaption className="text-center text-sm text-plum/50">
-                {label}
-              </figcaption>
-            </figure>
-          ))}
+        <div className="overflow-hidden rounded-xl border border-plum/10">
+          <Image
+            src={`/work/${file}`}
+            alt=""
+            width={1200}
+            height={900}
+            className="h-auto w-full"
+            sizes="(min-width: 640px) 768px, 100vw"
+          />
         </div>
       );
     }

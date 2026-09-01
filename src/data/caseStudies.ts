@@ -634,11 +634,13 @@ This preserved the structured data required for search and matching while reduci
 
 Users had to understand the hierarchy before they could categorise their service.
 
+[IMAGE: category-before.png]
+
 **After:**
 
 Users could begin with the service they already understood, while the interface helped translate it into the platform's structure.
 
-[BEFORE-AFTER: category-before.png, category-after.png]
+[IMAGE: category-after.png]
 
 ## 2. Breaking the journey into manageable stages
 
