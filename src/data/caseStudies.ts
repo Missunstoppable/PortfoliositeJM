@@ -498,7 +498,7 @@ const OSDIRE_CONTENT = `
 
 **Osdire · Freelance Marketplace**
 
-[HERO IMAGE]
+[HERO IMAGE: osdire-main-image.jpg]
 
 Osdire is a two-sided freelance marketplace connecting businesses with freelancers. After the platform's MVP launched, we discovered a significant activation problem: freelancers were registering, but many were not completing the process of publishing their first service.
 
@@ -637,6 +637,8 @@ Users had to understand the hierarchy before they could categorise their service
 **After:**
 
 Users could begin with the service they already understood, while the interface helped translate it into the platform's structure.
+
+[BEFORE-AFTER: category-before.png, category-after.png]
 
 ## 2. Breaking the journey into manageable stages
 

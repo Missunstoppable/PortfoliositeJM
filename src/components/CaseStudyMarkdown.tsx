@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Image from "next/image";
 import type { Components } from "react-markdown";
 import type { ReactNode } from "react";
 
@@ -28,7 +29,23 @@ const components: Components = {
   p: ({ children }) => {
     const text = textOf(children).trim();
 
-    if (text === "[HERO IMAGE]") {
+    const heroMatch = text.match(/^\[HERO IMAGE(?::\s*(.+))?\]$/);
+    if (heroMatch) {
+      const file = heroMatch[1]?.trim();
+      if (file) {
+        return (
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl">
+            <Image
+              src={`/work/${file}`}
+              alt="Case study hero image"
+              fill
+              className="object-cover"
+              sizes="(min-width: 640px) 768px, 100vw"
+              priority
+            />
+          </div>
+        );
+      }
       return (
         <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-plum/25 bg-white/40 text-plum/40">
           <svg
@@ -45,6 +62,37 @@ const components: Components = {
             <path d="M21 15l-5-5L5 21" />
           </svg>
           <span className="text-sm italic">Add hero image</span>
+        </div>
+      );
+    }
+
+    const beforeAfterMatch = text.match(
+      /^\[BEFORE-AFTER:\s*([^,]+),\s*(.+)\]$/,
+    );
+    if (beforeAfterMatch) {
+      const [, beforeFile, afterFile] = beforeAfterMatch;
+      return (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {[
+            { label: "Before", file: beforeFile.trim() },
+            { label: "After", file: afterFile.trim() },
+          ].map(({ label, file }) => (
+            <figure key={label} className="flex flex-col gap-2">
+              <div className="overflow-hidden rounded-xl border border-plum/10">
+                <Image
+                  src={`/work/${file}`}
+                  alt={`${label} screenshot`}
+                  width={800}
+                  height={600}
+                  className="h-auto w-full"
+                  sizes="(min-width: 640px) 384px, 100vw"
+                />
+              </div>
+              <figcaption className="text-center text-sm text-plum/50">
+                {label}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       );
     }
