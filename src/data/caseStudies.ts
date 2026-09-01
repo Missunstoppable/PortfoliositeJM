@@ -766,7 +766,7 @@ const QUABBLE_CONTENT = `
 
 **Quabble · Mental Wellness Mobile App**
 
-[HERO IMAGE]
+[HERO IMAGE: quabble-hero.png]
 
 Quabble helps people build mental wellness into everyday life through short, playful mental workouts.
 
@@ -1187,7 +1187,7 @@ const MUDE_CONTENT = `
 
 ## Mude — a behavioural design exploration into bedtime procrastination
 
-[HERO IMAGE]
+[HERO IMAGE: mude-hero.png]
 
 We've probably all done it.
 
@@ -1648,7 +1648,7 @@ const FAMCOOK_CONTENT = `
 
 **FamCook · Self-initiated product concept**
 
-[HERO IMAGE]
+[HERO IMAGE: famcook-hero.png]
 
 Cooking together sounds simple.
 
@@ -2177,7 +2177,7 @@ const SPIRA9_CONTENT = `
 
 **Spira9 · Digital Marketing & AI Website Builder**
 
-[HERO IMAGE]
+[HERO IMAGE: spira9-hero.png]
 
 Spira9 needed a new website for two reasons.
 
