@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const FULL_TEXT = "Social Media";
+const FULL_TEXT = "manage";
 const BOLD_CHARS = 4;
 const TYPE_INTERVAL_MS = 90;
 const PAUSE_BEFORE_SUGGESTIONS_MS = 350;
