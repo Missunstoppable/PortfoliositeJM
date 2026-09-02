@@ -2,30 +2,19 @@
 
 import { useEffect, useState } from "react";
 
-const FULL_TEXT = "manage";
+const FULL_TEXT = "Social Media";
+const BOLD_CHARS = 4;
 const TYPE_INTERVAL_MS = 90;
 const PAUSE_BEFORE_SUGGESTIONS_MS = 350;
 const HOLD_MS = 3000;
 
 const SUGGESTIONS = [
-  { label: "Social Media Management", top: true },
-  { label: "Project Management", top: false },
-  { label: "Product Management", top: false },
-  { label: "Account Management", top: false },
+  { label: "Digital Marketing", style: "muted" as const },
+  { label: "Social Media Management", style: "match" as const },
+  { label: "Business", style: "muted" as const },
+  { label: "Project Management", style: "normal" as const },
+  { label: "Product Management", style: "normal" as const },
 ];
-
-function highlightMatch(label: string, query: string) {
-  if (!query) return label;
-  const index = label.toLowerCase().indexOf(query.toLowerCase());
-  if (index === -1) return label;
-  return (
-    <>
-      {label.slice(0, index)}
-      <span className="font-bold">{label.slice(index, index + query.length)}</span>
-      {label.slice(index + query.length)}
-    </>
-  );
-}
 
 function prefersReducedMotion() {
   return (
@@ -96,7 +85,10 @@ export default function TypeAndSelectDemo() {
         Start typing and choose the category that best describes what you do.
       </p>
       <div className="mt-4 flex items-center rounded-xl border-2 border-lavender px-4 py-3 shadow-[0_0_0_3px_rgba(203,184,218,0.25)]">
-        <span className="text-[15px] text-plum">{typed}</span>
+        <span className="text-[15px] text-plum">
+          <span className="font-bold">{typed.slice(0, BOLD_CHARS)}</span>
+          {typed.slice(BOLD_CHARS)}
+        </span>
         <span className="ml-0.5 h-4 w-px animate-pulse bg-plum" />
       </div>
       <div
@@ -107,11 +99,15 @@ export default function TypeAndSelectDemo() {
         {SUGGESTIONS.map((s) => (
           <div
             key={s.label}
-            className={`border-b border-plum/[0.06] px-4 py-2.5 text-sm text-plum last:border-b-0 ${
-              s.top ? "bg-lavender font-semibold" : ""
+            className={`border-b border-plum/[0.06] px-4 py-2.5 text-sm last:border-b-0 ${
+              s.style === "match"
+                ? "bg-lavender font-semibold text-plum"
+                : s.style === "muted"
+                  ? "bg-[#F9F6F2] text-plum/30"
+                  : "text-plum"
             }`}
           >
-            {highlightMatch(s.label, showSuggestions ? FULL_TEXT : "")}
+            {s.label}
           </div>
         ))}
       </div>
