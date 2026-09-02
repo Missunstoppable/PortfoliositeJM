@@ -650,6 +650,8 @@ The revised journey introduced information as it became relevant, reducing the p
 
 The sequence was designed to build momentum: users started with simpler classification decisions before moving into the more demanding work of presenting and pricing their service.
 
+[IMAGE: osdire-progressive-disclosure.png]
+
 ## 3. Providing contextual writing support
 
 We considered AI-generated service content, but this would have introduced additional technical cost and complexity at that stage of the product.
