@@ -3,6 +3,11 @@ import remarkGfm from "remark-gfm";
 import Image from "next/image";
 import type { Components } from "react-markdown";
 import type { ReactNode } from "react";
+import TypeAndSelectDemo from "./TypeAndSelectDemo";
+
+const DEMOS: Record<string, React.ComponentType> = {
+  "type-and-select": TypeAndSelectDemo,
+};
 
 function textOf(children: ReactNode): string {
   if (typeof children === "string") return children;
@@ -81,6 +86,12 @@ const components: Components = {
           />
         </div>
       );
+    }
+
+    const demoMatch = text.match(/^\[DEMO:\s*(.+)\]$/);
+    if (demoMatch) {
+      const Demo = DEMOS[demoMatch[1].trim()];
+      if (Demo) return <Demo />;
     }
 
     const galleryMatch = text.match(/^\[GALLERY:\s*(.+)\]$/);

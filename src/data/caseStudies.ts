@@ -640,7 +640,7 @@ Users had to understand the hierarchy before they could categorise their service
 
 Users could begin with the service they already understood, while the interface helped translate it into the platform's structure.
 
-[IMAGE: osdire-category-after-v2.png]
+[DEMO: type-and-select]
 
 ## 2. Breaking the journey into manageable stages
 
