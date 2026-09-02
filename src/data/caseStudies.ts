@@ -2431,7 +2431,7 @@ Rules for how components and hierarchy should adapt as the available space chang
 
 That gave the project a shared design language and made later iterations much easier to manage.
 
-[SHOW DESIGN SYSTEM / COMPONENTS]
+[GALLERY: spira9-style-guide.png, spira9-components.png]
 
 ---
 
@@ -2457,7 +2457,7 @@ At each breakpoint, I considered:
 
 Working with Engineering also surfaced feasibility constraints before final handoff, allowing us to adjust layouts rather than handing over designs that couldn't be implemented reliably.
 
-[SHOW DESKTOP → TABLET → MOBILE]
+[GALLERY: Spira9-services.png, spira9-mockup-2.png, spira9-mockup-1.png]
 
 ---
 
@@ -2507,7 +2507,7 @@ Components and visual rules support consistency across future pages.
 
 The final website demonstrates how Spira9's underlying website-building framework can support a more polished brand experience.
 
-[SHOW LARGE FINAL MOCKUPS HERE]
+[IMAGE: spira9-display.png]
 
 ---
 

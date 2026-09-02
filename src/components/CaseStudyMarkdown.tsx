@@ -83,6 +83,31 @@ const components: Components = {
       );
     }
 
+    const galleryMatch = text.match(/^\[GALLERY:\s*(.+)\]$/);
+    if (galleryMatch) {
+      const files = galleryMatch[1].split(",").map((f) => f.trim());
+      const cols = files.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
+      return (
+        <div className={`grid grid-cols-1 gap-4 ${cols}`}>
+          {files.map((file) => (
+            <div
+              key={file}
+              className="overflow-hidden rounded-xl border border-plum/10"
+            >
+              <Image
+                src={`/work/${file}`}
+                alt=""
+                width={900}
+                height={900}
+                className="h-auto w-full"
+                sizes="(min-width: 640px) 384px, 100vw"
+              />
+            </div>
+          ))}
+        </div>
+      );
+    }
+
     const isPlaceholder = /^\[.*\]$/.test(text);
     if (isPlaceholder) {
       return (
