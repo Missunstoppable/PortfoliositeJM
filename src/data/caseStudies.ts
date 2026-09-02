@@ -634,13 +634,13 @@ This preserved the structured data required for search and matching while reduci
 
 Users had to understand the hierarchy before they could categorise their service.
 
-[IMAGE: category-before.png]
+[IMAGE: osdire-category-before-v2.png]
 
 **After:**
 
 Users could begin with the service they already understood, while the interface helped translate it into the platform's structure.
 
-[IMAGE: category-after.png]
+[IMAGE: osdire-category-after-v2.png]
 
 ## 2. Breaking the journey into manageable stages
 
@@ -665,6 +665,8 @@ Instead, I used:
 
 This provided practical support without introducing an expensive dependency or removing the freelancer's control over how their service was represented.
 
+[IMAGE: osdire-writing-support.png]
+
 ## 4. Making readiness visible
 
 I simplified the final review into a clearer checklist, helping freelancers understand:
@@ -675,6 +677,8 @@ I simplified the final review into a clearer checklist, helping freelancers unde
 - When the service was ready to publish
 
 This reduced uncertainty at the end of the journey while retaining the quality requirements necessary for a useful marketplace listing.
+
+[IMAGE: osdire-readiness.png]
 
 ---
 
@@ -702,6 +706,8 @@ Once the changes were built, I conducted UX QA and release validation to check t
 # The outcome
 
 Following the release, successful service publishing increased fourfold.
+
+[IMAGE: osdire-outcome-stat.png]
 
 I describe the redesign as having **contributed to** this result because the improvement depended on multidisciplinary delivery and was not produced by design work in isolation. However, the post-release movement addressed the activation behaviour we had specifically investigated: more freelancers progressed from registration to contributing usable supply to the marketplace.
 
