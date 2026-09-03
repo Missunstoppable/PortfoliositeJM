@@ -58,11 +58,8 @@ export default function GoodbyeSwitchDemo() {
 
   return (
     <div className="relative flex h-[320px] items-center justify-center overflow-hidden rounded-xl border border-plum/10 bg-white">
-      {/* Background crossfade: ivory -> deep plum */}
-      <div
-        className="absolute inset-0 transition-colors duration-[900ms] ease-in-out"
-        style={{ backgroundColor: dark ? "#2E2733" : "#FAF6F1" }}
-      />
+      {/* Background: dark throughout */}
+      <div className="absolute inset-0 bg-[#2E2733]" />
 
       {/* Lamp + switch, visible pre-goodnight */}
       <div
@@ -71,20 +68,20 @@ export default function GoodbyeSwitchDemo() {
       >
         <div className="relative flex flex-col items-center">
           <svg width="100" height="56" viewBox="0 0 100 56" aria-hidden="true">
-            <polygon points="30,0 70,0 92,52 8,52" fill="#8A7F92" />
+            <polygon points="30,0 70,0 92,52 8,52" fill="#B8AEC0" />
           </svg>
           <div
             className="absolute top-9 h-14 w-14 rounded-full bg-terracotta blur-xl transition-opacity duration-700 ease-in-out"
             style={{ opacity: lampOn ? 0.8 : 0 }}
           />
-          <div className="h-9 w-1.5 bg-plum/40" />
-          <div className="h-1.5 w-16 rounded-full bg-plum/40" />
+          <div className="h-9 w-1.5 bg-[#F6F2EE]/30" />
+          <div className="h-1.5 w-16 rounded-full bg-[#F6F2EE]/30" />
         </div>
 
         {/* ON/OFF switch */}
-        <div className="flex h-9 w-32 items-center rounded-full border border-plum/15 bg-[#F1ECE6] p-1">
+        <div className="flex h-9 w-32 items-center rounded-full border border-white/15 bg-white/10 p-1">
           <div
-            className="flex h-full w-1/2 items-center justify-center rounded-full bg-white text-xs font-bold text-plum shadow-sm transition-transform duration-500 ease-in-out"
+            className="flex h-full w-1/2 items-center justify-center rounded-full bg-[#F6F2EE] text-xs font-bold text-plum shadow-sm transition-transform duration-500 ease-in-out"
             style={{
               transform: lampOn ? "translateX(0%)" : "translateX(100%)",
             }}
