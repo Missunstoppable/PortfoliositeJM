@@ -92,8 +92,8 @@ export default function TypeAndSelectDemo() {
         <span className="ml-0.5 h-4 w-px animate-pulse bg-plum" />
       </div>
       <div
-        className={`mt-3 overflow-hidden rounded-xl border border-plum/10 transition-all duration-300 ease-out ${
-          showSuggestions ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`mt-3 h-[210px] overflow-hidden rounded-xl border border-plum/10 transition-opacity duration-300 ease-out ${
+          showSuggestions ? "opacity-100" : "opacity-0"
         }`}
       >
         {SUGGESTIONS.map((s) => (

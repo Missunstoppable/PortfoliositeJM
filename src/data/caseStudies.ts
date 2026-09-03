@@ -729,7 +729,7 @@ The project created value on both sides:
 
 ---
 
-# What I learned
+# My Takeaway
 
 ## Validate the measurement before responding to it
 
