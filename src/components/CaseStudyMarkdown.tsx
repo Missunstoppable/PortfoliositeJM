@@ -4,9 +4,17 @@ import Image from "next/image";
 import type { Components } from "react-markdown";
 import type { ReactNode } from "react";
 import TypeAndSelectDemo from "./TypeAndSelectDemo";
+import PolaroidCaptureDemo from "./mude/PolaroidCaptureDemo";
+import VentReleaseDemo from "./mude/VentReleaseDemo";
+import MoodConceptDemo from "./mude/MoodConceptDemo";
+import GoodbyeSwitchDemo from "./mude/GoodbyeSwitchDemo";
 
 const DEMOS: Record<string, React.ComponentType> = {
   "type-and-select": TypeAndSelectDemo,
+  "polaroid-capture": PolaroidCaptureDemo,
+  "vent-release": VentReleaseDemo,
+  "mood-concept": MoodConceptDemo,
+  "goodbye-switch": GoodbyeSwitchDemo,
 };
 
 function textOf(children: ReactNode): string {

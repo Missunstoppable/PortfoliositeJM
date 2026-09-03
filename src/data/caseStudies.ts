@@ -1305,6 +1305,8 @@ My initial exploration generated plenty of possible features:
 
 journaling, mood tracking, sleep tracking, galleries, personalised prompts, achievements, environmental recommendations, reminders, integrations and more.
 
+[DEMO: mood-concept]
+
 But a one-month concept did not need to become an entire wellness ecosystem.
 
 I narrowed the core experience to three behaviours:
@@ -1356,7 +1358,7 @@ It was to help someone notice:
 
 Prompts could help when people were stuck, but users always retained control over what they recorded.
 
-[SHOW JOURNAL ENTRY / PROMPTS]
+[DEMO: polaroid-capture]
 
 ---
 
@@ -1468,6 +1470,8 @@ The lesson was simple:
 
 ### Don't optimise an experience around the happy path of someone's emotions.
 
+[DEMO: vent-release]
+
 ---
 
 # Testing also made the experience quieter
@@ -1524,7 +1528,7 @@ Because, in this context:
 
 ### Closing the app can be a successful conversion.
 
-[SHOW FINAL SWITCH-OFF SCREEN]
+[DEMO: goodbye-switch]
 
 ---
 
