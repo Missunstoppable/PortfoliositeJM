@@ -500,20 +500,11 @@ const OSDIRE_CONTENT = `
 
 [HERO IMAGE: osdire-main-image.jpg]
 
+[META: Role=Product/UX Designer | Company=Osdire | Period=June 2025–July 2026 | Product stage=Post-MVP optimisation | Platforms=Responsive web application | Collaborators=Founders, Product, Performance Marketing, Frontend, Backend and QA | Methods=Funnel analysis, session recordings, think-aloud interviews, journey mapping, prototyping, usability testing and UX QA | Outcome=Fourfold increase in successful service publishing]
+
 Osdire is a two-sided freelance marketplace connecting businesses with freelancers. After the platform's MVP launched, we discovered a significant activation problem: freelancers were registering, but many were not completing the process of publishing their first service.
 
 I led the investigation and redesign of the freelancer onboarding and service-publishing journey—from diagnosing the problem to defining requirements, designing the experience and validating the released product.
-
-### At a glance
-
-- **My role:** Product/UX Designer
-- **Company:** Osdire
-- **Period:** June 2025–July 2026
-- **Product stage:** Post-MVP optimisation
-- **Platforms:** Responsive web application
-- **Collaborators:** Founders, Product, Performance Marketing, Frontend, Backend and QA
-- **Methods:** Funnel analysis, session recordings, think-aloud interviews, journey mapping, prototyping, usability testing and UX QA
-- **Outcome:** The redesign contributed to a **fourfold increase in successful service publishing**
 
 ---
 
@@ -776,6 +767,8 @@ const QUABBLE_CONTENT = `
 
 [HERO IMAGE: quabble-hero.png]
 
+[META: Role=Product / UX Designer | Scope=UX audit · User research · Product discovery · Journey analysis · Onboarding · Paywall UX · Interaction design · Growth experiments · UX QA | Collaborators=Head of Product · CEO · Engineering · Marketing | Timeline=Initial UX audit: 2 weeks · Ongoing collaboration: ~1 year]
+
 Quabble helps people build mental wellness into everyday life through short, playful mental workouts.
 
 The product already had a distinctive visual identity and a growing library of content. The bigger challenge was helping users understand **why they should come back — and experience that value early enough to form a routine.**
@@ -785,26 +778,6 @@ I initially joined the project through a UX audit. That work developed into a br
 The question became:
 
 ### How might we help users experience a meaningful mental workout sooner — and make coming back feel worth it?
-
----
-
-## My role
-
-**Product / UX Designer**
-
-I worked across:
-
-UX audit · User research · Product discovery · Journey analysis · Onboarding · Paywall UX · Interaction design · Growth experiments · UX QA
-
-**Collaborated with**
-
-Head of Product · CEO · Engineering · Marketing
-
-**Timeline**
-
-Initial UX audit: 2 weeks
-
-Ongoing product collaboration: approximately 1 year
 
 ---
 
@@ -1197,6 +1170,8 @@ const MUDE_CONTENT = `
 
 [HERO IMAGE: mude-hero.png]
 
+[META: Project=Self-initiated product concept | Role=Product Designer / UX Researcher | Timeline=1 month | Methods=Secondary research · Survey · Journey mapping · Prototyping · 5 guerrilla usability tests · 3 moderated usability tests · Iteration]
+
 We've probably all done it.
 
 You're tired. You know you should sleep. Tomorrow-you would very much appreciate it.
@@ -1212,18 +1187,6 @@ The challenge wasn't simply:
 It was:
 
 ### How might a digital product help people emotionally wind down and leave their phone — without becoming another reason to stay on it?
-
-**Project**
-Self-initiated product concept
-
-**Role**
-Product Designer / UX Researcher
-
-**Timeline**
-1 month
-
-**Methods**
-Secondary research · Survey · Journey mapping · Prototyping · 5 guerrilla usability tests · 3 moderated usability tests · Iteration
 
 ---
 
@@ -1650,6 +1613,8 @@ const FAMCOOK_CONTENT = `
 
 [HERO IMAGE: famcook-hero.png]
 
+[META: Project=Self-initiated concept | Role=Product Designer / UX Researcher | Timeline=3 months | Methods=User interviews · Competitive analysis · Journey mapping · Prioritisation · Wireframing · Prototyping · Usability testing · Interaction design · Visual design]
+
 Cooking together sounds simple.
 
 Pick a recipe. Buy some ingredients. Cook. Eat.
@@ -1661,15 +1626,6 @@ FamCook is a self-initiated concept exploring how digital products could make **
 The challenge became:
 
 ### How might we reduce the coordination around cooking together, so people can spend more time actually enjoying it?
-
-**Role**
-Product Designer / UX Researcher
-
-**Timeline**
-3 months
-
-**Research & methods**
-User interviews · Competitive analysis · Journey mapping · Prioritisation · Wireframing · Prototyping · Usability testing · Interaction design · Visual design
 
 ---
 
@@ -2179,6 +2135,8 @@ const SPIRA9_CONTENT = `
 
 [HERO IMAGE: spira9-hero.png]
 
+[META: Role=UX / UI Designer | Project type=Client project | Timeline=4 weeks | Scope=Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff | Collaborated with=[ADD YOUR ACTUAL TEAM — e.g. another designer, project lead, engineers]]
+
 Spira9 needed a new website for two reasons.
 
 It had to explain and sell its digital marketing services more effectively.
@@ -2192,25 +2150,6 @@ That created an unusual constraint:
 In other words:
 
 **Make it look custom. Don't make it too custom.**
-
----
-
-## My role
-
-**UX / UI Designer**
-
-I worked across:
-
-Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff
-
-**Project type**
-Client project
-
-**Timeline**
-4 weeks
-
-**Collaborated with**
-[ADD YOUR ACTUAL TEAM — e.g. another designer, project lead, engineers]
 
 ---
 

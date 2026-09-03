@@ -42,6 +42,31 @@ const components: Components = {
   p: ({ children }) => {
     const text = textOf(children).trim();
 
+    const metaMatch = text.match(/^\[META:\s*([\s\S]+)\]$/);
+    if (metaMatch) {
+      const pairs = metaMatch[1]
+        .split("|")
+        .map((pair) => {
+          const [label, ...rest] = pair.split("=");
+          return { label: label?.trim(), value: rest.join("=").trim() };
+        })
+        .filter((p) => p.label && p.value);
+      return (
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-4 rounded-xl border border-plum/10 bg-white/50 p-6 sm:grid-cols-2">
+          {pairs.map(({ label, value }) => (
+            <div key={label}>
+              <dt className="font-heading text-xs font-bold uppercase tracking-wide text-plum/40">
+                {label}
+              </dt>
+              <dd className="mt-1 text-sm leading-relaxed text-plum">
+                {value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      );
+    }
+
     const heroMatch = text.match(/^\[HERO IMAGE(?::\s*(.+))?\]$/);
     if (heroMatch) {
       const file = heroMatch[1]?.trim();
