@@ -1295,7 +1295,7 @@ That meant avoiding infinite content, unnecessary browsing and interactions desi
 
 The experience needed an ending.
 
-[SHOW SIMPLE DIAGRAM: OPEN MUDE → WIND DOWN → LEAVE PHONE]
+[IMAGE: wireframe-mude.avif]
 
 ---
 
@@ -1326,8 +1326,6 @@ Create a clear ending that encourages the user to leave the digital environment.
 This gave me a much simpler product loop:
 
 **Notice during the day → Reflect at night → Say goodbye to today → Switch off**
-
-[SHOW CORE EXPERIENCE / JOURNEY]
 
 ---
 
@@ -1386,8 +1384,6 @@ That divided the cognitive work:
 
 The bedtime experience could therefore remain lighter and calmer.
 
-[SHOW DAYTIME CAPTURE → NIGHT-TIME REFLECTION]
-
 ---
 
 # Decision 03
@@ -1409,8 +1405,6 @@ The interaction wasn't there just to create delight.
 It communicated:
 
 ### Today is finished. You don't need to keep doing things.
-
-[SHOW WIND-DOWN + PAGE-TEAR INTERACTION]
 
 ---
 
@@ -1440,8 +1434,6 @@ It exposed an important flaw in my original concept:
 ### Capturing an emotion and reliving an emotion are not the same user need.
 
 That was more useful than a participant simply telling me they liked the prototype.
-
-[SHOW OLD FLOW → INSIGHT → NEW FLOW]
 
 ---
 
@@ -1500,8 +1492,6 @@ It became:
 
 ### "What can I remove?"
 
-[SHOW BEFORE → AFTER ITERATION]
-
 ---
 
 # Decision 05
@@ -1547,8 +1537,6 @@ Revisit selected positive moments through a short, finite bedtime ritual.
 ### 03 — Switch off
 
 Mark the end of the day and deliberately leave the digital environment.
-
-[SHOW YOUR STRONGEST FINAL SCREENS HERE]
 
 The product isn't intended to diagnose or treat sleep disorders.
 
