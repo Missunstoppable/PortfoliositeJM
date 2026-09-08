@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy } from "@/data/caseStudies";
 import CaseStudyMarkdown from "@/components/CaseStudyMarkdown";
+import MoreCaseStudies from "@/components/MoreCaseStudies";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -32,11 +33,12 @@ export default async function CaseStudyPage({
       <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
         <Link
           href="/work"
-          className="w-fit text-sm font-medium text-plum/60 transition-colors hover:text-plum"
+          className="w-fit text-sm font-medium text-[var(--text-faint)] transition-colors hover:text-[var(--foreground)]"
         >
           ← Back to work
         </Link>
         <CaseStudyMarkdown content={study.content} />
+        <MoreCaseStudies currentSlug={study.slug} />
       </div>
     );
   }
@@ -45,41 +47,41 @@ export default async function CaseStudyPage({
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
       <Link
         href="/work"
-        className="w-fit text-sm font-medium text-plum/60 transition-colors hover:text-plum"
+        className="w-fit text-sm font-medium text-[var(--text-faint)] transition-colors hover:text-[var(--foreground)]"
       >
         ← Back to work
       </Link>
 
       <header className="flex flex-col gap-4">
-        <h1 className="font-heading text-3xl font-semibold text-plum sm:text-4xl">
+        <h1 className="font-heading text-3xl font-semibold text-[var(--foreground)] sm:text-4xl">
           {study.title}
         </h1>
-        <p className="text-lg text-plum/80">{study.subtitle}</p>
-        <p className="text-sm text-plum/60">{study.role}</p>
-        {study.meta && <p className="text-sm text-plum/50">{study.meta}</p>}
+        <p className="text-lg text-[var(--text-muted)]">{study.subtitle}</p>
+        <p className="text-sm text-[var(--text-faint)]">{study.role}</p>
+        {study.meta && <p className="text-sm text-[var(--text-faint)]">{study.meta}</p>}
         {study.metricsPreview && (
-          <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-4 py-1.5 text-sm font-medium text-plum">
+          <span className="mt-2 inline-flex w-fit rounded-full bg-sage/25 px-4 py-1.5 text-sm font-medium text-[var(--foreground)]">
             {study.metricsPreview}
           </span>
         )}
       </header>
 
       <section className="flex flex-col gap-3">
-        <h2 className="font-heading text-xl font-semibold text-plum">
+        <h2 className="font-heading text-xl font-semibold text-[var(--foreground)]">
           Problem &amp; context
         </h2>
-        <p className="leading-relaxed text-plum/80">{study.problem}</p>
+        <p className="leading-relaxed text-[var(--text-muted)]">{study.problem}</p>
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="font-heading text-xl font-semibold text-plum">
+        <h2 className="font-heading text-xl font-semibold text-[var(--foreground)]">
           Process &amp; approach
         </h2>
         <ul className="flex flex-col gap-3">
           {study.process?.map((step, i) => (
             <li
               key={i}
-              className="flex gap-3 leading-relaxed text-plum/80"
+              className="flex gap-3 leading-relaxed text-[var(--text-muted)]"
             >
               <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-lavender" />
               <span>{step}</span>
@@ -88,12 +90,14 @@ export default async function CaseStudyPage({
         </ul>
       </section>
 
-      <section className="flex flex-col gap-3 rounded-2xl border border-plum/10 bg-white/50 p-6">
-        <h2 className="font-heading text-xl font-semibold text-plum">
+      <section className="flex flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/50 p-6">
+        <h2 className="font-heading text-xl font-semibold text-[var(--foreground)]">
           Outcome
         </h2>
-        <p className="leading-relaxed text-plum/80">{study.outcome}</p>
+        <p className="leading-relaxed text-[var(--text-muted)]">{study.outcome}</p>
       </section>
+
+      <MoreCaseStudies currentSlug={study.slug} />
     </div>
   );
 }

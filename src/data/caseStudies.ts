@@ -5,6 +5,10 @@ export type CaseStudy = {
   role: string;
   meta?: string;
   summary: string;
+  // Short one-line summary shown on hover on the homepage polaroid cards,
+  // and reused for the "more case studies" cards at the end of each case
+  // study — distinct from (and shorter than) `summary`.
+  oneLiner: string;
   metricsPreview?: string;
   // Rich case studies (full markdown, replaces problem/process/outcome
   // entirely on the detail page) set `content`. Older, simpler case
@@ -836,7 +840,7 @@ Does the product give them a reason to make mental wellness part of their routin
 
 This helped turn a long list of interface issues into **product priorities**.
 
-[SHOW YOUR AUDIT / PRIORITISATION VISUAL HERE]
+[IMAGE: quabble-uxqa.png]
 
 ---
 
@@ -875,8 +879,6 @@ The goal wasn't simply to make onboarding shorter.
 
 It was to make the path to value **clearer**.
 
-[SHOW OLD JOURNEY → IMPROVED JOURNEY]
-
 ---
 
 # Decision 02
@@ -905,7 +907,7 @@ I also explored the paywall as part of the user journey rather than an isolated 
 
 A paywall should not be the first place where the product clearly explains why it is valuable.
 
-[SHOW ONBOARDING / PAYWALL ITERATIONS HERE]
+[IMAGE: quabble-onboarding-paywall-iterations.png]
 
 ---
 
@@ -936,7 +938,7 @@ towards:
 
 That distinction was important because habit-building depends on reducing the effort required to decide what to do next.
 
-[SHOW JOURNEY / ROUTINE / WORKOUT SCREENS]
+[IMAGE: quabble-wellness-journey.png]
 
 ---
 
@@ -962,7 +964,7 @@ The widget therefore wasn't primarily a UI feature.
 
 It was a hypothesis about **retention and routine formation**.
 
-[SHOW WIDGET MOCKUP]
+[IMAGE: quabble-widget-mockup.png]
 
 ---
 
@@ -1016,7 +1018,7 @@ Because:
 
 ### Installing a feature isn't value. Using the product more meaningfully might be.
 
-[SHOW SIMPLE EXPERIMENT DIAGRAM]
+[IMAGE: quabble-experiment-diagram.png]
 
 ---
 
@@ -1038,7 +1040,7 @@ This helped connect interface decisions with a broader product question:
 
 ### What makes Quabble worth returning to?
 
-[SHOW SURVEY / INSIGHT VISUAL, NOT THE WHOLE RESEARCH DOCUMENT]
+[IMAGE: quabble-high-intent-personas.png]
 
 ---
 
@@ -1687,7 +1689,7 @@ The initial research gave me plenty of potential problems.
 
 Possibly too many.
 
-[SHOW RESEARCH THEMES / JOURNEY HERE]
+[IMAGE: famcook-research-themes.png]
 
 ---
 
@@ -1727,7 +1729,7 @@ I chose to concentrate on:
 
 because it addressed several of the highest-frequency problems without requiring FamCook to become a recipe platform, social network and kitchen operating system simultaneously.
 
-[SHOW PRIORITISATION VISUAL]
+[IMAGE: famcook-prioritisation.png]
 
 ---
 
@@ -1765,7 +1767,7 @@ Instead of forcing users to search through messages, key information could stay 
 
 Conversation could support decisions without becoming the place where those decisions were stored.
 
-[SHOW CHAT + PINNED MEAL PLAN]
+[SPLIT: famcook-chat-pinned-plan.png | The shared meal plan sits pinned above the conversation as a persistent layer — what's been decided, what's still open, and what to buy stay visible without digging back through messages to find them.]
 
 ---
 
@@ -1793,7 +1795,7 @@ The goal wasn't to replace proper allergen checking.
 
 It was to reduce avoidable coordination mistakes.
 
-[SHOW DIETARY PROFILE / MEAL PLAN CONNECTION]
+[GALLERY: famcook-diet-selection.png, famcook-meal-plan-connection.png]
 
 ---
 
@@ -1837,7 +1839,7 @@ The idea wasn't to create another giant recipe catalogue.
 
 It was to help a group move from **vague intention → viable meal idea** with less negotiation.
 
-[SHOW INSPIRATION SCREENS]
+[GALLERY: famcook-inspiration-mood.png, famcook-inspiration-snap.png, famcook-inspiration-scan.png]
 
 ---
 
@@ -1869,7 +1871,7 @@ I also considered hands-free interaction and voice controls because the problem 
 
 Sometimes the user literally has chicken on their hands.
 
-[SHOW COOKING MODE]
+[SPLIT: famcook-cooking-mode.png | Bigger priorities, less information at once, and a clearer hierarchy — designed for someone who's reading instructions, watching a pan, and possibly holding a knife, all at the same time.]
 
 ---
 
@@ -1895,7 +1897,7 @@ When someone's attention is already divided, simplicity isn't just aesthetic.
 
 It's functional.
 
-[SHOW SPLIT SCREEN → SINGLE SCREEN]
+[IMAGE: famcook-split-single-compare.png]
 
 ---
 
@@ -1927,7 +1929,7 @@ These weren't isolated UI tweaks.
 
 Together, they pushed the product towards **lower cognitive effort**.
 
-[SHOW FIRST ITERATION → SECOND ITERATION]
+[IMAGE: famcook-iteration-comparison.png]
 
 ---
 
@@ -1953,7 +1955,7 @@ The goal became:
 
 ### Use familiar patterns everywhere else.
 
-[SHOW EARLY UI → FINAL UI]
+[IMAGE: famcook-ui-comparison.png]
 
 ---
 
@@ -1977,7 +1979,7 @@ The principle was:
 
 ### If I'm asking the user for data, I should know what I'm going to do with it.
 
-[SHOW ONBOARDING ITERATION]
+[SPLIT: famcook-onboarding-confidence.png | The final onboarding step asks about cooking confidence instead of budget — information that could actually shape how tasks and instructions are presented later, rather than a question with no clear downstream use.]
 
 ---
 
@@ -2001,7 +2003,7 @@ The product doesn't try to replace conversation.
 
 It provides **structure around the parts of conversation that need to turn into action**.
 
-[SHOW STRONGEST FINAL SCREENS]
+[GALLERY: famcook-home-final.png, famcook-meal-plan-connection.png, famcook-cooking-mode.png]
 
 ---
 
@@ -2135,7 +2137,7 @@ const SPIRA9_CONTENT = `
 
 [HERO IMAGE: spira9-hero.png]
 
-[META: Role=UX / UI Designer | Project type=Client project | Timeline=4 weeks | Scope=Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff | Collaborated with=[ADD YOUR ACTUAL TEAM — e.g. another designer, project lead, engineers]]
+[META: Role=UX / UI Designer | Project type=Client project | Timeline=4 weeks | Scope=Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff]
 
 Spira9 needed a new website for two reasons.
 
@@ -2203,8 +2205,6 @@ And a perfectly reusable template wasn't successful if every website built with 
 
 The challenge sat between the two.
 
-[SHOW OLD WEBSITE → NEW WEBSITE]
-
 ---
 
 # The first problem: users shouldn't have to decode the company
@@ -2237,8 +2237,6 @@ That's partly the point.
 
 A marketing website shouldn't make visitors perform information architecture.
 
-[SHOW OLD IA → SIMPLIFIED IA]
-
 ---
 
 # Decision 01
@@ -2269,8 +2267,6 @@ And rather than giving every piece of content equal visual weight, I designed ar
 
 Only once that hierarchy worked did visual styling become useful.
 
-[SHOW WIREFRAME → FINAL SECTION]
-
 ---
 
 # Decision 02
@@ -2297,8 +2293,6 @@ But we couldn't treat every page as a completely bespoke canvas.
 That forced an important question:
 
 ### How can a reusable system still create a distinctive brand experience?
-
-[SHOW SAME STRUCTURE WITH DIFFERENT VISUAL TREATMENTS]
 
 ---
 
@@ -2333,8 +2327,6 @@ Only after that hierarchy worked did I introduce the brand palette.
 Colour became a way to create emphasis rather than compensate for unclear composition.
 
 ### If everything asks for attention, nothing has hierarchy.
-
-[SHOW GREYSCALE → COLOUR VERSION]
 
 ---
 
@@ -2555,6 +2547,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Product / UX Designer",
     summary:
       "Freelancers were registering and quietly disappearing — tracing an 80% drop to a category picker nobody could parse, and fixing it.",
+    oneLiner: "Optimising freelancer onboarding to unlock market supply",
     content: OSDIRE_CONTENT,
   },
   {
@@ -2564,6 +2557,8 @@ export const caseStudies: CaseStudy[] = [
     role: "Product / UX Designer",
     summary:
       "A UX audit that expanded into a year of onboarding, paywall and engagement work to help new users reach value sooner.",
+    oneLiner:
+      "Improving activation and retention for Quabble's daily mental wellness experience",
     content: QUABBLE_CONTENT,
   },
   {
@@ -2573,6 +2568,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Product Designer / UX Researcher",
     summary:
       "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
+    oneLiner: "An integrated wind-down ritual to reduce bedtime procrastination",
     content: MUDE_CONTENT,
   },
   {
@@ -2582,6 +2578,7 @@ export const caseStudies: CaseStudy[] = [
     role: "Product Designer / UX Researcher",
     summary:
       "A self-initiated concept turning dietary chaos and an unanswered group chat into one shared plan, from decision to dinner.",
+    oneLiner: "A shared meal planning product for group cooking",
     content: FAMCOOK_CONTENT,
   },
   {
@@ -2591,6 +2588,8 @@ export const caseStudies: CaseStudy[] = [
     role: "UX / UI Designer",
     summary:
       "A four-week client project selling Spira9's website-building platform by building the site entirely inside it.",
+    oneLiner:
+      "Reimagining a conversion website and showcase for its AI website builder",
     content: SPIRA9_CONTENT,
   },
 ];

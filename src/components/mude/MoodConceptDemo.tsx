@@ -61,7 +61,7 @@ export default function MoodConceptDemo() {
 
   return (
     <div className="flex h-[280px] flex-col justify-center gap-6 overflow-hidden rounded-xl border border-dashed border-plum/20 bg-white p-8">
-      <p className="text-center text-xs font-semibold uppercase tracking-wide text-plum/35">
+      <p className="text-center text-xs font-semibold uppercase tracking-wide text-plum/75">
         Early concept sketch — explored, not part of the final scope
       </p>
 
@@ -84,7 +84,7 @@ export default function MoodConceptDemo() {
         className="flex flex-col items-center gap-2 transition-opacity duration-500"
         style={{ opacity: showTrend ? 1 : 0 }}
       >
-        <p className="text-xs font-medium text-plum/45">This week</p>
+        <p className="text-xs font-medium text-plum/75">This week</p>
         <div className="flex items-end gap-2">
           {WEEK_PATTERN.map((level, i) => (
             <div

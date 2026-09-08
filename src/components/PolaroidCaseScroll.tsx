@@ -11,6 +11,10 @@ const ROTATIONS = [-6, 4, -5, 6, -4];
 const TAPE_COLORS = ["bg-lavender", "bg-terracotta", "bg-sage", "bg-lavender", "bg-terracotta"];
 const SAG_MAX = 46; // px the middle card drops below the ends
 
+// Slugs with a dedicated card image (`<slug>-casecard.png`); anything else
+// falls back to the case study's hero-style `<slug>.png`.
+const CASECARD_SLUGS = new Set(["osdire", "mude", "famcook", "spira9"]);
+
 function sagFor(index: number, total: number) {
   const t = total > 1 ? index / (total - 1) : 0;
   return Math.sin(t * Math.PI) * SAG_MAX;
@@ -71,8 +75,8 @@ export default function PolaroidCaseScroll() {
   if (reducedMotion) {
     return (
       <section className="flex flex-col gap-8">
-        <h2 className="font-heading text-2xl font-semibold text-plum">
-          Selected work
+        <h2 className="font-heading text-2xl font-semibold text-[var(--foreground)]">
+          Selected works
         </h2>
         <div className="flex gap-12 overflow-x-auto px-6 pb-6 sm:px-10">
           {caseStudies.map((study, i) => (
@@ -89,12 +93,12 @@ export default function PolaroidCaseScroll() {
       style={{ height: "calc(100vh + 220vh)" }}
       className="relative"
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-start gap-10 overflow-hidden pt-24 sm:pt-28">
-        <h2 className="px-6 font-heading text-2xl font-semibold text-plum sm:px-10">
-          Selected work
+      <div className="sticky top-0 flex h-screen flex-col justify-start gap-10 overflow-hidden pt-8 sm:pt-12">
+        <h2 className="px-6 font-heading text-2xl font-semibold text-[var(--foreground)] sm:px-10">
+          Selected works
         </h2>
         <div className="relative">
-          <div className="absolute left-0 right-0 top-[86px] h-px bg-plum/15" />
+          <div className="absolute left-0 right-0 top-[86px] h-px bg-[var(--border)]" />
           <div
             ref={trackRef}
             className="flex items-start gap-[7vw] px-[10vw] will-change-transform"
@@ -135,23 +139,27 @@ function PolaroidCard({
       <div className="w-[clamp(220px,24vw,320px)] rounded-sm bg-white p-3 pb-5 shadow-[0_18px_30px_-12px_rgba(69,59,74,0.4)] transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-0">
         <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
           <Image
-            src={`/work/${study.slug}.png`}
+            src={
+              CASECARD_SLUGS.has(study.slug)
+                ? `/work/casecards/${study.slug}-casecard.png`
+                : `/work/${study.slug}.png`
+            }
             alt={`${study.title} preview`}
             fill
             className="object-cover"
             sizes="(min-width: 640px) 24vw, 60vw"
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-lavender-soft to-lavender p-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <span className="font-heading text-lg font-semibold text-plum">
-              {study.title}
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#E3D8EA] to-[#CBB8DA] p-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="font-heading text-sm font-medium leading-snug text-plum">
+              {study.oneLiner}
             </span>
           </div>
         </div>
         <p className="mt-3 text-center font-heading text-sm font-semibold text-plum">
-          {study.subtitle}
+          {study.title}
         </p>
         {study.metricsPreview && (
-          <p className="mt-1 text-center text-xs text-plum/60">
+          <p className="mt-1 text-center text-xs text-plum/75">
             {study.metricsPreview}
           </p>
         )}

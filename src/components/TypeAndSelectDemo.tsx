@@ -78,10 +78,10 @@ export default function TypeAndSelectDemo() {
 
   return (
     <div className="overflow-hidden rounded-xl border border-plum/10 bg-white p-8">
-      <p className="font-heading text-xs font-bold uppercase tracking-wide text-plum/40">
+      <p className="font-heading text-xs font-bold uppercase tracking-wide text-plum/75">
         Service category
       </p>
-      <p className="mt-1 text-sm text-plum/50">
+      <p className="mt-1 text-sm text-plum/75">
         Start typing and choose the category that best describes what you do.
       </p>
       <div className="mt-4 flex items-center rounded-xl border-2 border-lavender px-4 py-3 shadow-[0_0_0_3px_rgba(203,184,218,0.25)]">
@@ -103,7 +103,7 @@ export default function TypeAndSelectDemo() {
               s.style === "match"
                 ? "bg-lavender font-semibold text-plum"
                 : s.style === "muted"
-                  ? "bg-[#F9F6F2] text-plum/30"
+                  ? "bg-[#F9F6F2] text-plum/75"
                   : "text-plum"
             }`}
           >

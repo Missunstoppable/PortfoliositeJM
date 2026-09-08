@@ -25,17 +25,17 @@ function textOf(children: ReactNode): string {
 
 const components: Components = {
   h1: ({ children }) => (
-    <h1 className="font-heading text-2xl font-semibold text-plum sm:text-3xl">
+    <h1 className="font-heading text-2xl font-semibold text-[var(--foreground)] sm:text-3xl">
       {children}
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="font-heading text-xl font-semibold text-plum">
+    <h2 className="font-heading text-xl font-semibold text-[var(--foreground)]">
       {children}
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="font-heading text-lg font-semibold text-plum">
+    <h3 className="font-heading text-lg font-semibold text-[var(--foreground)]">
       {children}
     </h3>
   ),
@@ -52,13 +52,13 @@ const components: Components = {
         })
         .filter((p) => p.label && p.value);
       return (
-        <dl className="grid grid-cols-1 gap-x-8 gap-y-4 rounded-xl border border-plum/10 bg-white/50 p-6 sm:grid-cols-2">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-4 rounded-xl border border-[var(--border)] bg-[var(--surface)]/50 p-6 sm:grid-cols-2">
           {pairs.map(({ label, value }) => (
             <div key={label}>
-              <dt className="font-heading text-xs font-bold uppercase tracking-wide text-plum/40">
+              <dt className="font-heading text-xs font-bold uppercase tracking-wide text-[var(--text-faint)]">
                 {label}
               </dt>
-              <dd className="mt-1 text-sm leading-relaxed text-plum">
+              <dd className="mt-1 text-sm leading-relaxed text-[var(--foreground)]">
                 {value}
               </dd>
             </div>
@@ -85,7 +85,7 @@ const components: Components = {
         );
       }
       return (
-        <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-plum/25 bg-white/40 text-plum/40">
+        <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-[var(--border)] bg-[var(--surface)]/40 text-[var(--text-faint)]">
           <svg
             width="32"
             height="32"
@@ -108,7 +108,7 @@ const components: Components = {
     if (imageMatch) {
       const file = imageMatch[1].trim();
       return (
-        <div className="overflow-hidden rounded-xl border border-plum/10">
+        <div className="overflow-hidden rounded-xl border border-[var(--border)]">
           <Image
             src={`/work/${file}`}
             alt=""
@@ -117,6 +117,27 @@ const components: Components = {
             className="h-auto w-full"
             sizes="(min-width: 640px) 768px, 100vw"
           />
+        </div>
+      );
+    }
+
+    const splitMatch = text.match(/^\[SPLIT:\s*(.+?)\s*\|\s*(.+)\]$/);
+    if (splitMatch) {
+      const file = splitMatch[1].trim();
+      const caption = splitMatch[2].trim();
+      return (
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:gap-10">
+          <div className="w-full max-w-[220px] shrink-0 overflow-hidden rounded-xl border border-[var(--border)] sm:max-w-[240px]">
+            <Image
+              src={`/work/${file}`}
+              alt=""
+              width={480}
+              height={1040}
+              className="h-auto w-full"
+              sizes="240px"
+            />
+          </div>
+          <p className="leading-relaxed text-[var(--text-muted)]">{caption}</p>
         </div>
       );
     }
@@ -136,7 +157,7 @@ const components: Components = {
           {files.map((file) => (
             <div
               key={file}
-              className="overflow-hidden rounded-xl border border-plum/10"
+              className="mx-auto w-full max-w-[280px] overflow-hidden rounded-xl border border-plum/10"
             >
               <Image
                 src={`/work/${file}`}
@@ -144,7 +165,7 @@ const components: Components = {
                 width={900}
                 height={900}
                 className="h-auto w-full"
-                sizes="(min-width: 640px) 384px, 100vw"
+                sizes="280px"
               />
             </div>
           ))}
@@ -155,15 +176,15 @@ const components: Components = {
     const isPlaceholder = /^\[.*\]$/.test(text);
     if (isPlaceholder) {
       return (
-        <div className="rounded-xl border border-dashed border-plum/25 bg-white/40 px-4 py-6 text-center text-sm italic text-plum/50">
+        <div className="rounded-xl border border-dashed border-[var(--border)] bg-[var(--surface)]/40 px-4 py-6 text-center text-sm italic text-[var(--text-faint)]">
           {text}
         </div>
       );
     }
-    return <p className="leading-relaxed text-plum/80">{children}</p>;
+    return <p className="leading-relaxed text-[var(--text-muted)]">{children}</p>;
   },
   blockquote: ({ children }) => (
-    <blockquote className="border-l-2 border-terracotta pl-4 italic leading-relaxed text-plum/70">
+    <blockquote className="border-l-2 border-terracotta pl-4 italic leading-relaxed text-[var(--text-muted)]">
       {children}
     </blockquote>
   ),
@@ -171,19 +192,19 @@ const components: Components = {
     <ul className="flex flex-col gap-2">{children}</ul>
   ),
   li: ({ children }) => (
-    <li className="flex gap-3 leading-relaxed text-plum/80">
+    <li className="flex gap-3 leading-relaxed text-[var(--text-muted)]">
       <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lavender" />
       <span>{children}</span>
     </li>
   ),
   strong: ({ children }) => (
-    <strong className="font-semibold text-plum">{children}</strong>
+    <strong className="font-semibold text-[var(--foreground)]">{children}</strong>
   ),
-  hr: () => <hr className="border-t border-plum/10" />,
+  hr: () => <hr className="border-t border-[var(--border)]" />,
   a: ({ href, children }) => (
     <a
       href={href}
-      className="text-plum underline decoration-lavender underline-offset-2 hover:text-plum/80"
+      className="text-[var(--foreground)] underline decoration-lavender underline-offset-2 hover:text-[var(--text-muted)]"
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
     >

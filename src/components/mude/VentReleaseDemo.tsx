@@ -71,7 +71,7 @@ export default function VentReleaseDemo() {
   return (
     <div className="flex h-[280px] flex-col items-center justify-center gap-6 overflow-hidden rounded-xl border border-plum/10 bg-white p-8">
       <div className="w-full max-w-sm rounded-2xl border border-plum/10 bg-[#F9F6F2] p-5">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-plum/40">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-plum/75">
           Let it out
         </p>
         <p
@@ -91,7 +91,7 @@ export default function VentReleaseDemo() {
       </div>
 
       <div
-        className="flex items-center gap-2 text-sm text-plum/50 transition-opacity duration-500"
+        className="flex items-center gap-2 text-sm text-plum/75 transition-opacity duration-500"
         style={{ opacity: released ? 1 : 0 }}
       >
         <svg
