@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy } from "@/data/caseStudies";
 import CaseStudyMarkdown from "@/components/CaseStudyMarkdown";
 import MoreCaseStudies from "@/components/MoreCaseStudies";
+import BackLink from "@/components/BackLink";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -31,12 +31,7 @@ export default async function CaseStudyPage({
   if (study.content) {
     return (
       <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
-        <Link
-          href="/work"
-          className="w-fit text-sm font-medium text-[var(--text-faint)] transition-colors hover:text-[var(--foreground)]"
-        >
-          ← Back to work
-        </Link>
+        <BackLink />
         <CaseStudyMarkdown content={study.content} />
         <MoreCaseStudies currentSlug={study.slug} />
       </div>
@@ -45,12 +40,7 @@ export default async function CaseStudyPage({
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-20 sm:px-10">
-      <Link
-        href="/work"
-        className="w-fit text-sm font-medium text-[var(--text-faint)] transition-colors hover:text-[var(--foreground)]"
-      >
-        ← Back to work
-      </Link>
+      <BackLink />
 
       <header className="flex flex-col gap-4">
         <h1 className="font-heading text-3xl font-semibold text-[var(--foreground)] sm:text-4xl">

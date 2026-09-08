@@ -53,14 +53,14 @@ export default function TreasureBoxHero() {
       </div>
 
       <div className="box mx-auto">
-        <p className="box-label">Pick a cursor from my treasure box</p>
+        <p className="box-label">Pick something from my treasure box</p>
         <div className="items-grid">
           {ORDER.map((key) => (
             <button
               key={key}
               type="button"
               className={`item${selected === key ? " selected" : ""}`}
-              aria-label={`Choose ${ICONS[key].name} as cursor`}
+              aria-label={`Pick ${ICONS[key].name}`}
               onClick={() => choose(key)}
             >
               <Icon iconKey={key} />
@@ -75,12 +75,12 @@ export default function TreasureBoxHero() {
           {selected ? (
             <>
               <Icon iconKey={selected} size={18} />
-              <span>Cursor: {ICONS[selected].name}</span>
+              <span>You picked: {ICONS[selected].name}</span>
             </>
           ) : (
             <>
               <span className="dot" />
-              <span>Cursor: default</span>
+              <span>Nothing picked yet</span>
             </>
           )}
         </div>
