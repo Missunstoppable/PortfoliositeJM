@@ -90,6 +90,7 @@ export default function PolaroidCaseScroll() {
   return (
     <section
       ref={sectionRef}
+      id="selected-works-pin"
       style={{ height: "calc(100vh + 220vh)" }}
       className="relative"
     >
