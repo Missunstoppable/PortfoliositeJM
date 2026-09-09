@@ -53,7 +53,7 @@ export default function TreasureBoxHero() {
       </div>
 
       <div className="box mx-auto">
-        <p className="box-label">Pick something from my treasure box</p>
+        <p className="box-label">Pick a cursor from my treasure box</p>
         <div className="items-grid">
           {ORDER.map((key) => (
             <button
