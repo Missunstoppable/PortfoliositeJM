@@ -38,7 +38,7 @@ export default function TreasureBoxHero() {
   }
 
   return (
-    <section className="mx-auto grid w-full max-w-[1180px] grid-cols-1 items-center gap-x-16 gap-y-6 px-6 pt-6 sm:px-8 sm:pt-10 md:grid-cols-2">
+    <section className="mx-auto grid w-full max-w-5xl grid-cols-1 items-center gap-x-16 gap-y-6 px-6 pt-6 sm:px-10 sm:pt-10 md:grid-cols-2">
       <div className="flex flex-col items-center text-center md:items-start md:text-left">
         <p className="font-heading text-sm font-semibold uppercase tracking-wide text-[var(--text-faint)]">
           Product Designer · UX Designer

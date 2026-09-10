@@ -75,9 +75,11 @@ export default function PolaroidCaseScroll() {
   if (reducedMotion) {
     return (
       <section className="flex flex-col gap-8">
-        <h2 className="font-heading text-2xl font-semibold text-[var(--foreground)]">
-          Selected works
-        </h2>
+        <div className="mx-auto w-full max-w-5xl px-6 sm:px-10">
+          <h2 className="font-heading text-2xl font-semibold text-[var(--foreground)]">
+            Selected works
+          </h2>
+        </div>
         <div className="flex gap-12 overflow-x-auto px-6 pb-6 sm:px-10">
           {caseStudies.map((study, i) => (
             <PolaroidCard key={study.slug} study={study} index={i} />
@@ -95,9 +97,11 @@ export default function PolaroidCaseScroll() {
       className="relative"
     >
       <div className="sticky top-0 flex h-screen flex-col justify-start gap-10 overflow-hidden pt-8 sm:pt-12">
-        <h2 className="px-6 font-heading text-2xl font-semibold text-[var(--foreground)] sm:px-10">
-          Selected works
-        </h2>
+        <div className="mx-auto w-full max-w-5xl px-6 sm:px-10">
+          <h2 className="font-heading text-2xl font-semibold text-[var(--foreground)]">
+            Selected works
+          </h2>
+        </div>
         <div className="relative">
           <div className="absolute left-0 right-0 top-[86px] h-px bg-[var(--border)]" />
           <div

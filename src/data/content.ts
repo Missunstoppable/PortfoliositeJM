@@ -79,7 +79,7 @@ export const skillGroups = [
 ];
 
 export const whyHireMe = {
-  heading: "Why hire me",
+  heading: "Who I am as a designer",
   intro: [
     "I don't just make things look nice.",
     "Although I do, in fact, enjoy making things look nice.",
