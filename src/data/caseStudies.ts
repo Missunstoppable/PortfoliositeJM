@@ -840,7 +840,7 @@ Does the product give them a reason to make mental wellness part of their routin
 
 This helped turn a long list of interface issues into **product priorities**.
 
-[IMAGE: quabble-uxqa.png]
+[SCROLL IMAGE: Recommendations.png]
 
 ---
 

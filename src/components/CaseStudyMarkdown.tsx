@@ -121,6 +121,23 @@ const components: Components = {
       );
     }
 
+    const scrollImageMatch = text.match(/^\[SCROLL IMAGE:\s*(.+)\]$/);
+    if (scrollImageMatch) {
+      const file = scrollImageMatch[1].trim();
+      return (
+        <div className="h-[384px] overflow-y-auto overflow-x-hidden overscroll-contain rounded-xl border border-[var(--border)]">
+          <Image
+            src={`/work/${file}`}
+            alt=""
+            width={1200}
+            height={900}
+            className="h-auto w-full"
+            sizes="(min-width: 640px) 768px, 100vw"
+          />
+        </div>
+      );
+    }
+
     const splitMatch = text.match(/^\[SPLIT:\s*(.+?)\s*\|\s*(.+)\]$/);
     if (splitMatch) {
       const file = splitMatch[1].trim();
