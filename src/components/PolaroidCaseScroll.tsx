@@ -13,7 +13,7 @@ const SAG_MAX = 46; // px the middle card drops below the ends
 
 // Slugs with a dedicated card image (`<slug>-casecard.png`); anything else
 // falls back to the case study's hero-style `<slug>.png`.
-const CASECARD_SLUGS = new Set(["osdire", "mude", "famcook", "spira9"]);
+const CASECARD_SLUGS = new Set(["osdire", "quabble", "mude", "famcook", "spira9"]);
 
 function sagFor(index: number, total: number) {
   const t = total > 1 ? index / (total - 1) : 0;
