@@ -5,10 +5,16 @@ export type CaseStudy = {
   role: string;
   meta?: string;
   summary: string;
-  // Short one-line summary shown on hover on the homepage polaroid cards,
-  // and reused for the "more case studies" cards at the end of each case
-  // study — distinct from (and shorter than) `summary`.
+  // Short one-line summary shown on the homepage case cards and reused for
+  // the "more case studies" cards at the end of each case study — distinct
+  // from (and shorter than) `summary`.
   oneLiner: string;
+  // What the project IS, shown on the homepage case card as "{title} · {category}".
+  category: string;
+  // Bold outcome/result line on the homepage case card.
+  outcomeStat: string;
+  // Small pastel pill tags on the homepage case card.
+  tags: string[];
   metricsPreview?: string;
   // Rich case studies (full markdown, replaces problem/process/outcome
   // entirely on the detail page) set `content`. Older, simpler case
@@ -2548,38 +2554,10 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Freelancers were registering and quietly disappearing — tracing an 80% drop to a category picker nobody could parse, and fixing it.",
     oneLiner: "Optimising freelancer onboarding to unlock market supply",
+    category: "Two-sided freelance marketplace",
+    outcomeStat: "4x increase in service publishing",
+    tags: ["marketplace", "responsive web design", "0-1", "design system"],
     content: OSDIRE_CONTENT,
-  },
-  {
-    slug: "quabble",
-    title: "Quabble",
-    subtitle: "Improving activation and retention for a mental-wellness app",
-    role: "Product / UX Designer",
-    summary:
-      "A UX audit that expanded into a year of onboarding, paywall and engagement work to help new users reach value sooner.",
-    oneLiner:
-      "Improving activation and retention for Quabble's daily mental wellness experience",
-    content: QUABBLE_CONTENT,
-  },
-  {
-    slug: "mude",
-    title: "Mude",
-    subtitle: "A wind-down ritual to reduce bedtime procrastination",
-    role: "Product Designer / UX Researcher",
-    summary:
-      "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
-    oneLiner: "An integrated wind-down ritual to reduce bedtime procrastination",
-    content: MUDE_CONTENT,
-  },
-  {
-    slug: "famcook",
-    title: "FamCook",
-    subtitle: "A shared meal-planning product for group cooking",
-    role: "Product Designer / UX Researcher",
-    summary:
-      "A self-initiated concept turning dietary chaos and an unanswered group chat into one shared plan, from decision to dinner.",
-    oneLiner: "A shared meal planning product for group cooking",
-    content: FAMCOOK_CONTENT,
   },
   {
     slug: "spira9",
@@ -2589,8 +2567,51 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A four-week client project selling Spira9's website-building platform by building the site entirely inside it.",
     oneLiner:
-      "Reimagining a conversion website and showcase for its AI website builder",
+      "A conversion site built on the client's own website-building platform",
+    category: "AI website builder & digital marketing",
+    outcomeStat: "Shipped: site + reusable design system",
+    tags: ["marketing website", "style guide", "client project", "landing page"],
     content: SPIRA9_CONTENT,
+  },
+  {
+    slug: "mude",
+    title: "Mude",
+    subtitle: "A wind-down ritual to reduce bedtime procrastination",
+    role: "Product Designer / UX Researcher",
+    summary:
+      "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
+    oneLiner: "A bedtime ritual designed to help people put their phone down",
+    category: "An app for bedtime procrastination",
+    outcomeStat: "2 rounds of usability testing reshaped the core concept",
+    tags: ["sleep & wellbeing", "mobile app", "0-1 concept", "usability testing"],
+    content: MUDE_CONTENT,
+  },
+  {
+    slug: "quabble",
+    title: "Quabble",
+    subtitle: "Improving activation and retention for a mental-wellness app",
+    role: "Product / UX Designer",
+    summary:
+      "A UX audit that expanded into a year of onboarding, paywall and engagement work to help new users reach value sooner.",
+    oneLiner:
+      "Turning a UX audit into an ongoing activation and retention practice",
+    category: "Mental wellness mobile app",
+    outcomeStat: "80% of recommendations adopted by the product team",
+    tags: ["mental wellness", "mobile app", "audit-led redesign", "experiment design"],
+    content: QUABBLE_CONTENT,
+  },
+  {
+    slug: "famcook",
+    title: "FamCook",
+    subtitle: "A shared meal-planning product for group cooking",
+    role: "Product Designer / UX Researcher",
+    summary:
+      "A self-initiated concept turning dietary chaos and an unanswered group chat into one shared plan, from decision to dinner.",
+    oneLiner: "A shared meal-planning product for group cooking",
+    category: "A shared cooking experience",
+    outcomeStat: "50% improvement in task success across usability testing",
+    tags: ["group cooking", "mobile app", "0-1 concept", "prioritization"],
+    content: FAMCOOK_CONTENT,
   },
 ];
 

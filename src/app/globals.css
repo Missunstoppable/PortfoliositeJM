@@ -17,6 +17,9 @@
   --moss: #7c8f68;
   --stone: #b0a297;
   --shell: #eac9bc;
+  /* Lightened for WCAG 1.4.3 (4.5:1) against --plum tag text — plain
+     --stone measures 4.28:1, just under the normal-text threshold. */
+  --case-tag-stone: #beb1a7;
 
   /* Icon ink: same hues as the palette above, darkened only where needed
      so line icons clear WCAG 1.4.11 (3:1) against a white card. */
@@ -49,6 +52,7 @@
     --border: rgba(243, 236, 233, 0.14);
     --moss: #93a67f;
     --stone: #c7baaf;
+    --case-tag-stone: #c7baaf;
     --shell: #f2ded2;
 
     --icon-leaf: #b9c7aa;
@@ -80,6 +84,7 @@
   --border: rgba(243, 236, 233, 0.14);
   --moss: #93a67f;
   --stone: #c7baaf;
+  --case-tag-stone: #c7baaf;
   --shell: #f2ded2;
 
   --icon-leaf: #b9c7aa;
@@ -369,4 +374,69 @@ body > header {
   color: var(--text-faint);
   text-align: center;
   max-width: 320px;
+}
+
+/* ---- Homepage case cards ---- */
+.case-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-lato), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--plum);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.case-tag:nth-child(5n + 1) {
+  background: var(--lavender);
+  transform: rotate(-1.5deg);
+}
+.case-tag:nth-child(5n + 2) {
+  background: var(--terracotta);
+  transform: rotate(2deg);
+}
+.case-tag:nth-child(5n + 3) {
+  background: var(--sage);
+  transform: rotate(-2deg);
+}
+.case-tag:nth-child(5n + 4) {
+  background: var(--case-tag-stone);
+  transform: rotate(1.5deg);
+}
+.case-tag:nth-child(5n + 5) {
+  background: var(--shell);
+  transform: rotate(-1deg);
+}
+
+.case-card-text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.case-card-text.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.case-card-link .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+.case-card-link:hover .arrow {
+  transform: translateX(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-card-text {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .case-card-link .arrow {
+    transition: none;
+  }
 }
