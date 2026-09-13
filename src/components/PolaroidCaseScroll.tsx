@@ -15,10 +15,6 @@ const TAPE_COLORS = ["bg-lavender", "bg-terracotta", "bg-sage", "bg-lavender", "
 // falls back to the case study's hero-style `<slug>.png`.
 const CASECARD_SLUGS = new Set(["osdire", "quabble", "mude", "famcook", "spira9"]);
 
-// Shared animation config for every card's enter/exit — one instance of
-// these values applied identically everywhere, not tuned per card.
-const FADE_THRESHOLD = 0.2;
-
 export default function PolaroidCaseScroll() {
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -181,27 +177,18 @@ function PolaroidCard({
 
     let enterTimer: number | undefined;
 
-    // Two observers, deliberately: this animation is scroll-position
-    // driven (not time-driven), so "500ms before it leaves" can't be
-    // predicted from scroll position alone — a shrunk rootMargin
-    // approximates it spatially (the exit observer reports "left" while
-    // the card still has a real margin of true visibility remaining).
-    // Entrance uses the literal 500ms delay that was asked for, since
-    // that direction doesn't require predicting the future.
-    const enterObserver = new IntersectionObserver(
+    // A single observer drives both directions off the same shrunk
+    // rootMargin (a central ~64%-wide zone), so a card fades out a little
+    // before it's fully gone AND reliably fades back in on re-entry —
+    // using two separately-thresholded observers here previously meant
+    // the wider "entered" crossing could already be behind it (never
+    // re-fired) by the time a slow scroll approached the edge and back,
+    // leaving the text stuck hidden after that round trip.
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           enterTimer = window.setTimeout(() => setInView(true), 500);
-        } else if (enterTimer) {
-          window.clearTimeout(enterTimer);
-        }
-      },
-      { threshold: FADE_THRESHOLD },
-    );
-
-    const exitObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
+        } else {
           if (enterTimer) window.clearTimeout(enterTimer);
           setInView(false);
         }
@@ -209,12 +196,10 @@ function PolaroidCard({
       { threshold: 0, rootMargin: "0px -18% 0px -18%" },
     );
 
-    enterObserver.observe(el);
-    exitObserver.observe(el);
+    observer.observe(el);
     return () => {
       if (enterTimer) window.clearTimeout(enterTimer);
-      enterObserver.disconnect();
-      exitObserver.disconnect();
+      observer.disconnect();
     };
   }, []);
 
