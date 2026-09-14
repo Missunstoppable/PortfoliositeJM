@@ -1614,414 +1614,51 @@ That insight became the most transferable lesson from the project:
 `;
 
 const SPIRA9_CONTENT = `
-# Designing outside the box — while staying inside the template
-
-## Reimagining Spira9's digital presence as both a conversion website and a showcase for its AI website builder
+# Designing outside the box while staying inside the template
 
 **Spira9 · Digital Marketing & AI Website Builder**
 
 [HERO IMAGE: spira9-hero-new.png]
 
-[META: Role=UX / UI Designer | Project type=Client project | Timeline=4 weeks | Scope=Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff]
+[META: Role=UX Designer / UI Designer / UX Writer | Period=4 weeks | My Contributions=Information architecture · Design system · Responsive UI design · UX writing | Platforms=Responsive marketing website | Collaborators=Client team, engineering (dev handoff) | Methods=Market/competitive analysis, IA restructuring, wireframing, prototyping, usability testing, style guide | Outcome=Shipped a responsive marketing site and reusable design system that also showcases the client's own AI website-builder platform]
 
-Spira9 needed a new website for two reasons.
+# The constraint
 
-It had to explain and sell its digital marketing services more effectively.
-
-But it also had to demonstrate the capabilities of the company's own AI website-building platform.
-
-That created an unusual constraint:
-
-### The website needed to feel distinctive enough to sell the product — while using the same structural system the product would give its customers.
-
-In other words:
-
-**Make it look custom. Don't make it too custom.**
+Spira9 builds AI website-building software, and this project was the company's own marketing site — which meant it had to double as a working showcase of the builder itself. That created an unusual restriction: I could change section backgrounds, add visual guiding elements, and adjust the overall layout orientation, but the underlying structure was fixed by the platform I was designing inside of. The brief wasn't "design freely," it was "design distinctively within a template" — closer to choreographing within a fixed stage than building the stage itself.
 
 ---
 
-# The 30-second version
+# Building the system first
 
-### Business problem
+I started with market and competitive analysis across digital marketing and AI website-building tools, then rebuilt the information architecture before touching any visual design — deciding what a visitor should understand, and in what order, before colour or layout entered the conversation. I designed in greyscale first, specifically to prove the hierarchy worked without colour doing the work for it; colour went back in afterward to create emphasis, not to compensate for unclear composition.
 
-Spira9's existing website made its services difficult to understand and didn't present the company as the modern digital partner it wanted to become.
+I also set the style guide — type, colour, components, spacing, responsive rules — before high-fidelity screens multiplied, rather than documenting it retroactively. That decision held up better in principle than in practice: since this was a team effort, the colour palette wasn't followed strictly from the start, and I had to go back and clean up the design system once the drift became visible. The lesson wasn't "build the system first" — I already believed that — it was that a system only holds if everyone building against it treats it as fixed, not a suggestion.
 
-### Design constraint
+[IMAGE: spira9-style-guide.png]
 
-The redesign couldn't behave like a completely bespoke marketing site. Its underlying structure also needed to demonstrate what could be created through Spira9's AI website-building system.
-
-### My approach
-
-I focused on three things:
-
-**Clarify the proposition.**
-**Create stronger visual hierarchy.**
-**Build a reusable visual system that could survive different layouts and screen sizes.**
-
-### Biggest lesson
-
-Constraints don't necessarily reduce creativity.
-
-They change **where creativity needs to happen**.
+[IMAGE: spira9-components.png]
 
 ---
 
-# The website had two jobs
+# The showcase
 
-Most marketing websites need to convince visitors that a service is worth buying.
+The result needed to work two ways at once: a marketing site persuasive enough to bring in Spira9's own clients, and a live proof point for what their AI builder could produce. After usability testing and a handoff round with engineering — iterating on what was actually feasible before locking in responsive breakpoints — the site shipped as both.
 
-Spira9's site had an additional responsibility.
-
-### It was also evidence.
-
-If the company wanted customers to trust its website-building technology, its own website needed to communicate:
-
-**"This is what our platform can create."**
-
-That meant the interface wasn't merely presenting the product.
-
-### The interface was part of the product demonstration.
-
-This changed how I evaluated design decisions.
-
-A visually impressive interaction wasn't automatically useful if it couldn't work within the underlying website-builder structure.
-
-And a perfectly reusable template wasn't successful if every website built with it looked generic.
-
-The challenge sat between the two.
-
----
-
-# The first problem: users shouldn't have to decode the company
-
-The existing experience contained competing information and a weak content hierarchy.
-
-Before thinking about animation, illustration or colour, I needed to answer a more basic question:
-
-### What should someone understand within the first few seconds?
-
-I reorganised the experience around a clearer hierarchy:
-
-**What Spira9 does**
-
-↓
-**Why it matters**
-
-↓
-**What services/products are available**
-
-↓
-**Why the company is credible**
-
-↓
-**What the visitor should do next**
-
-This sounds simple.
-
-That's partly the point.
-
-A marketing website shouldn't make visitors perform information architecture.
-
----
-
-# Decision 01
-
-## Design the message before decorating the page
-
-The redesign needed to feel more dynamic and premium.
-
-But visual polish couldn't compensate for a vague proposition.
-
-So I worked on the hierarchy and content alongside the interface.
-
-Headings became more direct.
-
-Sections had clearer roles.
-
-Calls to action were given stronger priority.
-
-And rather than giving every piece of content equal visual weight, I designed around the questions a potential customer would naturally ask:
-
-### What do you actually do?
-
-### Is this relevant to me?
-
-### Why should I trust you?
-
-### What can I do next?
-
-Only once that hierarchy worked did visual styling become useful.
-
----
-
-# Decision 02
-
-## The constraint wasn't something to design around. It was part of the product.
-
-The biggest difference between this project and a conventional marketing-site redesign was the website builder itself.
-
-Because the site would also act as a reference for Spira9's scalable AI website-building service, some layout and interaction possibilities were restricted.
-
-Engineering and design therefore had to establish where variation was possible.
-
-For example, we could explore:
-
-- section backgrounds,
-- visual guiding elements,
-- changes in content orientation,
-- typography and hierarchy,
-- imagery,
-- and flexible composition within supported structures.
-
-But we couldn't treat every page as a completely bespoke canvas.
-
-That forced an important question:
-
-### How can a reusable system still create a distinctive brand experience?
-
----
-
-# Decision 03
-
-## Create distinction through hierarchy, not decoration
-
-When layout freedom is limited, there is an obvious temptation:
-
-Add more colour.
-
-Add more graphics.
-
-Add more effects.
-
-That often makes the constraint more visible rather than less.
-
-Instead, I initially designed in greyscale.
-
-This helped me evaluate:
-
-**What gets noticed first?**
-
-**Where does the eye move next?**
-
-**Which content feels primary?**
-
-**Where does a section begin and end?**
-
-Only after that hierarchy worked did I introduce the brand palette.
-
-Colour became a way to create emphasis rather than compensate for unclear composition.
-
-### If everything asks for attention, nothing has hierarchy.
-
----
-
-# Decision 04
-
-## Build the system earlier
-
-One of my biggest lessons from previous visual-design work was how expensive inconsistency becomes once high-fidelity screens multiply.
-
-So instead of treating the design system as something to document after finishing the website, I established the visual foundations earlier.
-
-That included:
-
-### Typography
-
-Clear roles for display, headings, supporting copy and body text.
-
-### Colour
-
-Defined use rather than arbitrary decoration.
-
-### Components
-
-Reusable buttons, navigation patterns, cards and content structures.
-
-### Spacing
-
-Consistent relationships between content instead of page-by-page adjustment.
-
-### Responsive behaviour
-
-Rules for how components and hierarchy should adapt as the available space changed.
-
-That gave the project a shared design language and made later iterations much easier to manage.
-
-[GALLERY: spira9-style-guide.png, spira9-components.png]
-
----
-
-# Decision 05
-
-## Responsive design isn't shrinking desktop
-
-The previous experience had particular problems on smaller devices.
-
-So mobile couldn't be treated as the desktop design squeezed into a narrower rectangle.
-
-At each breakpoint, I considered:
-
-**What still needs to be prominent?**
-
-**What needs to stack?**
-
-**What interaction changes?**
-
-**How much text can reasonably remain visible?**
-
-**Does the call to action still make sense in context?**
-
-Working with Engineering also surfaced feasibility constraints before final handoff, allowing us to adjust layouts rather than handing over designs that couldn't be implemented reliably.
-
-[GALLERY: Spira9-services.png, spira9-mockup-2.png, spira9-mockup-1.png]
-
----
-
-# Working with Engineering
-
-This project involved an important negotiation between **design ambition and system capability**.
-
-Some of the visual ideas I explored would have required greater structural flexibility than the website-building platform supported.
-
-Instead of treating that as an Engineering problem, we iterated together.
-
-The compromise was not:
-
-### "Make the design less good."
-
-It was:
-
-### "Find the parts of the experience where flexibility creates the most value."
-
-That meant using supported structural patterns while creating differentiation through hierarchy, composition, brand elements and carefully chosen variations.
-
-It was a useful lesson in designing something that could actually scale beyond one Figma file.
-
----
-
-# The final experience
-
-The redesign gave Spira9 a cleaner and more responsive digital presence built around:
-
-### Clearer positioning
-
-Visitors can understand the company's services and proposition faster.
-
-### Stronger hierarchy
-
-Content has a deliberate visual sequence rather than competing for attention.
-
-### Responsive behaviour
-
-The experience adapts across desktop, tablet and mobile rather than treating smaller screens as an afterthought.
-
-### Reusable foundations
-
-Components and visual rules support consistency across future pages.
-
-### A product showcase
-
-The final website demonstrates how Spira9's underlying website-building framework can support a more polished brand experience.
+[GALLERY: spira9-services.png, spira9-mockup-1.png, spira9-mockup-2.png]
 
 [IMAGE: spira9-display.png]
 
 ---
 
-# What did success mean?
+# Outcome
 
-For a commercial website, usability is only part of the outcome.
-
-The experience ultimately needs to help visitors understand the proposition and move towards a meaningful business action.
-
-The product metrics I would monitor include:
-
-### Visitor → enquiry conversion
-
-Are more relevant visitors taking the intended commercial action?
-
-### CTA conversion by page
-
-Which propositions and services successfully move visitors forward?
-
-### Mobile conversion
-
-Did improving the responsive experience reduce the gap between mobile and desktop visitors?
-
-### Qualified engagement
-
-Are visitors reaching important service/product content rather than simply generating longer sessions?
-
-I would treat metrics such as session duration and pages per visit as **diagnostic signals**, not success on their own.
-
-Someone spending longer on the site could mean they're interested.
-
-Or confused.
-
-Context matters.
+Shipped a responsive marketing site and reusable design system that also functions as a live showcase of Spira9's own website-building platform. No conversion-lift numbers are available in the source material — described here by what shipped, not invented metrics.
 
 ---
 
-# What I wouldn't optimise for
+# Takeaway
 
-## More time on the website
-
-A marketing website isn't Netflix.
-
-If a visitor understands the proposition quickly and submits an enquiry after two minutes, that's potentially much more valuable than someone browsing for fifteen.
-
-So I wouldn't define success as:
-
-**"Make people stay longer."**
-
-I'd define it as:
-
-### Help the right visitors understand Spira9 and confidently take the next step.
-
----
-
-# What I learned
-
-## Constraints tell you where to design
-
-The most valuable part of this project wasn't learning how to create a prettier marketing site.
-
-It was learning how to work creatively within a system I couldn't completely change.
-
-When layout flexibility was limited, hierarchy mattered more.
-
-When components had to be reusable, consistency mattered more.
-
-When Engineering constraints appeared, prioritisation mattered more.
-
-The restriction didn't remove design.
-
-### It moved design into the decisions that mattered.
-
----
-
-## A design system is a working tool, not a final deliverable
-
-Establishing the visual foundations earlier made the high-fidelity work significantly easier.
-
-It also exposed inconsistencies sooner.
-
-This project reinforced a habit I carry into later work:
-
-### Don't wait until the interface is finished to decide what makes it consistent.
-
----
-
-## Commercial design needs both clarity and character
-
-A marketing site needs enough personality to make the brand memorable.
-
-But it also has a job to do.
-
-The best visual decision isn't necessarily the most interesting one in isolation.
-
-It's the one that helps someone understand:
-
-### who you are, what you offer, and why they should care.
+Constraints tell you where to design — when layout freedom is limited, hierarchy and consistency have to do more work. And a design system isn't real until the whole team is actually building against it, not just referencing it.
 `;
 
 export const caseStudies: CaseStudy[] = [
