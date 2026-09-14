@@ -131,11 +131,12 @@ export default function PolaroidCaseScroll() {
             Selected works
           </h2>
         </div>
-        {/* Takes the remaining height below the heading and centers the
-            row of cards within it, so there's real breathing room between
-            the title and the gallery instead of the cards sitting right
-            underneath it. */}
-        <div className="relative flex flex-1 items-center">
+        {/* On mobile, a fixed top gap keeps deliberate breathing room below
+            the heading regardless of viewport height — centering alone
+            collapses to near-zero gap on shorter phones since it just
+            splits whatever space is left. Desktop keeps the original
+            vertical centering, where there's always room to spare. */}
+        <div className="relative flex flex-1 items-start pt-10 sm:items-center sm:pt-0">
           <div
             ref={trackRef}
             className="flex cursor-grab select-none items-stretch gap-[4vw] pl-[6vw] will-change-transform active:cursor-grabbing"
@@ -204,14 +205,18 @@ function PolaroidCard({
   }, []);
 
   return (
-    <div className="flex w-[82vw] max-w-[1300px] shrink-0 flex-col gap-8 rounded-xl p-3 sm:flex-row sm:items-center sm:gap-24">
-      {/* Photo — the only tilted element, and (along with "View case
-          study") one of the two actual click targets on the card. The
-          hover fade/lift is scoped to just this Link (its own `group`),
-          not the whole card, since the text column isn't clickable. */}
+    <div className="flex w-[82vw] max-w-[1300px] shrink-0 flex-col gap-6 rounded-xl p-3 sm:flex-row sm:items-center sm:gap-24">
+      {/* Photo — the only tilted element, and (on mobile, where "View case
+          study" is hidden) the sole click target on the card. The hover
+          fade/lift is scoped to just this Link (its own `group`), not the
+          whole card, since the text column isn't clickable. Sized down
+          from the desktop 38%-of-card-width crop on mobile so the card's
+          total height leaves room for the extra breathing space below the
+          "Selected works" heading without pushing the tags out of the
+          viewport on shorter phones. */}
       <Link
         href={`/work/${study.slug}`}
-        className="group relative mx-auto w-[62%] shrink-0 sm:mx-0 sm:w-[38%]"
+        className="group relative mx-auto w-[48%] shrink-0 sm:mx-0 sm:w-[38%]"
         style={{ transform: `rotate(${rotation}deg)` }}
       >
         <span
