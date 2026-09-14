@@ -23,6 +23,34 @@ function textOf(children: ReactNode): string {
   return "";
 }
 
+// Used by the `[ICONS: ...]` marker — a small set of generic role icons
+// (matched by keyword, case-insensitive) plus a plain fallback, so any
+// short label list can get an icon without needing a bespoke glyph.
+function iconPathFor(label: string) {
+  const key = label.toLowerCase();
+  if (key.includes("engineer")) {
+    return (
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+    );
+  }
+  if (key.includes("market")) {
+    return (
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    );
+  }
+  if (key.includes("design")) {
+    return (
+      <>
+        <path d="M12 19l7-7 3 3-7 7-3-3z" />
+        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+        <path d="M2 2l7.586 7.586" />
+        <circle cx="11" cy="11" r="2" />
+      </>
+    );
+  }
+  return <circle cx="12" cy="12" r="9" />;
+}
+
 const components: Components = {
   h1: ({ children }) => (
     <h1 className="font-heading text-2xl font-semibold text-[var(--foreground)] sm:text-3xl">
@@ -64,6 +92,39 @@ const components: Components = {
             </div>
           ))}
         </dl>
+      );
+    }
+
+    // [STATS: 80% = of recommendations adopted | 4.5k = views on Quabbler
+    // Stories] — a row of outcome cards where only the number is given
+    // heavy visual weight; the description next to it stays body-text
+    // size, so a project with several headline numbers doesn't turn into
+    // several equally-shouty stat tiles.
+    const statsMatch = text.match(/^\[STATS:\s*([\s\S]+)\]$/);
+    if (statsMatch) {
+      const stats = statsMatch[1]
+        .split("|")
+        .map((pair) => {
+          const [number, ...rest] = pair.split("=");
+          return { number: number?.trim(), label: rest.join("=").trim() };
+        })
+        .filter((s) => s.number && s.label);
+      const cols =
+        stats.length >= 4 ? "sm:grid-cols-4" : stats.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
+      return (
+        <div className={`grid grid-cols-1 gap-4 ${cols}`}>
+          {stats.map((stat) => (
+            <div
+              key={stat.number}
+              className="flex flex-col items-center gap-1 rounded-xl border border-lavender/40 bg-lavender/15 p-5 text-center"
+            >
+              <p className="font-heading text-3xl font-semibold text-[var(--foreground)]">
+                {stat.number}
+              </p>
+              <p className="text-sm leading-snug text-[var(--text-muted)]">{stat.label}</p>
+            </div>
+          ))}
+        </div>
       );
     }
 
@@ -155,6 +216,38 @@ const components: Components = {
             />
           </div>
           <p className="leading-relaxed text-[var(--text-muted)]">{caption}</p>
+        </div>
+      );
+    }
+
+    const iconsMatch = text.match(/^\[ICONS:\s*(.+)\]$/);
+    if (iconsMatch) {
+      const labels = iconsMatch[1].split(",").map((l) => l.trim());
+      const swatches = ["bg-lavender/20", "bg-terracotta/20", "bg-sage/20"];
+      return (
+        <div className="flex flex-wrap justify-center gap-8 py-2 sm:gap-14">
+          {labels.map((label, i) => (
+            <div key={label} className="flex flex-col items-center gap-2">
+              <div
+                className={`flex h-14 w-14 items-center justify-center rounded-full ${swatches[i % swatches.length]}`}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--foreground)"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  {iconPathFor(label)}
+                </svg>
+              </div>
+              <span className="text-sm font-medium text-[var(--text-muted)]">{label}</span>
+            </div>
+          ))}
         </div>
       );
     }
