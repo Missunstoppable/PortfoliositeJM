@@ -504,132 +504,35 @@ Each became a hypothesis about how design could move users closer to mutual valu
 const OSDIRE_CONTENT = `
 # Helping freelancers publish their first service
 
-## How behavioural data and user research informed an onboarding redesign that contributed to a fourfold increase in service publishing
-
 **Osdire · Freelance Marketplace**
 
-[HERO IMAGE: osdire-main-image.jpg]
+[HERO IMAGE: osdire-hero-new.png]
 
-[META: Role=Product/UX Designer | Company=Osdire | Period=June 2025–July 2026 | Product stage=Post-MVP optimisation | Platforms=Responsive web application | Collaborators=Founders, Product, Performance Marketing, Frontend, Backend and QA | Methods=Funnel analysis, session recordings, think-aloud interviews, journey mapping, prototyping, usability testing and UX QA | Outcome=Fourfold increase in successful service publishing]
+[META: Role=Product/UX Designer | Period=June 2025–July 2026 | My Contributions=Design system · End-to-end product design, pre- and post-launch | Platforms=Responsive web application | Collaborators=CEO, Marketing, Frontend, Backend and QA | Methods=Funnel analysis, session recordings, think-aloud interviews, journey mapping, prototyping, usability testing and UX QA]
 
-Osdire is a two-sided freelance marketplace connecting businesses with freelancers. After the platform's MVP launched, we discovered a significant activation problem: freelancers were registering, but many were not completing the process of publishing their first service.
+[STATS: 4x = Fourfold increase in successful service publishing]
 
-I led the investigation and redesign of the freelancer onboarding and service-publishing journey—from diagnosing the problem to defining requirements, designing the experience and validating the released product.
+# Background
 
----
-
-# The challenge
-
-## Registration was not translating into marketplace supply
-
-A marketplace cannot serve buyers without a healthy supply of services. Although Osdire was attracting new freelancer registrations, only around **20% of newly registered freelancers published at least one service**.
-
-This represented an 80% drop between registration and the freelancer's first meaningful contribution to the marketplace.
-
-The initial assumption was that freelancers might lack motivation or abandon the process because creating a service required too much effort. Before proposing a solution, I wanted to understand:
-
-- Where were freelancers leaving?
-- What made those points difficult?
-- Were they unwilling to publish, or unable to complete the process?
-- Which obstacles could we remove without reducing the quality of service listings?
-
-Our product goal became clearer:
-
-> Help more newly registered freelancers turn their expertise into a complete, searchable service listing without compromising the information buyers needed to make a decision.
+Osdire is a two-sided marketplace where everyone starts as a buyer by default and becomes a freelancer by completing onboarding, profile setup, and publishing a first service — a flow I designed end to end. Pre-launch, with much of the backend already defined and engineering protecting scope for a fast MVP ship, I flagged the category-selection step as a friction risk. The team made the reasonable call to ship on schedule and revisit it after launch.
 
 ---
 
-# Establishing reliable evidence
+# Approach
 
-## Before analysing the funnel, I checked whether we could trust it
+## 1. Untangled a broken metric before trusting it
 
-I worked with the performance marketer to review and correct the Google Analytics funnel. This was important because an incomplete or incorrectly configured funnel could have led us to optimise the wrong part of the journey.
+Post-launch, the profile-setup step was removed to shorten onboarding — a coordination gap rather than a considered call, since it silently broke the GA event tracking "profile setup completed." Working with marketing, I traced the dead event, cleaned up the reporting, and shifted analysis onto service-publishing data instead, paired with 13 session recordings and a small round of think-aloud interviews with freelancers, arranged quickly through the team's existing marketing relationships since a full research recruitment cycle wasn't realistic on the timeline we had.
 
-Once the tracking was reliable, the funnel confirmed a substantial drop between registration and first-service publication.
+## 2. Confirmed the original risk with real evidence
 
-I then combined several forms of evidence:
+The four-level category hierarchy I'd flagged before launch was, in fact, the single biggest point of loss in the funnel — even among freelancers who'd shown clear intent to publish, more than 40% dropped at this one step. Across the recordings, the same pattern showed up again and again — one user cycled through six different sub-category choices before giving up; several tried to preview later steps to gauge how much more was ahead and, unable to, dropped rather than commit. Metadata options appearing before someone had settled on a category didn't help — they reopened doubt that had only just been resolved.
 
-### Funnel data
+## 3. Reframed the step, within the same backend constraints
 
-Google Analytics showed the scale of the activation problem and identified the earliest stages with significant abandonment.
+Structural changes to this flow were still off the table, so instead of a classification exercise, Step 1 became an expression one: freelancers describe what they do in a few words first, and the system suggests likely categories from that, rather than asking them to navigate a rigid hierarchy blind. I moved metadata later in the flow so it read as an optional refinement rather than a second category decision, added lighter guidance around the offer title after noticing people treated a first draft title as unexpectedly high-stakes, and closed the rest of the journey with smaller steps and a readiness check instead of an ambiguous submit.
 
-### Session recordings
-
-I reviewed **13 recordings of high-intent freelancers** who had actively attempted to create a service. More than **40% abandoned at the first publishing step**.
-
-Some users spent more than 30 minutes on the platform without successfully publishing. Their behaviour suggested that motivation was not the only issue: people were investing time but still struggling to progress.
-
-### Think-aloud interviews
-
-We recruited freelancers through influencer-marketing contacts and asked them to talk through their thoughts while attempting the journey. This helped uncover confusion that behavioural data alone could not explain.
-
-### Internal walkthroughs
-
-I gathered feedback from team members who regularly encountered questions or problems relating to freelancer listings. This helped connect the interface problems with wider marketplace and operational requirements.
-
-The combination was important: analytics showed **where** people left, while observation and conversation helped explain **why**.
-
----
-
-# What I learned
-
-## 1. The platform's taxonomy did not match how freelancers described their work
-
-At the beginning of the publishing process, freelancers had to navigate a four-level category hierarchy.
-
-This structure reflected the platform's backend taxonomy, but not necessarily the language or mental models freelancers used to describe their skills. Users repeatedly moved backwards and forwards through the hierarchy, uncertain which path contained the correct category.
-
-The most important barrier appeared at the very first step—before freelancers had built enough momentum to continue.
-
-## 2. Users were asked to make too many decisions upfront
-
-The journey presented several fields and decisions together. Before seeing meaningful progress, freelancers had to understand the platform's categorisation system and decide how to position their service.
-
-The amount of information made the task feel more complex than it needed to be.
-
-## 3. Users left the journey to prepare their content
-
-Freelancers were asked to provide titles and descriptions without enough contextual support. Some left the page to work out what to write or look for examples elsewhere.
-
-The interface explained what information was required, but did not adequately help users create it.
-
-## 4. Completion did not feel close or predictable
-
-The journey lacked a strong sense of progress. Users could not always tell how much work remained or whether their listing was ready to publish.
-
-Together, these findings changed how I framed the problem:
-
-> Freelancers were not simply abandoning the journey because they lacked intent. The product was making it unnecessarily difficult for motivated users to translate their expertise into the platform's required structure.
-
----
-
-# Choosing where to intervene
-
-The evidence pointed to several possible improvements, but we could not rebuild the complete publishing system at once.
-
-I prioritised changes according to:
-
-- The severity and frequency of the observed problem
-- Its position in the activation journey
-- The likely effect on successful publication
-- Technical feasibility within the existing platform
-- The need to retain sufficient listing quality for buyers
-
-The category-selection step became the highest priority because it was both an early barrier and a prerequisite for the rest of the journey.
-
-Instead of changing the entire backend taxonomy, I focused on improving how users interacted with it. This allowed us to address the user problem while respecting the platform's existing technical structure.
-
----
-
-# The redesigned experience
-
-## 1. Replacing hierarchy navigation with type-and-select
-
-I replaced the four-level category picker with a type-and-select interaction.
-
-Instead of navigating the platform's taxonomy manually, freelancers could begin by describing their service in familiar language. The interface then suggested relevant predefined subcategories for them to select.
-
-This preserved the structured data required for search and matching while reducing the need for users to understand Osdire's internal classification system.
+The whole cycle — tracing the broken metric, confirming the real problem, designing and shipping the fix — happened in about a week. The team needed a fast turnaround, not a long research cycle, and that pace is part of the story, not a caveat on it.
 
 **Before:**
 
@@ -643,114 +546,33 @@ Users could begin with the service they already understood, while the interface 
 
 [DEMO: type-and-select]
 
-## 2. Breaking the journey into manageable stages
-
-I applied progressive disclosure so users could concentrate on one group of decisions at a time.
-
-The revised journey introduced information as it became relevant, reducing the perceived complexity of the form and creating a clearer sense of forward movement.
-
-The sequence was designed to build momentum: users started with simpler classification decisions before moving into the more demanding work of presenting and pricing their service.
-
 [IMAGE: osdire-progressive-disclosure.png]
 
-## 3. Providing contextual writing support
-
-We considered AI-generated service content, but this would have introduced additional technical cost and complexity at that stage of the product.
-
-Instead, I used:
-
-- Field-specific examples
-- Prompts explaining what buyers needed to know
-- Short guidance placed at the moment it was required
-- Clearer distinctions between required and optional information
-
-This provided practical support without introducing an expensive dependency or removing the freelancer's control over how their service was represented.
-
 [IMAGE: osdire-writing-support.png]
-
-## 4. Making readiness visible
-
-I simplified the final review into a clearer checklist, helping freelancers understand:
-
-- What they had completed
-- What still needed attention
-- Why particular information was required
-- When the service was ready to publish
-
-This reduced uncertainty at the end of the journey while retaining the quality requirements necessary for a useful marketplace listing.
 
 [IMAGE: osdire-readiness.png]
 
 ---
 
-# Designing within product and technical constraints
+# Outcome
 
-The redesign was not only an interface exercise. Each interaction had implications for the marketplace's taxonomy, search behaviour and underlying data.
-
-I worked with Product, Frontend, Backend and QA to define:
-
-- How typed phrases would map to existing subcategories
-- What happened when no suitable suggestion appeared
-- Required and optional fields
-- Validation and error states
-- Dependencies between publishing steps
-- Saved and incomplete service states
-- Expected behaviour across responsive screen sizes
-- Acceptance criteria for release
-
-I documented the intended behaviours and edge cases, created interactive Figma prototypes and remained involved during implementation to resolve questions as they arose.
-
-Once the changes were built, I conducted UX QA and release validation to check that the implemented journey matched the intended experience.
-
----
-
-# The outcome
-
-Following the release, successful service publishing increased fourfold.
+Service publishing increased **fourfold** after release — delivered within about a week of tracing the real problem.
 
 [IMAGE: osdire-outcome-stat.png]
 
-I describe the redesign as having **contributed to** this result because the improvement depended on multidisciplinary delivery and was not produced by design work in isolation. However, the post-release movement addressed the activation behaviour we had specifically investigated: more freelancers progressed from registration to contributing usable supply to the marketplace.
+---
 
-The project created value on both sides:
+# Takeaway
 
-### For freelancers
-
-- A faster and clearer path to becoming active
-- Less need to understand Osdire's internal taxonomy
-- More support when presenting their expertise
-- Greater visibility of progress and readiness
-
-### For the marketplace
-
-- More successfully published services
-- Increased supply for buyers to discover
-- More structured service data for matching and search
-- A stronger foundation for freelancer activation
+The friction I'd flagged before launch turned out to be real — but proving it meant untangling a broken measurement setup first, and doing it fast enough to matter.
 
 ---
 
-# My Takeaway
+# Beyond the redesign
 
-## Validate the measurement before responding to it
+The more durable outcome of this period wasn't the interface fix — it was proposing a weekly sync between engineering, marketing, and design leads, so a coordination gap like the one that broke this flow couldn't happen again without everyone seeing it coming first. That became one of the first real cross-functional habits at the company.
 
-Correcting the funnel before making design decisions prevented us from building around potentially unreliable evidence. Instrumentation is part of product discovery, not simply something used after launch.
-
-## Behavioural data and user research answer different questions
-
-The funnel identified the scale and location of abandonment. Session recordings and interviews revealed the hesitation, misunderstandings and unmet needs behind it. Neither source would have been sufficient alone.
-
-## High intent does not guarantee successful activation
-
-Some freelancers spent significant time trying to publish. Their persistence initially looked like engagement, but it was also evidence of friction. Time spent is only positive when it helps users achieve their goal.
-
-## Technical constraints can sharpen the solution
-
-We could not replace the complete taxonomy or introduce costly AI generation. Designing a simpler layer over the existing structure produced a more feasible solution while still addressing the central user problem.
-
-## Activation should represent delivered value
-
-Registration alone did not create value for freelancers, buyers or the marketplace. Publishing a first service was a much more meaningful activation point because it represented a freelancer becoming discoverable and able to receive work.
+[ICONS: Engineering, Marketing, Design]
 
 ---
 
@@ -769,406 +591,63 @@ Across these areas, I combined user research, interaction design and product del
 `;
 
 const QUABBLE_CONTENT = `
-# Helping users reach the value of mental wellness sooner
+# Helping users reach their aha moment
 
-## Improving activation and retention for Quabble's daily mental wellness experience
+**Quabble · Mental Wellness App**
 
-**Quabble · Mental Wellness Mobile App**
+[HERO IMAGE: quabble-hero-new.png]
 
-[HERO IMAGE: quabble-hero.png]
+[META: Role=UX Designer / Product Marketer | Period=Dec 2024–Jan 2026 | My Contributions=UX QA · Onboarding & paywall UX design · User research · Growth partnerships · Community content strategy | Platforms=Mobile app | Collaborators=Head of Product, CEO, Visual Design, Content | Methods=UX QA, competitive benchmarking, user interviews, in-app survey design]
 
-[META: Role=Product / UX Designer | Scope=UX audit · User research · Product discovery · Journey analysis · Onboarding · Paywall UX · Interaction design · Growth experiments · UX QA | Collaborators=Head of Product · CEO · Engineering · Marketing | Timeline=Initial UX audit: 2 weeks · Ongoing collaboration: ~1 year]
+[STATS: 80% = of UX audit recommendations adopted | 30% = shipped in later updates | 4.5k = views on Quabbler Stories | 3M+ = organic reach across Quabble's growth efforts]
 
-Quabble helps people build mental wellness into everyday life through short, playful mental workouts.
+# Context
 
-The product already had a distinctive visual identity and a growing library of content. The bigger challenge was helping users understand **why they should come back — and experience that value early enough to form a routine.**
-
-I initially joined the project through a UX audit. That work developed into a broader collaboration across **activation, onboarding, paywall experience, engagement and retention**.
-
-The question became:
-
-### How might we help users experience a meaningful mental workout sooner — and make coming back feel worth it?
+Quabble needed new users to feel its value quickly enough to become a paid member, and needed to rely less on expensive acquisition channels to get people in the door in the first place. Those are really two different problems that happened to live in the same company — one about the product, one about growth. I ended up working across both.
 
 ---
 
-# The real problem wasn't visual design
+# Product: closing the value gap
 
-Quabble already looked good.
-
-The issue was that visual quality alone didn't guarantee that users understood:
-
-- what a "mental workout" was,
-- where to start,
-- how Quabble fitted into their daily life,
-- or why they should return tomorrow.
-
-At the time, **activation was a major product focus**.
-
-The team was looking closely at:
-
-### Time to first workout completed
-
-because completing a workout represented the first point where a new user could experience the product's core value.
-
-That changed how I approached the work.
-
-Instead of asking:
-
-**"Where are the usability issues?"**
-
-I started asking:
-
-**"What is preventing someone from reaching the meaningful part of the product?"**
-
----
-
-# From UX friction to product behaviour
-
-I started with a screen-by-screen heuristic audit, reviewing usability, hierarchy, navigation, interaction patterns and clarity.
-
-But rather than treating every usability issue equally, I grouped findings according to the behaviour they might affect.
-
-### Discover
-
-Can a new user understand what Quabble offers?
-
-### Start
-
-Can they confidently choose and begin a mental workout?
-
-### Experience value
-
-Do they understand what they're getting from completing it?
-
-### Return
-
-Does the product give them a reason to make mental wellness part of their routine?
-
-This helped turn a long list of interface issues into **product priorities**.
+I started with a UX QA pass across the existing app — reviewing journeys the way a user actually experiences them, documenting friction, inconsistency, and moments where the app gave unclear or no feedback, then handing that to the product team to prioritize. Not glamorous work, but it's what turned "this needs a redesign" into a list someone could actually act on.
 
 [SCROLL IMAGE: Recommendations.png]
 
----
+From there I worked on the UX design of onboarding and the paywall. Rather than guessing at what would convert better, I looked at how comparable products — journaling apps, digital healthcare tools, and Tolan, an AI companion built around emotional connection — introduced their value and built trust before asking for money.
 
-# Decision 01
+[GALLERY: quabble-research-benchmarking1.png, quabble-research-benchmarking2.png, quabble-research-benchmarking3.png]
 
-## Prioritise the path to the first meaningful workout
+We defined Quabble's "aha moment" as finishing a first mind workout, and the onboarding redesign aimed to get people there during onboarding itself, rather than asking them to subscribe on faith first.
 
-One of the most important things I learned from the project was that **registration isn't necessarily activation**.
+[IMAGE: quabble-onboarding-steps-v3.png]
 
-A user can download the app.
+A home-screen widget came out of this same research thread — informed by interviews where I asked users to walk me through how they actually used the app and where they typically opened it from — and contributed to retention.
 
-Create an account.
+[IMAGE: quabble-widget-mockup-v3.png]
 
-Browse several screens.
-
-And still never understand why the product matters.
-
-For Quabble, the more meaningful moment happened when someone actually completed a mental workout.
-
-So I started evaluating the experience around a simple question:
-
-### How much work does a new user have to do before experiencing Quabble?
-
-Anything standing between entry and that first meaningful experience needed to justify its existence.
-
-This influenced how I assessed:
-
-- onboarding,
-- content discovery,
-- calls to action,
-- navigation,
-- explanations,
-- and the sequence in which product information appeared.
-
-The goal wasn't simply to make onboarding shorter.
-
-It was to make the path to value **clearer**.
+> Product outcome: 80% of recommendations from the UX QA pass were adopted for consideration by the product team, and about 30% shipped in later updates.
 
 ---
 
-# Decision 02
+# Growth: finding the right people without paying for all of them
 
-## Explain the value before asking users to commit
+In parallel, I was part of the team looking at customer lifetime value against acquisition cost. Early on, I proposed segmenting Quabble's users by how they behaved in the app rather than by demographics — a strong instinct, but one I hadn't backed with research yet. When engineering and the CEO asked how I knew, I didn't have a good answer, and the idea didn't move forward. That pushback is what led to designing an in-app survey in the first place — not to prove my personas right, but to actually find out who our users were instead of guessing. The findings broke an assumption we'd been carrying about our users' age range; they didn't end up validating the original personas, which stayed shelved. Proposing the idea before doing the work to support it meant it never got a fair test — a fix I'd make earlier next time, not just note after the fact.
 
-Mental wellness is a difficult category because the benefit isn't always immediately tangible.
+There was a bigger question underneath the scholarship and partnership work that followed: Quabble wanted mental wellness support to stay accessible to people who needed it but couldn't pay for it, without undermining the case for paying at all. If the free and paid experiences felt too similar, people who could afford to subscribe would have less reason to. So alongside sponsor-funded scholarship memberships and healthcare-provider partnerships that gave people free access, the paid tier needed genuinely distinct features to differentiate itself — aimed at protecting the lifetime value of members who could pay, while keeping the door open for the ones who couldn't.
 
-"Do a mental workout every day" is a behaviour.
+The piece I'm proudest of is Quabbler Stories, a YouTube series I led where real users shared their own experience with the app, animated by our designer rather than shot as talking-head video. It gave the brand a human voice, and it traveled — clips got reworked for Instagram, and users shared their own stories inside their networks. The series itself reached 4.5k views directly.
 
-But it doesn't yet explain **why I should care today**.
+[IMAGE: quabbler-stories-playlist-new.png]
 
-So I explored how onboarding and the paywall could communicate Quabble's value earlier.
+[Watch Quabbler Stories →](https://www.youtube.com/watch?v=S78IW-ABwMs&list=PLAwxE-vqQXvGwPnQyutBod2dILfI5EDvh)
 
-Instead of focusing primarily on features, the experience needed to answer:
-
-### What will this help me with?
-
-### What does using Quabble actually feel like?
-
-### Why would I come back tomorrow?
-
-This meant surfacing the experience itself earlier and making the relationship between **small daily actions and longer-term wellbeing** easier to understand.
-
-I also explored the paywall as part of the user journey rather than an isolated conversion screen.
-
-A paywall should not be the first place where the product clearly explains why it is valuable.
-
-[IMAGE: quabble-onboarding-paywall-iterations.png]
+> Growth outcome: Quabbler Stories reached 4.5k views. Separately, organic reach across Quabble's combined growth efforts — social marketing, content, and partnerships — passed 3M+ during this period; that figure reflects the wider team's work, mostly led by social marketing, with my content as one contribution to it rather than something I drove.
 
 ---
 
-# Decision 03
+# Takeaway
 
-## Make wellness feel like a journey, not a content library
-
-Another opportunity was helping users understand where individual workouts fitted into their broader wellness experience.
-
-A collection of exercises gives users choice.
-
-But choice alone doesn't create progress.
-
-So I explored ways to make the experience feel more like a **mental wellness journey** — helping users understand:
-
-- what they could do today,
-- how activities related to their goals,
-- what they had already completed,
-- and what they might do next.
-
-This shifted the experience away from:
-
-**"Here are some wellness activities."**
-
-towards:
-
-**"Here is something useful you can do for yourself today."**
-
-That distinction was important because habit-building depends on reducing the effort required to decide what to do next.
-
-[IMAGE: quabble-wellness-journey.png]
-
----
-
-# Decision 04
-
-## Bring the product into the user's daily routine
-
-Opening an app requires someone to remember that the app exists.
-
-That sounds obvious, but it becomes important when you're designing for habit formation.
-
-I explored a mobile widget that placed Quabble's daily experience directly on the phone's home screen.
-
-Rather than asking users to remember:
-
-> "I should open my wellness app today."
-
-the product could become an ambient reminder:
-
-### "Here's something small you can do for yourself right now."
-
-The widget therefore wasn't primarily a UI feature.
-
-It was a hypothesis about **retention and routine formation**.
-
-[IMAGE: quabble-widget-mockup.png]
-
----
-
-# Designing the experiment
-
-A potentially misleading way to evaluate the widget would have been:
-
-**Compare people who install the widget with people who don't.**
-
-But there was an obvious problem.
-
-Users were prompted inside Quabble to install the widget.
-
-That meant the people who chose to install it were likely already:
-
-- more engaged,
-- more curious about the product,
-- or more motivated to build a routine.
-
-If widget users subsequently completed more workouts, we couldn't confidently say the widget caused that behaviour.
-
-### Selection bias
-
-The more engaged users may simply have been more likely to install it in the first place.
-
-So I approached the feature as an experiment instead.
-
-For the initial test, traffic could be split among **paid users**, the segment the team was focused on delivering value for.
-
-### Control
-
-Existing experience.
-
-### Variant
-
-Widget experience / widget promotion.
-
-I would compare behaviours such as:
-
-**Workout completion frequency**
-
-**Return rate**
-
-**Time between workouts**
-
-**Daily routine participation**
-
-rather than simply measuring widget installs.
-
-Because:
-
-### Installing a feature isn't value. Using the product more meaningfully might be.
-
-[IMAGE: quabble-experiment-diagram.png]
-
----
-
-# Understanding motivation beyond the interface
-
-As my involvement with Quabble expanded, I also worked on growth and user research beyond individual screens.
-
-I helped explore questions such as:
-
-### Who receives the most value from Quabble?
-
-### Why do some people continue while others disengage?
-
-### Which needs should the product prioritise?
-
-I worked on survey design to better understand different user groups and their motivations, and explored user stories as a way to make the community and benefits of mental wellness feel more relatable.
-
-This helped connect interface decisions with a broader product question:
-
-### What makes Quabble worth returning to?
-
-[IMAGE: quabble-high-intent-personas.png]
-
----
-
-# What changed
-
-The initial audit was reviewed with Quabble's Head of Product and shared with the wider team for prioritisation.
-
-### 80%
-
-of my initial recommendations were taken onboard for consideration.
-
-### ~30%
-
-were implemented during subsequent product updates.
-
-More importantly, the project expanded beyond a one-off UX review.
-
-I went on to contribute to areas including:
-
-Onboarding · Paywall experience · Mental wellness journey · Engagement concepts · Retention widget · Growth research · UX QA
-
-The work changed how I thought about product design:
-
-### Fixing friction is useful.
-
-### Understanding the behaviour behind the friction is more powerful.
-
----
-
-# Measuring success
-
-I wouldn't evaluate this work using one engagement number alone.
-
-I'd look at the user journey as a funnel:
-
-**App opened**
-
-→ Onboarding completed
-→ Workout discovered
-→ First workout started
-→ First workout completed
-→ Second workout completed
-→ Routine established
-
-And then ask where users are losing momentum.
-
-The metrics I'd pay particular attention to are:
-
-### Time to first workout completed
-
-How quickly does a new user experience the core product?
-
-### First → second workout conversion
-
-Did the first experience create enough value to bring them back?
-
-### Workout completion frequency
-
-Are users integrating Quabble into their routine?
-
-### Retention by behaviour
-
-Do users who complete workouts, use certain content or interact with routine features retain differently?
-
-These tell us much more than simply asking how many people opened the app.
-
----
-
-# What I learned
-
-## Activation is the moment a user experiences value — not the moment the company acquires a user.
-
-This project changed the way I think about onboarding.
-
-A successful sign-up does not automatically mean someone understands a product.
-
-A completed onboarding flow doesn't either.
-
-For Quabble, I became much more interested in the moment when someone could genuinely think:
-
-### "Ah — this is what this product can do for me."
-
-That became a useful lens for evaluating everything from navigation to onboarding and retention.
-
----
-
-## Product experiments need to separate correlation from causation
-
-The widget work also reinforced an important lesson about product data.
-
-If highly engaged users voluntarily adopt a feature, their higher engagement afterwards does not necessarily mean the feature caused it.
-
-Recognising that bias changed the question from:
-
-**"Do widget users engage more?"**
-
-to:
-
-**"Does introducing the widget cause users to engage differently?"**
-
-That is a small wording change, but a very different product question.
-
----
-
-# If I continued this work
-
-I would focus next on understanding **what makes the first mental workout meaningful enough to create a second one**.
-
-I would segment retention by:
-
-- first workout type,
-- user motivation,
-- onboarding path,
-- frequency of early workouts,
-- subscription status,
-- and use of routine features.
-
-From there, I would test personalised next-workout recommendations and different ways of reinforcing progress.
-
-Not to maximise screen time.
-
-But to help users build a wellness routine that remains useful **without needing the app to demand their attention.**
+Working both sides of this taught me to see product experience and growth as one system rather than two separate jobs sitting next to each other. Fixing friction in the app made it easier to trust once someone opened it; the growth work decided who got the chance to open it in the first place. Neither fully explains the other, but neither works as well alone.
 `;
 
 const MUDE_CONTENT = `
@@ -2141,7 +1620,7 @@ const SPIRA9_CONTENT = `
 
 **Spira9 · Digital Marketing & AI Website Builder**
 
-[HERO IMAGE: spira9-hero.png]
+[HERO IMAGE: spira9-hero-new.png]
 
 [META: Role=UX / UI Designer | Project type=Client project | Timeline=4 weeks | Scope=Competitive research · Information architecture · Responsive UX · Wireframing · UI design · Content design · Design system · Prototyping · Developer handoff]
 
@@ -2560,33 +2039,6 @@ export const caseStudies: CaseStudy[] = [
     content: OSDIRE_CONTENT,
   },
   {
-    slug: "spira9",
-    title: "Spira9",
-    subtitle: "Redesigning a conversion website built inside its own AI website builder",
-    role: "UX / UI Designer",
-    summary:
-      "A four-week client project selling Spira9's website-building platform by building the site entirely inside it.",
-    oneLiner:
-      "A conversion site built on the client's own website-building platform",
-    category: "AI website builder & digital marketing",
-    outcomeStat: "Shipped: site + reusable design system",
-    tags: ["marketing website", "style guide", "client project", "landing page"],
-    content: SPIRA9_CONTENT,
-  },
-  {
-    slug: "mude",
-    title: "Mude",
-    subtitle: "A wind-down ritual to reduce bedtime procrastination",
-    role: "Product Designer / UX Researcher",
-    summary:
-      "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
-    oneLiner: "A bedtime ritual designed to help people put their phone down",
-    category: "An app for bedtime procrastination",
-    outcomeStat: "2 rounds of usability testing reshaped the core concept",
-    tags: ["sleep & wellbeing", "mobile app", "0-1 concept", "usability testing"],
-    content: MUDE_CONTENT,
-  },
-  {
     slug: "quabble",
     title: "Quabble",
     subtitle: "Improving activation and retention for a mental-wellness app",
@@ -2601,6 +2053,20 @@ export const caseStudies: CaseStudy[] = [
     content: QUABBLE_CONTENT,
   },
   {
+    slug: "spira9",
+    title: "Spira9",
+    subtitle: "Redesigning a conversion website built inside its own AI website builder",
+    role: "UX / UI Designer",
+    summary:
+      "A four-week client project selling Spira9's website-building platform by building the site entirely inside it.",
+    oneLiner:
+      "A conversion site built on the client's own website-building platform",
+    category: "AI website builder & digital marketing",
+    outcomeStat: "Shipped: site + reusable design system",
+    tags: ["marketing website", "style guide", "client project", "landing page"],
+    content: SPIRA9_CONTENT,
+  },
+  {
     slug: "famcook",
     title: "FamCook",
     subtitle: "A shared meal-planning product for group cooking",
@@ -2612,6 +2078,19 @@ export const caseStudies: CaseStudy[] = [
     outcomeStat: "50% improvement in task success across usability testing",
     tags: ["group cooking", "mobile app", "0-1 concept", "prioritization"],
     content: FAMCOOK_CONTENT,
+  },
+  {
+    slug: "mude",
+    title: "Mude",
+    subtitle: "A wind-down ritual to reduce bedtime procrastination",
+    role: "Product Designer / UX Researcher",
+    summary:
+      "A self-initiated concept testing whether a phone app could actually convince someone to put their phone down before bed.",
+    oneLiner: "A bedtime ritual designed to help people put their phone down",
+    category: "An app for bedtime procrastination",
+    outcomeStat: "2 rounds of usability testing reshaped the core concept",
+    tags: ["sleep & wellbeing", "mobile app", "0-1 concept", "usability testing"],
+    content: MUDE_CONTENT,
   },
 ];
 
