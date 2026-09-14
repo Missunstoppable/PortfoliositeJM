@@ -423,6 +423,16 @@ body > header {
   align-items: center;
   gap: 4px;
 }
+@media (max-width: 639px) {
+  /* Written as a plain media query, not a Tailwind `hidden` utility class
+     on the element — Tailwind's utilities live in `@layer utilities`, and
+     the unlayered `display: inline-flex` rule above would silently win
+     over it regardless of breakpoint (unlayered CSS always beats layered
+     CSS, independent of source order or specificity). */
+  .case-card-link {
+    display: none;
+  }
+}
 .case-card-link .arrow {
   display: inline-block;
   transition: transform 0.3s ease-out;
