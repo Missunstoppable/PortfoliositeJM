@@ -8,6 +8,7 @@ import PolaroidCaptureDemo from "./mude/PolaroidCaptureDemo";
 import VentReleaseDemo from "./mude/VentReleaseDemo";
 import MoodConceptDemo from "./mude/MoodConceptDemo";
 import GoodbyeSwitchDemo from "./mude/GoodbyeSwitchDemo";
+import InViewVideo from "./InViewVideo";
 
 const DEMOS: Record<string, React.ComponentType> = {
   "type-and-select": TypeAndSelectDemo,
@@ -178,6 +179,25 @@ const components: Components = {
             className="h-auto w-full"
             sizes="(min-width: 640px) 768px, 100vw"
           />
+        </div>
+      );
+    }
+
+    const videoMatch = text.match(/^\[VIDEO:\s*(.+)\]$/);
+    if (videoMatch) {
+      const file = videoMatch[1].trim();
+      return (
+        <div className="flex justify-center rounded-3xl bg-lavender/15 p-10 sm:p-14">
+          {/* The source file is pre-cropped tight to the recording's own
+              phone bezel (see mude-venting-flow-cropped.mp4) — no black
+              canvas margin left to hide, so a corner radius approximating
+              the bezel's own curve is enough: the video's rounded edge and
+              its natural light rim read as the boundary against the pastel
+              backdrop, not an artificial crop. Slight tilt to match the
+              reference mockup rather than sitting dead straight. */}
+          <div className="w-full max-w-[260px] -rotate-3 overflow-hidden rounded-[32px] shadow-[0_20px_40px_-16px_rgba(69,59,74,0.35)]">
+            <InViewVideo src={`/work/${file}`} />
+          </div>
         </div>
       );
     }

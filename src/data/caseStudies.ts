@@ -574,6 +574,8 @@ The more durable outcome of this period wasn't the interface fix — it was prop
 
 [ICONS: Engineering, Marketing, Design]
 
+Separately, I led discovery for an internal admin platform spanning finance, moderation, marketing, and technical teams — running cross-functional workshops and stakeholder interviews, then using an object-oriented UX approach to model one shared system instead of isolated department screens. It stayed a concept and alignment artifact rather than a shipped product. It's where I learned to model a product as one shared system serving multiple roles and permissions at once, rather than one flow at a time.
+
 ---
 
 # My wider contribution to Osdire
@@ -653,964 +655,123 @@ Working both sides of this taught me to see product experience and growth as one
 const MUDE_CONTENT = `
 # Designing a bedtime app that wants you to put your phone down
 
-## Mude — a behavioural design exploration into bedtime procrastination
+**Mude · Wind-down app concept**
 
 [HERO IMAGE: mude-hero.png]
 
-[META: Project=Self-initiated product concept | Role=Product Designer / UX Researcher | Timeline=1 month | Methods=Secondary research · Survey · Journey mapping · Prototyping · 5 guerrilla usability tests · 3 moderated usability tests · Iteration]
+[META: Role=UX Researcher / UX Designer | Period=1 month | My Contributions=End-to-end concept design · User research · Interaction design | Platforms=Mobile app | Collaborators=Solo project | Methods=Secondary research, survey, journey mapping, guerrilla usability testing, moderated usability testing, iterative prototyping]
 
-We've probably all done it.
+[STATS: 2 = rounds of usability testing overturned a core assumption and reshaped the concept]
 
-You're tired. You know you should sleep. Tomorrow-you would very much appreciate it.
+# Discover
 
-And yet somehow you're still scrolling at 12:47am.
-
-Mude is a self-initiated product concept exploring **bedtime procrastination** — the gap between intending to go to bed and actually doing it.
-
-The challenge wasn't simply:
-
-**How do I help people sleep?**
-
-It was:
-
-### How might a digital product help people emotionally wind down and leave their phone — without becoming another reason to stay on it?
+Bedtime procrastination isn't just poor scheduling — for a lot of people, staying up late is the last bit of personal time they get in a day. I started with secondary research into the causes and severity of the problem, then ran a survey to check what I was finding against real responses, looking at how procrastination correlated with occupation, sleep habits, and stress levels. Students and women showed up as most affected, but the pattern crossed other groups too. The leading driver wasn't really about sleep at all — it was "reclaiming me-time," usually sitting on top of stress or anxiety, with poor control over device use close behind. People already reached for journaling, reading, meditation, and ambient sound to wind down; the question was whether a product could support that instead of getting in the way of it.
 
 ---
 
-# The 30-second version
+# Define
 
-### Problem
+I framed the project around two questions: how might we help people feel more present and less stressed during the day, and how might we build a wind-down experience people would actually keep coming back to. Journaling became the core feature — a way to remind people of the moments they'd had, before turning it into something reassuring to close the day on.
 
-People sometimes delay bedtime even when they intend to sleep, often filling that time with digital activities.
-
-### Insight
-
-Going to bed isn't only a scheduling problem. For some people, staying awake provides a final period of personal time or emotional decompression after the day.
-
-### Design response
-
-I explored a short ritual built around capturing meaningful moments, reflecting on the day and then deliberately **ending the digital interaction**.
-
-### What testing changed
-
-My original assumption that journaling was inherently calming was wrong.
-
-Users pointed out that revisiting a frustrating or upsetting journal entry before bed could do exactly the opposite.
-
-That changed the product.
-
----
-
-# I started with the behaviour, not an app idea
-
-I wanted to understand why someone who *wanted* to sleep would repeatedly choose not to.
-
-My exploratory research combined secondary research with a survey examining bedtime habits, stress, digital behaviour and activities people already found helpful before bed.
-
-The research pointed towards a more interesting problem than poor time management.
-
-Bedtime procrastination could represent an **intention–behaviour gap**.
-
-Someone might understand perfectly well that sleep is important while still choosing the immediate reward of another episode, another video or a little more personal time.
-
-So instead of designing another app that said:
-
-> "It's bedtime. Go to sleep."
-
-I became interested in the **transition between being active and being ready to stop**.
-
-That became the product opportunity.
-
----
-
-# The core tension
-
-## How do you use a phone to help someone stop using their phone?
-
-This became the most important constraint in the project.
-
-Most digital products are designed around engagement:
-
-**Open → interact → discover more → come back**
-
-That felt wrong here.
-
-If Mude succeeded by increasing minutes spent in the app, it could actually be making the original problem worse.
-
-So I defined a different design principle:
-
-### Mude should earn a few intentional minutes of attention, then give the user's attention back.
-
-That meant avoiding infinite content, unnecessary browsing and interactions designed purely to prolong engagement.
-
-The experience needed an ending.
-
-[IMAGE: wireframe-mude.avif]
-
----
-
-# Research helped me narrow the behaviour
-
-My initial exploration generated plenty of possible features:
-
-journaling, mood tracking, sleep tracking, galleries, personalised prompts, achievements, environmental recommendations, reminders, integrations and more.
-
-[DEMO: mood-concept]
-
-But a one-month concept did not need to become an entire wellness ecosystem.
-
-I narrowed the core experience to three behaviours:
-
-### Notice
-
-Capture small moments during the day before they're forgotten.
-
-### Reflect
-
-Return to selected moments as part of a short bedtime ritual.
-
-### Switch off
-
-Create a clear ending that encourages the user to leave the digital environment.
-
-This gave me a much simpler product loop:
-
-**Notice during the day → Reflect at night → Say goodbye to today → Switch off**
-
----
-
-# Decision 01
-
-## Don't make users become poets before bed
-
-Journaling sounded useful in theory.
-
-In practice, it creates a very obvious problem:
-
-### "What am I supposed to write?"
-
-My early journey mapping identified the blank page as a likely drop-off point. If reflection started to feel like homework, it wouldn't make a convincing bedtime ritual.
-
-So I explored multiple low-effort ways to capture something:
-
-- A short note.
-- A photo.
-- A voice entry.
-- A lightweight prompt.
-
-The goal wasn't to produce a perfect journal entry.
-
-It was to help someone notice:
-
-**"That was a nice part of my day."**
-
-Prompts could help when people were stuck, but users always retained control over what they recorded.
+I mapped the flow on FigJam to find real entry points — someone experiencing a moment worth recording, snapping a photo, wanting to look back at something, or just starting to wind down — and the points where people would likely drop off: not knowing what to write, deciding something wasn't worth recording, or the whole thing not feeling worth the effort. That shaped a tighter set of design questions, the one that mattered most being how to make Mude the last digital interaction before sleep, not another thing competing for attention.
 
 [DEMO: polaroid-capture]
 
 ---
 
-# Decision 02
+# Ideate & Prototype
 
-## Capture moments when they happen — not only when you're already tired
+I sketched the key screens — home, journaling, a gallery of past entries, and the wind-down flow itself, closing with a "farewell to today" ritual modeled on tearing a page off a calendar. Lo-fi wireframes went into guerrilla testing with 5 users, which surfaced real problems fast: the home screen's date element was more distracting than useful, button placement needed better accessibility, the wind-down screens were too text-heavy to actually feel relaxing, and the farewell page needed to come after the moment review, not before it.
 
-Originally, I thought about Mude mainly as something people would use at bedtime.
-
-Mapping the journey changed that.
-
-Meaningful moments happen throughout the day.
-
-If users were expected to reconstruct everything at 11pm, they would have to remember what happened, decide what mattered and then write about it when they were already tired.
-
-So I introduced multiple entry points.
-
-Someone could quickly capture a moment during the day and return to it later during their wind-down.
-
-That divided the cognitive work:
-
-**Daytime:** notice.
-
-**Bedtime:** reflect.
-
-The bedtime experience could therefore remain lighter and calmer.
+[IMAGE: wireframe-mude.avif]
 
 ---
 
-# Decision 03
+# Test
 
-## Make wind-down a ritual, not another content feed
+I built the hi-fi version from that feedback, then ran 3 moderated sessions with follow-up interviews. One question from a participant reshaped the whole product: what happens if I journal about something that annoyed me — wouldn't reading that again right before bed be the opposite of relaxing? That was the real finding. I'd built one feature to hold every kind of entry, assuming reflection was inherently calming. It isn't, if what you're reflecting on is something that upset you. Testing also flagged that the interface felt visually "too rigid," and that a slideshow-style review read as stimulating rather than soothing.
 
-I wanted the evening interaction to feel deliberately different from the products users might have been scrolling moments earlier.
+That led to a rebrand and a split: Mood Tracking, to visualize patterns over time, and a separate Emotional Dumpster, for the things people needed to get out but didn't need to see again at bedtime. Only the reflective, positive entries carried into the wind-down review.
 
-Instead of an endless feed, Mude had a finite sequence.
+[DEMO: mood-concept]
 
-The user could prepare their environment, revisit selected moments and move towards a deliberate ending.
-
-One interaction I explored was a **"goodbye to today"** ritual inspired by tearing a page from a calendar.
-
-It gave an abstract action — finishing the day — a visible moment of closure.
-
-The interaction wasn't there just to create delight.
-
-It communicated:
-
-### Today is finished. You don't need to keep doing things.
-
----
-
-# Then users challenged my biggest assumption
-
-After creating the first high-fidelity prototype, I ran three moderated usability-testing sessions with follow-up interviews.
-
-And one participant asked a question that changed the direction of the project:
-
-### "What if I write about something that annoyed me?"
-
-I had assumed that journaling followed by reflection would create a reassuring wind-down.
-
-But journaling isn't automatically positive.
-
-Someone might use it to process:
-
-an argument,
-a stressful meeting,
-anxiety about tomorrow,
-or something they were angry about.
-
-Automatically resurfacing that entry just before sleep could be the opposite of calming.
-
-It exposed an important flaw in my original concept:
-
-### Capturing an emotion and reliving an emotion are not the same user need.
-
-That was more useful than a participant simply telling me they liked the prototype.
-
----
-
-# Decision 04
-
-## Separate "things I want to remember" from "things I need to let out"
-
-Instead of abandoning journaling, I reconsidered the role different entries should play.
-
-Some moments are worth revisiting:
-
-- A good meal.
-- Something funny a friend said.
-- Finishing something difficult.
-- A small thing you're grateful for.
-
-Other thoughts may simply need somewhere to go.
-
-So I explored separating **positive reflection** from **emotional release**.
-
-Content intended as an outlet didn't need to automatically return during the bedtime recap.
-
-This gave the user more control over their emotional experience and challenged my earlier assumption that more personalisation or more resurfaced content was necessarily better.
-
-The lesson was simple:
-
-### Don't optimise an experience around the happy path of someone's emotions.
-
-[DEMO: vent-release]
-
----
-
-# Testing also made the experience quieter
-
-The first round of guerrilla testing with five participants exposed several more practical problems.
-
-My opening screen felt redundant.
-
-Some button choices needed better accessibility.
-
-The wind-down flow contained too much text.
-
-And parts of the sequence felt more like using an app than winding down from one.
-
-The second testing round challenged the visual experience further.
-
-Participants questioned whether the interface felt sufficiently calming, and some found the slideshow-style playback potentially more stimulating than relaxing.
-
-So I reduced unnecessary content and reconsidered motion, visual density and the sequence of the experience.
-
-The objective wasn't:
-
-**"How can I make this more impressive?"**
-
-It became:
-
-### "What can I remove?"
-
----
-
-# Decision 05
-
-## Design a finish line
-
-A bedtime product needs something most apps actively avoid:
-
-### a reason to leave.
-
-So the final part of Mude deliberately closes the interaction.
-
-After reflection and the goodbye ritual, the interface transitions towards **Switch Off**.
-
-Rather than suggesting another activity or presenting more content, the experience encourages the user to put the device down and can connect with the phone's Sleep / Do Not Disturb mode.
-
-There is no infinite feed waiting underneath.
-
-No "you might also like…"
-
-No streak demanding one more action.
-
-Because, in this context:
-
-### Closing the app can be a successful conversion.
+[VIDEO: mude-venting-flow-cropped.mp4]
 
 [DEMO: goodbye-switch]
 
 ---
 
-# The final concept
+# Outcome
 
-Mude became a three-part experience.
-
-### 01 — Notice
-
-Capture meaningful moments throughout the day with minimal effort.
-
-### 02 — Wind down
-
-Revisit selected positive moments through a short, finite bedtime ritual.
-
-### 03 — Switch off
-
-Mark the end of the day and deliberately leave the digital environment.
-
-The product isn't intended to diagnose or treat sleep disorders.
-
-It's a behavioural design exploration around a narrower question:
-
-### Can we make the transition from "one more thing" to "I'm done for today" a little easier?
+No live users or production data — this was a self-initiated concept. What's real: two rounds of testing that overturned a founding assumption and reshaped the product from a single journaling feature into two distinct ones, based on what actually happened when people used it, not what I'd assumed going in. What's missing: a further round of testing on the rebranded, split version itself. The two-feature split addressed what the second round of testing surfaced, but I never got to validate whether it actually solved the problem for users — that's the natural next step if I picked this project back up.
 
 ---
 
-# What did I actually validate?
+# Takeaway
 
-Because this was a **self-initiated prototype**, I did not have a live product, production analytics or a large enough sample to claim improvements in retention or sleep.
-
-What I could evaluate was the design itself.
-
-Across two rounds of testing, I identified issues with:
-
-navigation, accessibility, information density, interaction sequencing, emotional assumptions and the overall wind-down concept.
-
-Most importantly, testing invalidated part of my original hypothesis about journaling and led me to change the product model.
-
-For this project, that is the outcome I would stand behind:
-
-### I finished with a better problem definition than the one I started with.
-
----
-
-# If Mude were shipped, what would success mean?
-
-Traditional engagement metrics could be misleading here.
-
-More sessions and more screen time might actually indicate a worse outcome.
-
-Instead, I would evaluate whether Mude helps users follow through on their own bedtime intention.
-
-A primary behavioural signal could be:
-
-### Intended-bedtime adherence
-
-How often does a user finish their wind-down close to the bedtime they set for themselves?
-
-I would support that with:
-
-**Wind-down completion** — Do users reach the intentional Switch Off moment?
-
-**Time to switch off** — Does the ritual remain short rather than becoming another prolonged activity?
-
-**Repeat voluntary use** — Do people find the routine useful enough to return to over time?
-
-**Self-reported calmness** — Do users feel more ready to disengage after the ritual?
-
-**Post-routine screen behaviour** — With appropriate permission, do users actually leave their device after finishing?
-
-Sleep quality could be explored as a longer-term self-reported outcome, but I would not claim that Mude caused improved sleep without substantially stronger research.
-
----
-
-# What I wouldn't build yet
-
-This project originally generated ideas around AI-generated content, sleep tracking, wearables, achievements, social features and deeper personalisation.
-
-I wouldn't prioritise those next.
-
-Not until the core behaviour works.
-
-Before increasing scope, I would want to answer:
-
-### Do people actually find the Notice → Reflect → Switch Off ritual useful enough to repeat?
-
-Only then would I decide which additional capabilities genuinely strengthen that behaviour.
-
----
-
-# What I learned
-
-## The best usability test doesn't always validate your design.
-
-The most valuable feedback I received wasn't:
-
-> "I couldn't find this button."
-
-It was a question that challenged the premise of the experience.
-
-That reminded me that testing isn't just about checking whether users can operate a solution.
-
-It's also an opportunity to ask whether the solution **should work that way at all**.
-
----
-
-## User engagement isn't universally good.
-
-Mude also changed how I think about product metrics.
-
-For many digital products, longer sessions can look positive.
-
-For a bedtime product, they could represent failure.
-
-Good product design means defining success around the **user's goal**, not automatically around more product usage.
-
-Sometimes the best thing your product can help someone do is:
-
-### leave.
+The best usability test doesn't always validate your design — sometimes it challenges the premise you built the whole thing on. And engagement isn't universally the goal: for a bedtime product, helping someone successfully disengage and put the phone down is the actual win, not keeping them in the app longer.
 `;
 
 const FAMCOOK_CONTENT = `
 # From group-chat chaos to cooking together
 
-## Designing a shared cooking experience around different diets, skills and very busy hands
-
-**FamCook · Self-initiated product concept**
+**FamCook · Co-cooking product concept**
 
 [HERO IMAGE: famcook-hero.png]
 
-[META: Project=Self-initiated concept | Role=Product Designer / UX Researcher | Timeline=3 months | Methods=User interviews · Competitive analysis · Journey mapping · Prioritisation · Wireframing · Prototyping · Usability testing · Interaction design · Visual design]
+[META: Role=UX Researcher / UX Designer / UI Designer | Period=3 months (self-initiated / course project) | My Contributions=End-to-end concept design · User research · Visual design & style guide | Platforms=Mobile app (concept) | Collaborators=Solo project — structured critique from 8 design mentors via ADPList | Methods=User interviews, affinity diagramming, competitive analysis, Crazy 8s, lo-fi & hi-fi prototyping, usability testing, mentor critique]
 
-Cooking together sounds simple.
+[STATS: 50% = improvement in task success | 30% = increase in user satisfaction]
 
-Pick a recipe. Buy some ingredients. Cook. Eat.
+# Discovery
 
-Add eight friends, three dietary requirements, different cooking abilities and a group chat where nobody answers the actual question, and suddenly dinner starts looking suspiciously like project management.
-
-FamCook is a self-initiated concept exploring how digital products could make **planning and cooking a shared meal easier — without taking the social part out of it.**
-
-The challenge became:
-
-### How might we reduce the coordination around cooking together, so people can spend more time actually enjoying it?
-
----
-
-# The 30-second version
-
-### Problem
-
-Cooking together creates coordination work before anyone even reaches the kitchen: agreeing on dishes, accommodating dietary needs, planning ingredients and understanding who can do what.
-
-### Research insight
-
-Most of the friction participants described happened **before cooking**, while the problems during cooking were more about attention, coordination and differing levels of confidence.
-
-### Product decision
-
-Rather than building a giant cooking super-app, I focused FamCook around a shared meal plan that connects **decision-making, preparation and cooking**.
-
-### What testing changed
-
-Testing pushed me to reduce navigation, simplify the meal plan and rethink how information should be presented when users are actively cooking.
-
-### Biggest lesson
-
-The hardest part of this project wasn't generating ideas.
-
-It was deciding what **not** to build.
-
----
-
-# Cooking was only half the problem
-
-I started by interviewing five people about how they cooked with partners, housemates, family members and groups of friends.
-
-The conversations uncovered problems throughout the journey.
-
-### Before cooking
-
-People had to:
-
-remember everyone's dietary requirements, agree on dishes, share ideas, buy the right ingredients, and coordinate the plan.
-
-### During cooking
-
-Different skill levels became more noticeable.
-
-Tasks were forgotten.
-
-People worked at different speeds.
-
-And when several dishes were happening simultaneously, the kitchen could become stressful surprisingly quickly.
-
-### Afterwards
-
-Even dinner wasn't quite the end.
-
-There might still be payment and cleanup to organise.
-
-The initial research gave me plenty of potential problems.
-
-Possibly too many.
+Picture ten friends over for a housewarming cook-together: coordinating in a group chat, discovering everyone has different dietary needs, and realizing cooking skills vary widely across the group. That's the scenario FamCook started from. I ran 5 user interviews to understand how people actually organize group meals today, pulled out patterns with affinity diagramming, and ran a competitive analysis of what already existed. People cook together in roughly three settings — daily with family, day-to-day with housemates, or one-off gatherings with friends — and most of the friction sat before anyone touched a pan: tracking dietary needs, agreeing on dishes everyone would eat, communicating plans and getting feedback, and making sure the right ingredients were actually in the kitchen.
 
 [IMAGE: famcook-research-themes.png]
 
 ---
 
-# The first real design challenge
+# Define
 
-## I had enough ideas to build five different apps
-
-My early exploration generated several possible directions.
-
-### A dietary profile
-
-A reusable profile containing allergies, preferences and dietary requirements.
-
-### A recipe generator
-
-Recommend meals based on the group, occasion, ingredients and restrictions.
-
-### A meal-planning space
-
-Help people propose dishes, discuss options and organise preparation.
-
-### A live co-cooking experience
-
-Coordinate people while multiple dishes are being prepared.
-
-All of them could solve genuine problems.
-
-Trying to build all of them would solve another problem:
-
-### how to create a very bloated product.
-
-So I evaluated the directions based on the research, usefulness across different cooking situations and feasibility within the project.
-
-I chose to concentrate on:
-
-## Shared planning + communication + coordinated cooking
-
-because it addressed several of the highest-frequency problems without requiring FamCook to become a recipe platform, social network and kitchen operating system simultaneously.
+There was more here than one project could reasonably solve. I mapped four possible directions — a shareable dietary profile, a recipe generator, a group communication platform, and a co-cooking instruction app — and weighed each against viability, privacy, and how directly it addressed the friction I'd actually heard about. The recipe generator and the communication app were the two directions that held up: together they covered the planning-and-preparation problem without needing a dietary "foodie card" nobody asked for. A co-cooking instruction app stayed on the table as an exploratory direction for later — worth revisiting, but not part of this scope. Accessibility was a concern from the start too — cooking means occupied hands and divided attention, so the interface needed a clear hierarchy that didn't depend on careful scrolling.
 
 [IMAGE: famcook-prioritisation.png]
 
 ---
 
-# Decision 01
+# Develop
 
-## Don't build another group chat
-
-At first, communication looked like an obvious feature.
-
-People already organise meals through WhatsApp, Messenger and other group chats.
-
-So simply putting chat inside FamCook wouldn't create much value.
-
-The real problem was that **important decisions disappear inside conversation**.
-
-Someone suggests lasagne.
-
-Someone else says they're dairy-free.
-
-Three messages later somebody sends a meme.
-
-By tomorrow nobody remembers whether lasagne was actually agreed.
-
-So I designed the shared meal plan as the persistent layer above conversation.
-
-Instead of forcing users to search through messages, key information could stay visible:
-
-**What are we making?**
-
-**What still needs deciding?**
-
-**What do we need to buy?**
-
-**Who's doing what?**
-
-Conversation could support decisions without becoming the place where those decisions were stored.
-
-[SPLIT: famcook-chat-pinned-plan.png | The shared meal plan sits pinned above the conversation as a persistent layer — what's been decided, what's still open, and what to buy stay visible without digging back through messages to find them.]
-
----
-
-# Decision 02
-
-## Treat dietary information as group context, not someone's problem to remember
-
-Dietary requirements were one of the clearest planning frustrations from the interviews.
-
-In real life, responsibility often falls on one organiser:
-
-> "Was Sam vegetarian or vegan?"
-
-> "Who couldn't have nuts?"
-
-> "Can everyone eat this?"
-
-I didn't want the product to rely on one person's memory.
-
-FamCook therefore explored ways for dietary preferences and restrictions to become **shared context for the meal**.
-
-That information could influence the dishes being considered and help the group spot conflicts earlier — before ingredients had been purchased or cooking had started.
-
-The goal wasn't to replace proper allergen checking.
-
-It was to reduce avoidable coordination mistakes.
-
-[GALLERY: famcook-diet-selection.png, famcook-meal-plan-connection.png]
-
----
-
-# Decision 03
-
-## Help the group decide without forcing them to start with a recipe
-
-Another problem surfaced around the question:
-
-### "What should we cook?"
-
-Sometimes people know exactly what they want.
-
-Sometimes the conversation is:
-
-> "Something comforting?"
-
-> "Maybe Asian?"
-
-> "Not spicy."
-
-> "I've got mushrooms."
-
-A traditional recipe search assumes the user already knows what they're looking for.
-
-I explored several lower-effort inspiration entry points:
-
-### Mood
-
-What kind of food do we feel like eating?
-
-### Occasion
-
-What are we cooking for?
-
-### Snap
-
-What ingredients do we already have?
-
-The idea wasn't to create another giant recipe catalogue.
-
-It was to help a group move from **vague intention → viable meal idea** with less negotiation.
-
-[GALLERY: famcook-inspiration-mood.png, famcook-inspiration-snap.png, famcook-inspiration-scan.png]
-
----
-
-# Decision 04
-
-## Designing for someone holding a spatula is different
-
-The context changed dramatically once cooking started.
-
-Users aren't calmly sitting at a desk.
-
-They're reading instructions, handling ingredients, watching pans, talking to other people, moving around the kitchen, and possibly wondering why the rice is burning.
-
-That made **attention** one of the most important design constraints.
-
-Anything requiring precise taps, repeated scrolling or dense reading became more expensive during cooking.
-
-So I started treating the cooking interface as a different mode of use.
-
-### Bigger priorities.
-
-### Less information at once.
-
-### Clearer hierarchy.
-
-### Fewer interactions.
-
-I also considered hands-free interaction and voice controls because the problem isn't merely accessibility in the traditional sense.
-
-Sometimes the user literally has chicken on their hands.
-
-[SPLIT: famcook-cooking-mode.png | Bigger priorities, less information at once, and a clearer hierarchy — designed for someone who's reading instructions, watching a pan, and possibly holding a knife, all at the same time.]
-
----
-
-# Decision 05
-
-## One screen beat two
-
-My initial co-cooking interface divided information across a split-screen experience.
-
-On paper, it allowed more information to remain visible.
-
-During testing, however, the extra information increased complexity.
-
-So I changed the experience to a **single-screen cooking view**.
-
-Instead of maximising how much information was available, I prioritised what users needed **right now**.
-
-This became an important lesson in contextual interface design:
-
-### Information can be useful and still not deserve to be visible.
-
-When someone's attention is already divided, simplicity isn't just aesthetic.
-
-It's functional.
-
-[IMAGE: famcook-split-single-compare.png]
-
----
-
-# Testing the first model
-
-I tested the low-fidelity prototype with four participants.
-
-The sessions highlighted several areas where my first assumptions weren't working.
-
-Among the changes:
-
-### Navigation became more visible
-
-I replaced the hamburger-style navigation with more immediately accessible entry points.
-
-### The meal plan became simpler
-
-I removed the calendar because it added visual complexity without enough value.
-
-### Cooking became more focused
-
-The split-screen approach became a single-screen interface.
-
-### Inspiration became more flexible
-
-I expanded the ways users could discover dishes around mood and flavour rather than relying on conventional search alone.
-
-These weren't isolated UI tweaks.
-
-Together, they pushed the product towards **lower cognitive effort**.
+I used Crazy 8s to explore layouts fast, built a lo-fi prototype, and tested it with 4 participants. Their feedback reshaped the structure directly: a hamburger menu became widgets, an information card was added to explain ingredients, the calendar came out of the meal plan to cut clutter, and the cooking interface moved from a split screen to a single one, since people didn't actually want to compare two things with their hands full. I then took the design to 8 mentors through ADPList, and the recurring note was blunt — the design was functional, but it didn't hold up against platform conventions and lacked consistency.
 
 [IMAGE: famcook-iteration-comparison.png]
 
----
-
-# Then I got uncomfortable feedback
-
-I presented the next iteration to eight design mentors through ADPList.
-
-A recurring piece of feedback was difficult but useful:
-
-### The concept worked better than the interface.
-
-The product was functional, but the mobile experience lacked consistency and didn't always follow familiar interaction patterns.
-
-My first instinct as a new designer had been to invent.
-
-That feedback reminded me that originality isn't automatically usability.
-
-So I revisited the design system, component behaviour, hierarchy and established mobile patterns.
-
-The goal became:
-
-### Innovate where the problem requires innovation.
-
-### Use familiar patterns everywhere else.
-
-[IMAGE: famcook-ui-comparison.png]
+[SPLIT: famcook-cooking-mode.png | The cooking interface moved from a split screen to a single, focused one — with hands full and a pan to watch, comparing two panels wasn't realistic.]
 
 ---
 
-# Decision 06
+# Deliver
 
-## Don't make onboarding interrogate the user
+That feedback led to real changes, not cosmetic ones. Onboarding swapped a budget question for one about cooking skill, since budget data had no clear use later in the product, with an option to skip and complete it later. The meal plan and to-do list moved to sit pinned above the conversation itself, so a decision didn't get lost three messages later, with quick actions to accept or reject suggestions. And inspiration for what to cook came from three entry points — snapping a photo, picking a mood, or naming an occasion — rather than asking people to browse a generic recipe list.
 
-My early onboarding asked for information including budget.
+[SPLIT: famcook-onboarding-confidence.png | Onboarding asks about cooking confidence instead of budget — with an option to skip and come back to it later.]
 
-But after reconsidering what FamCook actually needed to create a useful group-cooking experience, budget wasn't one of the strongest inputs.
+[SPLIT: famcook-chat-pinned-plan.png | The meal plan and to-do list sit pinned above the conversation, with quick actions to accept or reject suggestions, so a decision doesn't get lost three messages later.]
 
-Cooking confidence was.
+[GALLERY: famcook-inspiration-mood.png, famcook-inspiration-snap.png, famcook-inspiration-scan.png]
 
-Knowing whether someone was comfortable cooking independently or needed more guidance could influence how tasks and instructions were presented later.
-
-So I replaced lower-value questions with information that could actually shape the experience.
-
-I also allowed people to finish profile details later rather than requiring everything upfront.
-
-The principle was:
-
-### If I'm asking the user for data, I should know what I'm going to do with it.
-
-[SPLIT: famcook-onboarding-confidence.png | The final onboarding step asks about cooking confidence instead of budget — information that could actually shape how tasks and instructions are presented later, rather than a question with no clear downstream use.]
+[SPLIT: famcook-home-final.png | The finished home screen — search, mood/occasion/snap entry points, and the group's meal plan, all one tap away.]
 
 ---
 
-# The final concept
+# Outcome
 
-FamCook became a connected experience across three stages.
-
-## 01 — Plan together
-
-Create a meal, invite people, understand dietary needs and turn suggestions into agreed dishes.
-
-## 02 — Prepare together
-
-Organise ingredients and responsibilities so everyone understands what needs to happen.
-
-## 03 — Cook together
-
-Present the information people need in a simpler, lower-attention interface while the meal is actually being prepared.
-
-The product doesn't try to replace conversation.
-
-It provides **structure around the parts of conversation that need to turn into action**.
-
-[GALLERY: famcook-home-final.png, famcook-meal-plan-connection.png, famcook-cooking-mode.png]
+Task success improved 50% and satisfaction 30% across rounds of usability testing. This was also my first project as a UX researcher/designer, and the biggest lesson wasn't a specific screen — it was learning to prioritize. There were more real problems in this space than one product could fix, and choosing one mattered more than trying to solve all of them at once.
 
 ---
 
-# What did I actually validate?
+# Takeaway
 
-FamCook was a concept project rather than a launched product.
-
-So I don't have production data showing increased retention, engagement or successful group meals.
-
-What I did validate was the **usability and direction of the interaction model**.
-
-Research helped identify where people experienced coordination friction.
-
-Prototype testing revealed where my first solution introduced new friction.
-
-And feedback led to meaningful changes in navigation, information density, interaction patterns and the cooking interface.
-
-That distinction matters.
-
-### Prototype testing can tell me whether people understand and can use the experience.
-
-### It cannot tell me whether FamCook would become a successful product.
-
----
-
-# If FamCook were shipped, what would success mean?
-
-I wouldn't use general app engagement as the primary measure.
-
-The product exists to help groups successfully organise and cook meals.
-
-So I would start with a behavioural outcome such as:
-
-## Shared meals successfully completed
-
-A meal that progresses from planning into an agreed plan and completed cooking session.
-
-I would then examine:
-
-### Plan completion
-
-How often does a newly created meal reach an agreed set of dishes?
-
-### Decision time
-
-How long does it take a group to move from invitation to an agreed meal?
-
-### Dietary-conflict resolution
-
-How often are incompatible dish choices identified before the group reaches preparation?
-
-### Cooking-task completion
-
-Can groups successfully understand and complete assigned tasks during cooking?
-
-### Repeat group cooking
-
-Do groups choose to use FamCook again for another shared meal?
-
-The important thing isn't whether users spend more time inside FamCook.
-
-It's whether FamCook helps them spend **better time together outside it**.
-
----
-
-# What I wouldn't build yet
-
-My original project generated ideas around:
-
-AI recipe generation, voice control, social discovery, profiles, wearables, ingredient recognition, personalised recommendations, payments, and deeper accessibility features.
-
-Some may eventually be valuable.
-
-But before adding them, I'd validate one much more fundamental behaviour:
-
-### Will groups actually use a shared meal plan instead of continuing to organise everything through their existing chat?
-
-If the answer is no, more features won't rescue the concept.
-
-I would test that assumption before significantly expanding the product.
-
----
-
-# What I learned
-
-## Prioritisation is design.
-
-This was one of my earliest product-design projects, and my biggest mistake initially was believing that discovering more user problems meant I needed to design more solutions.
-
-Research gave me dozens of directions.
-
-The better product wasn't the one containing all of them.
-
-It was the one where the features reinforced the **same core behaviour**.
-
----
-
-## Design for the context, not just the screen.
-
-FamCook also taught me to think differently about mobile interaction.
-
-A screen used while planning dinner on the sofa and a screen used while stirring a pan might run on the same phone.
-
-They don't have the same UX requirements.
-
-The user's physical environment, attention and ability to interact are part of the interface.
-
----
-
-## Collaboration products need shared truth
-
-The communication problem wasn't a lack of messages.
-
-People already had plenty of ways to message each other.
-
-The problem was turning those conversations into something everyone could understand and act on.
-
-That insight became the most transferable lesson from the project:
-
-### When many people are coordinating one outcome, good UX isn't just communication.
-
-### It's creating a shared understanding of what happens next.
+Design for the context, not just the screen — planning dinner on the sofa and cooking with wet hands are not the same interface problem. And structured critique from people who owed me nothing did more to improve the design than another round of internal iteration would have.
 `;
 
 const SPIRA9_CONTENT = `
