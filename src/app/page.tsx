@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { experience, whyHireMe } from "@/data/content";
 import PolaroidCaseScroll from "@/components/PolaroidCaseScroll";
 import TreasureBoxHero from "@/components/TreasureBoxHero";
@@ -12,7 +13,15 @@ export default function Home() {
 
       <div className="mx-auto mt-20 flex w-full max-w-5xl flex-col gap-28 px-6 sm:px-10">
         {/* Why hire me */}
-        <section className="flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 sm:p-12">
+        <section className="relative flex flex-col gap-6 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 p-8 sm:p-12">
+          <Image
+            src="/hero-avatar.png"
+            alt=""
+            width={746}
+            height={2046}
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-[53px] right-4 z-10 h-auto w-[43px] select-none drop-shadow-[0_8px_16px_rgba(69,59,74,0.25)] sm:-top-[75px] sm:right-10 sm:w-16"
+          />
           <h2 className="font-heading text-2xl font-semibold text-[var(--foreground)]">
             {whyHireMe.heading}
           </h2>
