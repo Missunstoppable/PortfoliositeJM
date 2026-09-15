@@ -408,6 +408,11 @@ body > header {
   background: var(--shell);
   transform: rotate(-1deg);
 }
+/* The /work index list reads better with tags sitting flat, unlike the
+   playful hand-tilted look used on the homepage cards. */
+.case-tags-flat .case-tag {
+  transform: none;
+}
 
 .case-card-text {
   opacity: 0;

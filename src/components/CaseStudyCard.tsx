@@ -10,6 +10,13 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
       <span className="font-heading text-xl font-semibold text-[var(--foreground)]">
         {study.title}
       </span>
+      <div className="case-tags-flat flex flex-wrap gap-2">
+        {study.tags.map((tag) => (
+          <span key={tag} className="case-tag">
+            {tag}
+          </span>
+        ))}
+      </div>
       <span className="text-sm text-[var(--text-muted)]">{study.subtitle}</span>
       <span className="text-sm text-[var(--text-faint)]">{study.summary}</span>
       {study.metricsPreview && (
