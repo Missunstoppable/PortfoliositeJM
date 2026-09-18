@@ -5,7 +5,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Jianan Meng.</p>
         <div className="flex items-center gap-5">
           <a
-            href="https://www.linkedin.com/in/jianan-m-190264145/"
+            href="https://www.linkedin.com/in/jianan-m"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-[var(--foreground)]"
