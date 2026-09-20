@@ -1,3 +1,8 @@
+export const footerContact = {
+  heading: "Let's make complex journeys feel simple.",
+  ctaLabel: "Get in touch",
+};
+
 export const experience = [
   {
     role: "UX/Product Designer",
@@ -10,7 +15,7 @@ export const experience = [
     dates: "Dec 2024–Jan 2026",
   },
   {
-    role: "Volunteer",
+    role: "UX Designer (Volunteer)",
     org: "NUX",
     dates: "May 2024–Present",
   },
@@ -18,6 +23,13 @@ export const experience = [
     role: "UX Researcher/Designer",
     org: "Health Innovation Manchester",
     dates: "Sep 2025–Dec 2025",
+    note: "Partnered with NHS",
+  },
+  {
+    role: "UX/UI Designer",
+    org: "Freelance",
+    dates: "May 2023–November 2024",
+    note: "Projects, spanning landing pages and femhealth consumer app discovery",
   },
   {
     role: "UX QA Specialist",
@@ -97,23 +109,52 @@ export const whyHireMe = {
     "My background spans product design, UX research, growth experimentation, UX QA and customer-facing roles, so I tend to see products from more than one angle.",
     "I care about the tiny interaction that frustrates one user and the bigger product decision affecting thousands.",
   ],
-  closingLabel: "In short:",
-  closing:
-    "I design with users, think with product, collaborate with engineers, and keep one eye on the metrics.",
 };
 
 export const about = {
-  paragraphs: [
-    "Hi, I'm Jianan — a Product Designer who enjoys turning messy problems into products that feel surprisingly simple.",
-    "My route into design hasn't been completely linear. Before becoming a Product Designer, I worked across customer success, UX QA, product marketing and growth. It means I learned to understand products not only from the perspective of the person designing them, but also the people using them, selling them, supporting them and building them.",
-    "Today, I work across the full product design process — from discovery and research through to interaction design, testing, delivery and post-launch optimisation.",
-    "I'm particularly interested in the space where user needs, product strategy and data meet. I like asking what users are trying to accomplish, understanding what matters to the business, and finding the product experience that makes both sides work.",
-    "I've worked on products including freelance marketplaces, mental-wellness experiences and early-stage digital platforms, often in environments where there isn't a perfectly defined brief waiting for me.",
-    "And that's probably my favourite kind of problem.",
+  hero: {
+    lead: "Design, for me, keeps coming back to the same question: how do people actually think, learn, and make decisions?",
+    leadTwo: "I've asked it as a teacher, as someone hiring for a team, and now as a designer.",
+    emphasis: "The context keeps changing, the question doesn't.",
+  },
+  myPath: [
+    "I didn't start in tech. I came from teaching, where I discovered a real talent for understanding people and helping them learn, with a genuine, ongoing interest in psychology and behavior on the side. My passion for human experience was already there — working with a UX Researcher/Designer to improve our recruiting product was what finally put a name to it. I got certified (University of Michigan, Google UX), moved to the UK, and started projects like Mude and a femhealth-focused discovery project.",
+    "Quabble is where product and growth started to feel like one system to me, not two separate jobs. By the time I got to Osdire, I was researching markets and competitors, sitting in on major product decisions, and realizing product work fascinates me for the same reason teaching did: underneath everything, it is still about understanding people.",
   ],
-  pullQuote:
-    "Give me an ambiguous challenge, some users to talk to, a few behavioural clues and a Figma file — and I'm very happy.",
-  closingParagraphs: [
-    "Outside of designing interfaces, I'm increasingly interested in AI products, responsible technology and how emerging technology can solve meaningful human problems without creating ten new ones along the way.",
-  ],
+  howIWork: {
+    bullets: [
+      {
+        icon: "trace" as const,
+        text: "I'd rather trace a number back to why it's wrong than trust it at face value",
+      },
+      {
+        icon: "system" as const,
+        text: "I think about the whole system a decision sits inside, not just the screen in front of me",
+      },
+      {
+        icon: "engineer" as const,
+        text: "I involve engineers early, and design for the constraints actually in front of me",
+      },
+      {
+        icon: "evidence" as const,
+        text: "I argue for my designs with conviction, and let evidence have the final say",
+      },
+    ],
+    bridge:
+      "I've worked on products including freelance marketplaces, mental-wellness experiences and early-stage digital platforms, often in environments where there isn't a perfectly defined brief waiting for me.",
+    reward: [
+      "And that's probably my favourite kind of problem.",
+      "Give me an ambiguous challenge, some users to talk to, a few behavioural clues and a Figma file — and I'm very happy.",
+    ],
+  },
+  whatIBelieve: {
+    lead: "I think a lot about the difference between technology that helps someone get what they actually want, and technology that just gets better at holding their attention. It's why the accessibility side of the Quabble work mattered to me: keeping the app reachable and still supportive for people who couldn't pay, not just optimising the paid funnel.",
+    pullQuote: "What is technology actually for",
+    trailing:
+      "is a question that doesn't get asked enough inside most product teams, and I'd rather be someone who asks it.",
+  },
+  hobbies: {
+    lead: "Outside of work: exercising, making coffee, listening to music, and capturing delightful moments in life.",
+    emphasis: "And yes — I still spend my spare time reading about people.",
+  },
 };

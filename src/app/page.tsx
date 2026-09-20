@@ -53,13 +53,6 @@ export default function Home() {
               </p>
             ))}
           </div>
-
-          <p className="leading-relaxed text-[var(--foreground)]">
-            <span className="font-heading font-semibold">
-              {whyHireMe.closingLabel}
-            </span>{" "}
-            {whyHireMe.closing}
-          </p>
         </section>
 
         {/* Experience */}
@@ -77,6 +70,9 @@ export default function Home() {
                 <p className="text-sm text-[var(--text-muted)]">
                   {item.org} · {item.dates}
                 </p>
+                {item.note && (
+                  <p className="text-sm italic text-[var(--text-faint)]">{item.note}</p>
+                )}
               </li>
             ))}
           </ol>
