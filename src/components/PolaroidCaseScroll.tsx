@@ -20,10 +20,6 @@ export default function PolaroidCaseScroll() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [maxTranslate, setMaxTranslate] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [dragOffset, setDragOffset] = useState(0);
-  const draggingRef = useRef(false);
-  const dragStartXRef = useRef(0);
-  const dragStartTranslateRef = useRef(0);
   const [reducedMotion, setReducedMotion] = useState(() =>
     typeof window !== "undefined"
       ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -59,10 +55,6 @@ export default function PolaroidCaseScroll() {
       }
       const raw = -rect.top / scrollableHeight;
       setProgress(Math.min(1, Math.max(0, raw)));
-      // A drag offset is only a temporary preview — once the visitor
-      // resumes vertical scrolling, position resyncs to the scroll-driven
-      // value rather than staying wherever the drag left it.
-      setDragOffset(0);
     }
 
     measure();
@@ -75,31 +67,7 @@ export default function PolaroidCaseScroll() {
     };
   }, [reducedMotion]);
 
-  function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
-    if (reducedMotion || maxTranslate <= 0) return;
-    if ((e.target as HTMLElement).closest("a")) return;
-    draggingRef.current = true;
-    dragStartXRef.current = e.clientX;
-    dragStartTranslateRef.current = progress * maxTranslate;
-    e.currentTarget.setPointerCapture(e.pointerId);
-  }
-
-  function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
-    if (!draggingRef.current) return;
-    const deltaX = e.clientX - dragStartXRef.current;
-    const target = dragStartTranslateRef.current - deltaX;
-    const clamped = Math.min(Math.max(target, 0), maxTranslate);
-    setDragOffset(clamped - progress * maxTranslate);
-  }
-
-  function endDrag() {
-    draggingRef.current = false;
-  }
-
-  const translate = Math.min(
-    Math.max(progress * maxTranslate + dragOffset, 0),
-    maxTranslate,
-  );
+  const translate = Math.min(Math.max(progress * maxTranslate, 0), maxTranslate);
 
   if (reducedMotion) {
     return (
@@ -139,12 +107,8 @@ export default function PolaroidCaseScroll() {
         <div className="relative flex flex-1 items-start pt-10 sm:items-center sm:pt-0">
           <div
             ref={trackRef}
-            className="flex cursor-grab select-none items-stretch gap-[4vw] pl-[6vw] will-change-transform active:cursor-grabbing"
+            className="flex items-stretch gap-[4vw] pl-[6vw] will-change-transform"
             style={{ transform: `translateX(-${translate}px)` }}
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={endDrag}
-            onPointerCancel={endDrag}
           >
             {caseStudies.map((study, i) => (
               <PolaroidCard key={study.slug} study={study} index={i} />
